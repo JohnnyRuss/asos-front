@@ -1,0 +1,38 @@
+{
+    "main": [
+        {
+            "listTitle": "help & information",
+            "list": [
+                "help",
+                "track order",
+                "delivery & returns",
+                "sitemap"
+            ]
+        },
+        {
+            "listTitle": "about asos",
+            "list": [
+                "about us",
+                "careers at ASOS",
+                "corporate responsibility",
+                "investors site"
+            ]
+        },
+        {
+            "listTitle": "more from asos",
+            "list": [
+                "mobile and ASOS apps",
+                "ASOS Marketplace",
+                "gift vouchers",
+                "black friday",
+                "ASOS x Thrift+"
+            ]
+        }
+    ],
+    "sub": [
+        "ASOS details",
+        "privacy & cookies",
+        "Ts&Cs",
+        "accessibility"
+    ]
+}

@@ -1,0 +1,148 @@
+{
+    "hero": {
+        "men": [
+            {
+                "fig": "./assets/hero/men/hero-men.webp",
+                "label": ""
+            },
+            {
+                "fig": "./assets/hero/men/hero-men-2.webp",
+                "label": "new season"
+            }
+        ],
+        "women": [
+            {
+                "fig": "./assets/hero/women/hero-women.webp",
+                "label": ""
+            },
+            {
+                "fig": "./assets/hero/women/hero-women-2.webp",
+                "label": ""
+            }
+        ]
+    },
+    "landingCatalog": {
+        "men": {
+            "main": [
+                {
+                    "_id": "landing-catalog__1",
+                    "title": "summer starterpak",
+                    "label": "Never too early",
+                    "fig": "./assets/catalog/men/catalog-men-1.webp"
+                },
+                {
+                    "_id": "landing-catalog__2",
+                    "title": "new balance",
+                    "label": "Can't beat  a classic",
+                    "fig": "./assets/catalog/men/catalog-men-2.webp"
+                },
+                {
+                    "_id": "landing-catalog__3",
+                    "title": "sunnies",
+                    "label": "The shade of it all",
+                    "fig": "./assets/catalog/men/catalog-men-3.webp"
+                },
+                {
+                    "_id": "landing-catalog__4",
+                    "title": "asos design denim",
+                    "label": "The jean scene",
+                    "fig": "./assets/catalog/men/catalog-men-4.webp"
+                }
+            ],
+            "sub": [
+                {
+                    "_id": "landing-catalog__sub-1",
+                    "chapter": 0,
+                    "title": "best dressed",
+                    "label": "It's gonna be you",
+                    "fig": "./assets/catalog/men/catalog-men-sub-1.webp",
+                    "actionLabel": "shop the edit"
+                },
+                {
+                    "_id": "landing-catalog__sub-2",
+                    "chapter": 0,
+                    "title": "topman new season",
+                    "label": "Legends only",
+                    "fig": "./assets/catalog/men/catalog-men-sub-2.webp",
+                    "actionLabel": "shop the brand"
+                }
+            ]
+        },
+        "women": {
+            "main": [
+                {
+                    "_id": "landing-catalog__1",
+                    "title": "soft layer",
+                    "label": "Comfy chic",
+                    "fig": "./assets/catalog/women/catalog-women-1.webp"
+                },
+                {
+                    "_id": "landing-catalog__2",
+                    "title": "asos design utility",
+                    "label": "Pocket picks",
+                    "fig": "./assets/catalog/women/catalog-women-2.webp"
+                },
+                {
+                    "_id": "landing-catalog__3",
+                    "title": "balletcore",
+                    "label": "Barre-raising looks",
+                    "fig": "./assets/catalog/women/catalog-women-3.webp"
+                },
+                {
+                    "_id": "landing-catalog__4",
+                    "title": "workwear dresses",
+                    "label": "Black is always ellegant",
+                    "fig": "./assets/catalog/women/catalog-women-4.webp"
+                }
+            ],
+            "sub": [
+                {
+                    "_id": "landing-catalog__sub-1",
+                    "chapter": 0,
+                    "title": "topshop denim",
+                    "label": "Legends only",
+                    "fig": "./assets/catalog/women/catalog-women-sub-1.webp",
+                    "actionLabel": "shop the brand"
+                },
+                {
+                    "_id": "landing-catalog__sub-2",
+                    "chapter": 0,
+                    "title": "spring stuff",
+                    "label": "Getting warmer...",
+                    "fig": "./assets/catalog/women/catalog-women-sub-2.webp",
+                    "actionLabel": "shop now"
+                },
+                {
+                    "_id": "landing-catalog__sub-2",
+                    "chapter": 1,
+                    "title": "new in:denim icons",
+                    "label": "Fantasy fits",
+                    "fig": "./assets/catalog/women/catalog-women-sub-3.webp",
+                    "actionLabel": "shop asos design"
+                },
+                {
+                    "_id": "landing-catalog__sub-2",
+                    "chapter": 1,
+                    "title": "new miss selfridge",
+                    "label": "Spring essentials",
+                    "fig": "./assets/catalog/women/catalog-women-sub-4.webp",
+                    "actionLabel": "shop the brand"
+                }
+            ]
+        }
+    },
+    "trendingBrands": {
+        "men": [
+            {
+                "_id": "",
+                "fig": ""
+            }
+        ],
+        "women": [
+            {
+                "_id": "",
+                "fig": ""
+            }
+        ]
+    }
+}

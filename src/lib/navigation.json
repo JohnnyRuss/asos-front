@@ -1,0 +1,1781 @@
+{
+    "main": [
+        {
+            "label": "women",
+            "route": "/women"
+        },
+        {
+            "label": "men",
+            "route": "/men"
+        }
+    ],
+    "subNavs": {
+        "men": [
+            {
+                "label": "new in",
+                "route": "new-in"
+            },
+            {
+                "label": "clothing",
+                "route": "clothing"
+            },
+            {
+                "label": "shoes",
+                "route": "shoes"
+            },
+            {
+                "label": "sportswear",
+                "route": "sportswear"
+            },
+            {
+                "label": "jeans",
+                "route": "jeans"
+            },
+            {
+                "label": "brands",
+                "route": "brands"
+            }
+        ],
+        "women": [
+            {
+                "label": "new in",
+                "route": "new-in"
+            },
+            {
+                "label": "clothing",
+                "route": "clothing"
+            },
+            {
+                "label": "dresses",
+                "route": "dresses"
+            },
+            {
+                "label": "shoes",
+                "route": "shoes"
+            },
+            {
+                "label": "sportswear",
+                "route": "sportswear"
+            },
+            {
+                "label": "jeans",
+                "route": "jeans"
+            },
+            {
+                "label": "brands",
+                "route": "brands"
+            }
+        ]
+    },
+    "sub": [
+        {
+            "label": "new in",
+            "route": "new-in",
+            "nestedNav": [
+                {
+                    "listType": "TEXT_ONLY",
+                    "title": "new products",
+                    "routes": {
+                        "men": [
+                            {
+                                "label": "view all",
+                                "route": "view all"
+                            },
+                            {
+                                "label": "clothing",
+                                "route": "clothing"
+                            },
+                            {
+                                "label": "shoes",
+                                "route": "shoes"
+                            },
+                            {
+                                "label": "coats & Jackets",
+                                "route": "coats & Jackets"
+                            },
+                            {
+                                "label": "hoodies",
+                                "route": "hoodies"
+                            },
+                            {
+                                "label": "T-Shirt & Vests",
+                                "route": "T-Shirt & Vests"
+                            },
+                            {
+                                "label": "sportswear",
+                                "route": "sportswear"
+                            }
+                        ],
+                        "women": [
+                            {
+                                "label": "view all",
+                                "route": "view all"
+                            },
+                            {
+                                "label": "clothing",
+                                "route": "clothing"
+                            },
+                            {
+                                "label": "shoes",
+                                "route": "shoes"
+                            },
+                            {
+                                "label": "dresses",
+                                "route": "dresses"
+                            },
+                            {
+                                "label": "coats & Jackets",
+                                "route": "coats & Jackets"
+                            },
+                            {
+                                "label": "tops",
+                                "route": "tops"
+                            },
+                            {
+                                "label": "sportswear",
+                                "route": "sportswear"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "brand drops",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-asos-design__new-in.webp",
+                                "label": "ASOS DESIGN",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-adidas__new-in.webp",
+                                "label": "adidas",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-new-balance__new-in.webp",
+                                "label": "New Balance",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-nike__new-in.webp",
+                                "label": "Nike",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jack-and-jones__new-in.webp",
+                                "label": "Jack & Jones",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-the-north-face__new-in.webp",
+                                "label": "The North Face",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-new-in__holiday.webp",
+                                "label": "holiday",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-new-in__the-essentials.webp",
+                                "label": "the essentials",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-new-in__wedding-guest.webp",
+                                "label": "wedding guest",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-new-in__adidas.webp",
+                                "label": "adidas",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-new-in__nike.webp",
+                                "label": "nike",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-new-in__stradovarius.webp",
+                                "label": "stratovarius",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_Y",
+                    "title": "top saved",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-clothing__new-in.webp",
+                                "label": "clothing",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__new-in.webp",
+                                "label": "brands",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportwear__new-in.webp",
+                                "label": "sportswear",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-trainers__new-in.webp",
+                                "label": "trainers",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-new-in__clothing.webp",
+                                "label": "clothing",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-new-in__brands.webp",
+                                "label": "brands",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-new-in__trainers.webp",
+                                "label": "trainers",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "FIG_ONLY",
+                    "title": "new edits",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-going-grunge__new-in.webp",
+                                "label": "going grunge",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-wedding-attire__new-in.webp",
+                                "label": "wedding attire",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-new-in__top-shop-denim.webp",
+                                "label": "topshop denim",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-new-in__denim-weekend-collective.webp",
+                                "label": "denim weekend collective",
+                                "route": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "clothing",
+            "route": "clothing",
+            "nestedNav": [
+                {
+                    "listType": "TEXT_ONLY",
+                    "title": "shop by product",
+                    "routes": {
+                        "men": [
+                            {
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "label": "jackets & coats",
+                                "route": ""
+                            },
+                            {
+                                "label": "jumpers & cardigans",
+                                "route": ""
+                            },
+                            {
+                                "label": "shirts",
+                                "route": ""
+                            },
+                            {
+                                "label": "jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "T-Shirts & Vests",
+                                "route": ""
+                            },
+                            {
+                                "label": "Hoodies & Sweatshirts",
+                                "route": ""
+                            },
+                            {
+                                "label": "Co-ords",
+                                "route": ""
+                            },
+                            {
+                                "label": "designer",
+                                "route": ""
+                            },
+                            {
+                                "label": "joggers",
+                                "route": ""
+                            },
+                            {
+                                "label": "loungewear",
+                                "route": ""
+                            },
+                            {
+                                "label": "multipacks",
+                                "route": ""
+                            },
+                            {
+                                "label": "polo shirts",
+                                "route": ""
+                            },
+                            {
+                                "label": "shorts",
+                                "route": ""
+                            },
+                            {
+                                "label": "socks",
+                                "route": ""
+                            },
+                            {
+                                "label": "sportswear",
+                                "route": ""
+                            },
+                            {
+                                "label": "Suits & Tailoring",
+                                "route": ""
+                            },
+                            {
+                                "label": "swimwear",
+                                "route": ""
+                            },
+                            {
+                                "label": "tracksuits",
+                                "route": ""
+                            },
+                            {
+                                "label": "trousers & chinos",
+                                "route": ""
+                            },
+                            {
+                                "label": "underwear",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "label": "coats & jackets",
+                                "route": ""
+                            },
+                            {
+                                "label": "jumpers & cardigans",
+                                "route": ""
+                            },
+                            {
+                                "label": "dresses",
+                                "route": ""
+                            },
+                            {
+                                "label": "lingerie & Nightwear",
+                                "route": ""
+                            },
+                            {
+                                "label": "tracksuits & Joggers",
+                                "route": ""
+                            },
+                            {
+                                "label": "Tops",
+                                "route": ""
+                            },
+                            {
+                                "label": "blazers",
+                                "route": ""
+                            },
+                            {
+                                "label": "cargo trousers",
+                                "route": ""
+                            },
+                            {
+                                "label": "Co-ords",
+                                "route": ""
+                            },
+                            {
+                                "label": "Designer",
+                                "route": ""
+                            },
+                            {
+                                "label": "Exclusive at ASOS",
+                                "route": ""
+                            },
+                            {
+                                "label": "hoodies & sweatshirts",
+                                "route": ""
+                            },
+                            {
+                                "label": "jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "jumpsuits & Playsuits",
+                                "route": ""
+                            },
+                            {
+                                "label": "loungewear",
+                                "route": ""
+                            },
+                            {
+                                "label": "multipacks",
+                                "route": ""
+                            },
+                            {
+                                "label": "shirts & Blouses",
+                                "route": ""
+                            },
+                            {
+                                "label": "shorts",
+                                "route": ""
+                            },
+                            {
+                                "label": "skirts",
+                                "route": ""
+                            },
+                            {
+                                "label": "socks & Tights",
+                                "route": ""
+                            },
+                            {
+                                "label": "sportswear",
+                                "route": ""
+                            },
+                            {
+                                "label": "Suits & Tailoring",
+                                "route": ""
+                            },
+                            {
+                                "label": "swimwear & Beachwear",
+                                "route": ""
+                            },
+                            {
+                                "label": "trousers & leggings",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_Y",
+                    "title": "shop by body fit",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-clothing__plus-size.webp",
+                                "label": "plus size",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-clothing__tall.webp",
+                                "label": "tall",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-clothing__curve-and-plus-size.webp",
+                                "label": "curve & Plus Size",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-clothing__maternity.webp",
+                                "label": "maternity",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-clothing__petite.webp",
+                                "label": "petite",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-clothing__tall.webp",
+                                "label": "tall",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "shop by edit",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-clothing__holiday.webp",
+                                "label": "holiday",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-clothing__asos-basics.webp",
+                                "label": "ASOS Basics",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-clothing__festival.webp",
+                                "label": "festival",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-clothing__partywear.webp",
+                                "label": "partywear",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-clothing__linen-looks.webp",
+                                "label": "linen looks",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-clothing__ski-and-snowboard.webp",
+                                "label": "ski & Snowboard",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-clothing__wedding.webp",
+                                "label": "wedding",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-clothing__wedding.webp",
+                                "label": "wedding",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-clothing__holiday.webp",
+                                "label": "holiday",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-clothing__modest-fashion.webp",
+                                "label": "modest fashion",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-clothing__linen-looks.webp",
+                                "label": "linen looks",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-clothing__ski-and-snowboard.webp",
+                                "label": "ski & snowboard",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-clothing__students-edit.webp",
+                                "label": "students edit",
+                                "route": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "dresses",
+            "route": "dresses",
+            "nestedNav": [
+                {
+                    "listType": "TEXT_ONLY",
+                    "title": "shop by type",
+                    "routes": {
+                        "men": [],
+                        "women": [
+                            {
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "label": "evening dresses",
+                                "route": ""
+                            },
+                            {
+                                "label": "wedding guest dresses",
+                                "route": ""
+                            },
+                            {
+                                "label": "day dresses",
+                                "route": ""
+                            },
+                            {
+                                "label": "bridesmaid dresses",
+                                "route": ""
+                            },
+                            {
+                                "label": "party dresses",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "trending now",
+                    "routes": {
+                        "men": [],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-dresses__white-dresses.webp",
+                                "label": "white dresses",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__slip-dresses.webp",
+                                "label": "slip dresses",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__workwear-dresses.webp",
+                                "label": "workwear dresses",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__lbds.webp",
+                                "label": "LBDs",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__jumper-dresses.webp",
+                                "label": "jumper dresses",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_Y",
+                    "title": "shop by body fit",
+                    "routes": {
+                        "men": [],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-dresses__curve-and-plus-size.webp",
+                                "label": "curve & plus size",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__maternity.webp",
+                                "label": "maternity",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__petite.webp",
+                                "label": "petite",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__tall.webp",
+                                "label": "tall",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "FIG_ONLY",
+                    "title": "",
+                    "routes": {
+                        "men": [],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-dresses__asos-design.webp",
+                                "label": "asos design",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__topshop.webp",
+                                "label": "topshop",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-dresses__asos-luxe.webp",
+                                "label": "asos luxe",
+                                "route": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "shoes",
+            "route": "shoes",
+            "nestedNav": [
+                {
+                    "listType": "TEXT_ONLY",
+                    "title": "shop by product",
+                    "routes": {
+                        "men": [
+                            {
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "label": "trainers",
+                                "route": ""
+                            },
+                            {
+                                "label": "boots",
+                                "route": ""
+                            },
+                            {
+                                "label": "loafers",
+                                "route": ""
+                            },
+                            {
+                                "label": "sandals",
+                                "route": ""
+                            },
+                            {
+                                "label": "shoes",
+                                "route": ""
+                            },
+                            {
+                                "label": "sliders & Flip flops",
+                                "route": ""
+                            },
+                            {
+                                "label": "slippers",
+                                "route": ""
+                            },
+                            {
+                                "label": "smart shoes",
+                                "route": ""
+                            },
+                            {
+                                "label": "sports trainers",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "label": "trainers",
+                                "route": ""
+                            },
+                            {
+                                "label": "boots",
+                                "route": ""
+                            },
+                            {
+                                "label": "heels",
+                                "route": ""
+                            },
+                            {
+                                "label": "sandals",
+                                "route": ""
+                            },
+                            {
+                                "label": "flat shoes",
+                                "route": ""
+                            },
+                            {
+                                "label": "loafers",
+                                "route": ""
+                            },
+                            {
+                                "label": "running Trainers",
+                                "route": ""
+                            },
+                            {
+                                "label": "sliders & Flip flops",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "shop by brand",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-shoes__asos-design.webp",
+                                "label": "ASOS DESIGN",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-shoes__adidas.webp",
+                                "label": "adidas Originals",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-shoes__converse.webp",
+                                "label": "converse",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-shoes__new-balance.webp",
+                                "label": "New Balance",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-shoes__nike.webp",
+                                "label": "nike",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-shoes__puma.webp",
+                                "label": "puma",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-shoes__asos-design.webp",
+                                "label": "asos design",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-shoes__dr-martens.webp",
+                                "label": "Dr Martens",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-shoes__public-desire.webp",
+                                "label": "Public Desire",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-shoes__aldo.webp",
+                                "label": "Aldo",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-shoes__converse.webp",
+                                "label": "Converse",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-shoes__nike.webp",
+                                "label": "nike",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "TEXT_ONLY",
+                    "title": "shop by trainer style",
+                    "routes": {
+                        "men": [
+                            {
+                                "label": "adidas stan smith",
+                                "route": ""
+                            },
+                            {
+                                "label": "nike air  max",
+                                "route": ""
+                            },
+                            {
+                                "label": "new balance 574",
+                                "route": ""
+                            },
+                            {
+                                "label": "vans old skool",
+                                "route": ""
+                            },
+                            {
+                                "label": "converse all star",
+                                "route": ""
+                            },
+                            {
+                                "label": "nike air force 1",
+                                "route": ""
+                            },
+                            {
+                                "label": "new balance 530",
+                                "route": ""
+                            },
+                            {
+                                "label": "adidas gazelle",
+                                "route": ""
+                            },
+                            {
+                                "label": "reebok classic",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "label": "nike air max",
+                                "route": ""
+                            },
+                            {
+                                "label": "adidas stan smith",
+                                "route": ""
+                            },
+                            {
+                                "label": "new balance 530",
+                                "route": ""
+                            },
+                            {
+                                "label": "puma cali",
+                                "route": ""
+                            },
+                            {
+                                "label": "vans old skool",
+                                "route": ""
+                            },
+                            {
+                                "label": "converse all star",
+                                "route": ""
+                            },
+                            {
+                                "label": "adidas gazelle",
+                                "route": ""
+                            },
+                            {
+                                "label": "reebok classic",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "FIG_ONLY",
+                    "title": "",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-shoes__white-trainers.webp",
+                                "label": "white trainers",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-shoes__chunky-trainers.webp",
+                                "label": "chunky trainers",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-shoes__hi-tops.webp",
+                                "label": "HI-TOPS",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-shoes__white-trainers.webp",
+                                "label": "white trainers",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-shoes__chunky-trainers.webp",
+                                "label": "chunky trainers",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-shoes__hi-tops.webp",
+                                "label": "HI-TOPS",
+                                "route": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "sportswear",
+            "route": "sportswear",
+            "nestedNav": [
+                {
+                    "listType": "TEXT_ONLY",
+                    "title": "shop by product",
+                    "routes": {
+                        "men": [
+                            {
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "label": "trainers",
+                                "route": ""
+                            },
+                            {
+                                "label": "shorts",
+                                "route": ""
+                            },
+                            {
+                                "label": "tops",
+                                "route": ""
+                            },
+                            {
+                                "label": "accessories",
+                                "route": ""
+                            },
+                            {
+                                "label": "hoodies & sweatshirts",
+                                "route": ""
+                            },
+                            {
+                                "label": "jackets",
+                                "route": ""
+                            },
+                            {
+                                "label": "jaggers",
+                                "route": ""
+                            },
+                            {
+                                "label": "trousers & tights",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "label": "trainers",
+                                "route": ""
+                            },
+                            {
+                                "label": "leggings",
+                                "route": ""
+                            },
+                            {
+                                "label": "tops",
+                                "route": ""
+                            },
+                            {
+                                "label": "hoodies & sweatshirts",
+                                "route": ""
+                            },
+                            {
+                                "label": "jackets",
+                                "route": ""
+                            },
+                            {
+                                "label": "shorts",
+                                "route": ""
+                            },
+                            {
+                                "label": "sports bras",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "shop by activity",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__ski-and-snowboard.webp",
+                                "label": "ski & snowboard",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__gym-and-training.webp",
+                                "label": "gym & training",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__football.webp",
+                                "label": "football",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__lifestyle.webp",
+                                "label": "lifestyle",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__outdoors.webp",
+                                "label": "outdoors",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__running.webp",
+                                "label": "running",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__ski-and-snowboard.webp",
+                                "label": "ski & snowboard",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__gym-and-training.webp",
+                                "label": "gym & training",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__lifestyle.webp",
+                                "label": "lifestyle",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__outdoors.webp",
+                                "label": "outdoors",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__running.webp",
+                                "label": "running",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__yoga-and-studio.webp",
+                                "label": "yoga & studio",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "shop by brand",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__adidas.webp",
+                                "label": "adidas",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__asos-4505.webp",
+                                "label": "ASOS 4505",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__converse.webp",
+                                "label": "converse",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__new-balance.webp",
+                                "label": "new balance",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__nike.webp",
+                                "label": "nike",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__the-north-face.webp",
+                                "label": "the north face",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__adidas.webp",
+                                "label": "adidas",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__asos-4505.webp",
+                                "label": "ASOS 4505",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__converse.webp",
+                                "label": "converse",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__new-balance-2.webp",
+                                "label": "new balance",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__nike.webp",
+                                "label": "nike",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__the-north-face.webp",
+                                "label": "the north face",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "FIG_ONLY",
+                    "title": "",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__running-fig-only.webp",
+                                "label": "running",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__new-balance-fig-only.webp",
+                                "label": "new balance",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-sportswear__outdoors-fig-only.webp",
+                                "label": "outdoors",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__bestselling-trainers.webp",
+                                "label": "bestselling trainers",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__outdoors-2.webp",
+                                "label": "outdoors",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-sportswear__new-balance.webp",
+                                "label": "new balance",
+                                "route": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "jeans",
+            "route": "jeans",
+            "nestedNav": [
+                {
+                    "listType": "TEXT_ONLY",
+                    "title": "shop by style",
+                    "routes": {
+                        "men": [
+                            {
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "label": "straight jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "wide jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "skinny jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "tapered jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "ripped jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "slim jeans",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "label": "mom jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "straight Leg Jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "Wide Leg Jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "Skinny Jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "Ripped Jeans",
+                                "route": ""
+                            },
+                            {
+                                "label": "Slim Jeans",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_Y",
+                    "title": "shop by body fit",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-jeans__tall.webp",
+                                "label": "tall",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__plus.webp",
+                                "label": "plus",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-jeans__curve-and-plus-size.webp",
+                                "label": "curve & Plus Size",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__petite.webp",
+                                "label": "petite",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__maternity.webp",
+                                "label": "maternity",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__tall.webp",
+                                "label": "tall",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "shop by colour",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-jeans__black-jeans.webp",
+                                "label": "black jeans",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__blue-jeans.webp",
+                                "label": "blue jeans",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__grey-jeans.webp",
+                                "label": "grey jeans",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__white-jeans.webp",
+                                "label": "white jeans",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-jeans__black-jeans.webp",
+                                "label": "black jeans",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__blue-jeans.webp",
+                                "label": "blue jeans",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__grey-jeans.webp",
+                                "label": "grey jeans",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__white-jeans.webp",
+                                "label": "white jeans",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "shop by brand",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-jeans__asos-design.webp",
+                                "label": "ASOS DESIGN",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__topman.webp",
+                                "label": "topman",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__pull-and-bear.webp",
+                                "label": "Pull&Bear",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__levis.webp",
+                                "label": "Levis's",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__jack-and-jones.webp",
+                                "label": "Jack & Jones",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-jeans__only-and-sons.webp",
+                                "label": "Only & Sons",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-jeans__asos-design.webp",
+                                "label": "asos design",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__topshop.webp",
+                                "label": "topshop",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__stradivarius.webp",
+                                "label": "stradivarius",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__levis.webp",
+                                "label": "Levis's",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-jeans__river-island.webp",
+                                "label": "river island",
+                                "route": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "brands",
+            "route": "brands",
+            "nestedNav": [
+                {
+                    "listType": "TEXT_ONLY",
+                    "title": "top brands",
+                    "routes": {
+                        "men": [
+                            {
+                                "label": "adidas",
+                                "route": ""
+                            },
+                            {
+                                "label": "bershka",
+                                "route": ""
+                            },
+                            {
+                                "label": "new balance",
+                                "route": ""
+                            },
+                            {
+                                "label": "new look",
+                                "route": ""
+                            },
+                            {
+                                "label": "nike",
+                                "route": ""
+                            },
+                            {
+                                "label": "Pull&Bear",
+                                "route": ""
+                            },
+                            {
+                                "label": "puma",
+                                "route": ""
+                            },
+                            {
+                                "label": "river island",
+                                "route": ""
+                            },
+                            {
+                                "label": "the north face",
+                                "route": ""
+                            },
+                            {
+                                "label": "tommy hilfiger",
+                                "route": ""
+                            },
+                            {
+                                "label": "Jack & Jones",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "label": "adidas",
+                                "route": ""
+                            },
+                            {
+                                "label": "bershka",
+                                "route": ""
+                            },
+                            {
+                                "label": "new balance",
+                                "route": ""
+                            },
+                            {
+                                "label": "new look",
+                                "route": ""
+                            },
+                            {
+                                "label": "nike",
+                                "route": ""
+                            },
+                            {
+                                "label": "& other stories",
+                                "route": ""
+                            },
+                            {
+                                "label": "puma",
+                                "route": ""
+                            },
+                            {
+                                "label": "river island",
+                                "route": ""
+                            },
+                            {
+                                "label": "the north face",
+                                "route": ""
+                            },
+                            {
+                                "label": "tommy hilfiger",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "asos brands",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-brands__view-all.webp",
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__asos-design.webp",
+                                "label": "ASOS DESIGN",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__asos-4505.webp",
+                                "label": "ASOS 4505",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__topman.webp",
+                                "label": "topman",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__collusion.webp",
+                                "label": "COLLUSION",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__reclaimed-vintage.webp",
+                                "label": "ReclaimedVintage",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-brands__view-all.webp",
+                                "label": "view all",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__asos-design.webp",
+                                "label": "asos design",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__topshop.webp",
+                                "label": "topshop",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__collusion.webp",
+                                "label": "COLLUSION",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__miss-selfridge.webp",
+                                "label": "miss selfridge",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__asos-4505.webp",
+                                "label": "ASOS 4505",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "ROUNDED_FIG_X",
+                    "title": "discover brands",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-brands__new-in-2.webp",
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__outdoors.webp",
+                                "label": "outdoors",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__streetwear.webp",
+                                "label": "streetwear",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__trainers.webp",
+                                "label": "trainers",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__emerging-brands.webp",
+                                "label": "emerging brands",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-brands__new-in.webp",
+                                "label": "new in",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__outdoor.webp",
+                                "label": "outdoor",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__streetwear.webp",
+                                "label": "streetwear",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__trainers.webp",
+                                "label": "trainers",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__emerging-brands.webp",
+                                "label": "emerging brands",
+                                "route": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "listType": "FIG_ONLY",
+                    "title": "discover",
+                    "routes": {
+                        "men": [
+                            {
+                                "fig": "./assets/nav/men/men-brands__plus-size-brands.webp",
+                                "label": "plus size brands",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/men/men-brands__asos-brands.webp",
+                                "label": "ASOS BRANDS",
+                                "route": ""
+                            }
+                        ],
+                        "women": [
+                            {
+                                "fig": "./assets/nav/women/women-brands__curve-and-plus-size.webp",
+                                "label": "curve & plus size",
+                                "route": ""
+                            },
+                            {
+                                "fig": "./assets/nav/women/women-brands__asos-brands.webp",
+                                "label": "ASOS BRANDS",
+                                "route": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
