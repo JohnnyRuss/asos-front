@@ -22,8 +22,11 @@ const CatalogSpecial: React.FC<CatalogSpecialType> = (props) => {
       <div className="flex justify-center gap-10 my-10">
         {listToRender
           .filter((block) => block.chapter === randomNumber)
-          .map((block) => (
-            <div key={block._id} className="w-1/3 flex flex-col items-center">
+          .map((block, i) => (
+            <div
+              key={`${block._id}--${i}`}
+              className="w-1/3 flex flex-col items-center"
+            >
               <figure className="w-full h-[520px] overflow-hidden">
                 <img
                   src={block.fig}

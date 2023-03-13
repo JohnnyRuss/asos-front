@@ -1,0 +1,26 @@
+.spinner__box {
+  position: relative;
+  z-index: 99;
+}
+
+.spinner__box:after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 4px solid black;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  animation: rotateSpinner 1s ease infinite;
+}
+
+@keyframes rotateSpinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}

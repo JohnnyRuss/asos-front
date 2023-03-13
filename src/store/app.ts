@@ -9,8 +9,25 @@ import footerData from "../lib/footer.json";
 import landingData from "../lib/landing.json";
 
 import { AppT } from "../interface/app.types";
+import { error } from "console";
 interface StateT extends AppT {
-  getProducts: () => void;
+  productsLoadingStatus: {
+    loading: boolean;
+    error: boolean;
+    message: string;
+  };
+
+  productLoadingStatus: {
+    loading: boolean;
+    error: boolean;
+    message: string;
+  };
+
+  getProducts: (params: {
+    search_for: string;
+    search_in: string;
+    search: string;
+  }) => void;
   getProduct: (productId: string) => void;
 }
 
@@ -29,16 +46,72 @@ const useAppStore = create<StateT>()(
       products: [],
       product: null,
 
-      getProducts: async () => {
-        const { data } = await axios.get("http://localhost:4013/api/v1/app");
-        set({ products: data });
+      productsLoadingStatus: {
+        loading: false,
+        error: false,
+        message: "",
+      },
+
+      productLoadingStatus: {
+        loading: false,
+        error: false,
+        message: "",
+      },
+
+      getProducts: async ({ search_for, search_in, search }) => {
+        try {
+          set({
+            productsLoadingStatus: {
+              loading: true,
+              error: false,
+              message: "",
+            },
+          });
+
+          const { data } = await axios.get(
+            `http://localhost:4013/api/v1/products?search_for=${search_for}&search_in=${search_in}&search=${search}`
+          );
+
+          set({ products: data });
+        } catch (error) {
+          console.log(error);
+        } finally {
+          set({
+            productsLoadingStatus: {
+              loading: false,
+              error: true,
+              message: "",
+            },
+          });
+        }
       },
 
       getProduct: async (productId) => {
-        const { data } = await axios.get(
-          `http://localhost:4013/api/v1/app/${productId}`
-        );
-        set({ product: data });
+        try {
+          set({
+            productLoadingStatus: {
+              loading: true,
+              error: false,
+              message: "",
+            },
+          });
+
+          const { data } = await axios.get(
+            `http://localhost:4013/api/v1/app/${productId}`
+          );
+
+          set({ product: data });
+        } catch (error) {
+          console.log(error);
+        } finally {
+          set({
+            productLoadingStatus: {
+              loading: false,
+              error: true,
+              message: "",
+            },
+          });
+        }
       },
     }))
   )

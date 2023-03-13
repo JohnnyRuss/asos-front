@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import useAppStore from "../../../store/app";
 
@@ -8,12 +9,17 @@ import { NestedNavRouteT } from "../../../interface/app.types";
 
 interface SubNavPopUpType {
   listOf: "men" | "women";
-  listLabel: string;
+  listRoute: string;
+  rootRoute: string;
 }
 
-const SubNavPopUp: React.FC<SubNavPopUpType> = ({ listOf, listLabel }) => {
+const SubNavPopUp: React.FC<SubNavPopUpType> = ({
+  listOf,
+  listRoute,
+  rootRoute,
+}) => {
   const nav = useAppStore().navigation.sub.find(
-    (block) => block.label === listLabel
+    (block) => block.route === listRoute
   )?.nestedNav;
 
   return (
@@ -33,6 +39,10 @@ const SubNavPopUp: React.FC<SubNavPopUpType> = ({ listOf, listLabel }) => {
                   <TextOnlyList
                     routes={routes}
                     title={title || ""}
+                    query={{
+                      search_for: rootRoute,
+                      search_in: listRoute,
+                    }}
                     key={`sub-nav--list__${block.listType}-${i}`}
                   />
                 );
@@ -41,6 +51,10 @@ const SubNavPopUp: React.FC<SubNavPopUpType> = ({ listOf, listLabel }) => {
                   <FigXList
                     routes={routes}
                     title={title || ""}
+                    query={{
+                      search_for: rootRoute,
+                      search_in: listRoute,
+                    }}
                     key={`sub-nav--list__${block.listType}-${i}`}
                   />
                 );
@@ -49,6 +63,10 @@ const SubNavPopUp: React.FC<SubNavPopUpType> = ({ listOf, listLabel }) => {
                   <FigYList
                     routes={routes}
                     title={title || ""}
+                    query={{
+                      search_for: rootRoute,
+                      search_in: listRoute,
+                    }}
                     key={`sub-nav--list__${block.listType}-${i}`}
                   />
                 );
@@ -57,6 +75,10 @@ const SubNavPopUp: React.FC<SubNavPopUpType> = ({ listOf, listLabel }) => {
                   <FigOnlyList
                     routes={routes}
                     title={title || ""}
+                    query={{
+                      search_for: rootRoute,
+                      search_in: listRoute,
+                    }}
                     key={`sub-nav--list__${block.listType}-${i}`}
                   />
                 );
@@ -78,35 +100,63 @@ function ListTitle({ title }: { title: string }) {
   );
 }
 
+interface NestedListQueryT {
+  search_for: string;
+  search_in: string;
+}
+
 interface NestedListT {
   routes: NestedNavRouteT[];
   title: string;
+  query: NestedListQueryT;
 }
 
-function TextOnlyList({ routes, title }: NestedListT) {
+function TextOnlyList({ routes, title, query }: NestedListT) {
   return (
     <div className="flex-1 flex flex-col items-start gap-4 border-x border-x-app-gray-shade px-5">
       <ListTitle title={title} />
       {routes.length > 15 ? (
         <div className="flex gap-16">
-          <TextOnlyListEl routes={routes.slice(0, routes.length / 2)} />
-          <TextOnlyListEl routes={routes.slice(routes.length / 2)} />
+          <TextOnlyListEl
+            query={query}
+            routes={routes.slice(0, routes.length / 2)}
+          />
+          <TextOnlyListEl
+            query={query}
+            routes={routes.slice(routes.length / 2)}
+          />
         </div>
       ) : (
-        <TextOnlyListEl routes={routes} />
+        <TextOnlyListEl query={query} routes={routes} />
       )}
     </div>
   );
 }
 
-function TextOnlyListEl({ routes }: { routes: NestedNavRouteT[] }) {
+function TextOnlyListEl({
+  routes,
+  query,
+}: {
+  routes: NestedNavRouteT[];
+  query: NestedListQueryT;
+}) {
   return (
-    <ul className="text-app-sm capitalize flex flex-col gap-3">
+    <ul className="text-app-sm capitalize flex flex-col gap-3 w-full">
       {routes.map((route, i) => (
         <li
           key={`nested-nav--route__text-only__${i}-${route.route}--${route.label}`}
         >
-          {route.label}
+          <Link
+            className="inline-block w-full"
+            to={`/${query.search_for}/products`}
+            state={{
+              search_for: query.search_for,
+              search_in: query.search_in,
+              search: route.route,
+            }}
+          >
+            {route.label}
+          </Link>
         </li>
       ))}
     </ul>

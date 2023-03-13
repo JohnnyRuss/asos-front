@@ -21,7 +21,7 @@ const Brands: React.FC = () => {
           </h4>
           <ul className="flex items-center gap-4 flex-wrap justify-center">
             {brandsToRender.map((brand) => (
-              <li className="max-w-[15%]">
+              <li className="max-w-[15%]" key={brand._id}>
                 <Link to="products" state={{ brand: brand.name }}>
                   <figure className="w-full overflow-hidden">
                     <img

@@ -12,8 +12,8 @@
     "subNavs": {
         "men": [
             {
-                "label": "new in",
-                "route": "new-in"
+                "label": "New In",
+                "route": "new in"
             },
             {
                 "label": "clothing",
@@ -38,8 +38,8 @@
         ],
         "women": [
             {
-                "label": "new in",
-                "route": "new-in"
+                "label": "New In",
+                "route": "new in"
             },
             {
                 "label": "clothing",
@@ -69,8 +69,8 @@
     },
     "sub": [
         {
-            "label": "new in",
-            "route": "new-in",
+            "label": "New In",
+            "route": "new in",
             "nestedNav": [
                 {
                     "listType": "TEXT_ONLY",
@@ -78,61 +78,61 @@
                     "routes": {
                         "men": [
                             {
-                                "label": "view all",
-                                "route": "view all"
+                                "label": "View All",
+                                "route": ""
                             },
                             {
-                                "label": "clothing",
+                                "label": "Clothing",
                                 "route": "clothing"
                             },
                             {
-                                "label": "shoes",
+                                "label": "Shoes",
                                 "route": "shoes"
                             },
                             {
-                                "label": "coats & Jackets",
-                                "route": "coats & Jackets"
+                                "label": "Coats & Jackets",
+                                "route": "coats & jackets"
                             },
                             {
-                                "label": "hoodies",
+                                "label": "Hoodies",
                                 "route": "hoodies"
                             },
                             {
                                 "label": "T-Shirt & Vests",
-                                "route": "T-Shirt & Vests"
+                                "route": "t-shirt & vests"
                             },
                             {
-                                "label": "sportswear",
+                                "label": "Sportswear",
                                 "route": "sportswear"
                             }
                         ],
                         "women": [
                             {
-                                "label": "view all",
-                                "route": "view all"
+                                "label": "View All",
+                                "route": ""
                             },
                             {
-                                "label": "clothing",
+                                "label": "Clothing",
                                 "route": "clothing"
                             },
                             {
-                                "label": "shoes",
+                                "label": "Shoes",
                                 "route": "shoes"
                             },
                             {
-                                "label": "dresses",
+                                "label": "Dresses",
                                 "route": "dresses"
                             },
                             {
-                                "label": "coats & Jackets",
-                                "route": "coats & Jackets"
+                                "label": "Coats & Jackets",
+                                "route": "coats & jackets"
                             },
                             {
-                                "label": "tops",
+                                "label": "Tops",
                                 "route": "tops"
                             },
                             {
-                                "label": "sportswear",
+                                "label": "Sportswear",
                                 "route": "sportswear"
                             }
                         ]
@@ -150,60 +150,60 @@
                             },
                             {
                                 "fig": "/assets/nav/men/men-adidas__new-in.webp",
-                                "label": "adidas",
-                                "route": ""
+                                "label": "Adidas",
+                                "route": "adidas"
                             },
                             {
                                 "fig": "/assets/nav/men/men-new-balance__new-in.webp",
                                 "label": "New Balance",
-                                "route": ""
+                                "route": "new balance"
                             },
                             {
                                 "fig": "/assets/nav/men/men-nike__new-in.webp",
                                 "label": "Nike",
-                                "route": ""
+                                "route": "nike"
                             },
                             {
                                 "fig": "/assets/nav/men/men-jack-and-jones__new-in.webp",
                                 "label": "Jack & Jones",
-                                "route": ""
+                                "route": "jack & jones"
                             },
                             {
                                 "fig": "/assets/nav/men/men-the-north-face__new-in.webp",
                                 "label": "The North Face",
-                                "route": ""
+                                "route": "the north face"
                             }
                         ],
                         "women": [
                             {
                                 "fig": "/assets/nav/women/women-new-in__holiday.webp",
-                                "label": "holiday",
-                                "route": ""
+                                "label": "Holiday",
+                                "route": "holiday"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__the-essentials.webp",
-                                "label": "the essentials",
-                                "route": ""
+                                "label": "The Essentials",
+                                "route": "the essentials"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__wedding-guest.webp",
-                                "label": "wedding guest",
-                                "route": ""
+                                "label": "Wedding Guest",
+                                "route": "wedding guest"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__adidas.webp",
-                                "label": "adidas",
-                                "route": ""
+                                "label": "Adidas",
+                                "route": "adidas"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__nike.webp",
-                                "label": "nike",
-                                "route": ""
+                                "label": "Nike",
+                                "route": "nike"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__stradovarius.webp",
-                                "label": "stratovarius",
-                                "route": ""
+                                "label": "Stradivarius",
+                                "route": "stradivarius"
                             }
                         ]
                     }
@@ -215,40 +215,40 @@
                         "men": [
                             {
                                 "fig": "/assets/nav/men/men-clothing__new-in.webp",
-                                "label": "clothing",
-                                "route": ""
+                                "label": "Clothing",
+                                "route": "clothing"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__new-in.webp",
-                                "label": "brands",
-                                "route": ""
+                                "label": "Brands",
+                                "route": "brands"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportwear__new-in.webp",
-                                "label": "sportswear",
-                                "route": ""
+                                "label": "Sportswear",
+                                "route": "sportswear"
                             },
                             {
                                 "fig": "/assets/nav/men/men-trainers__new-in.webp",
-                                "label": "trainers",
-                                "route": ""
+                                "label": "Trainers",
+                                "route": "trainers"
                             }
                         ],
                         "women": [
                             {
                                 "fig": "/assets/nav/women/women-new-in__clothing.webp",
-                                "label": "clothing",
-                                "route": ""
+                                "label": "Clothing",
+                                "route": "clothing"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__brands.webp",
-                                "label": "brands",
-                                "route": ""
+                                "label": "Brands",
+                                "route": "brands"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__trainers.webp",
-                                "label": "trainers",
-                                "route": ""
+                                "label": "Trainers",
+                                "route": "trainers"
                             }
                         ]
                     }
@@ -260,25 +260,25 @@
                         "men": [
                             {
                                 "fig": "/assets/nav/men/men-going-grunge__new-in.webp",
-                                "label": "going grunge",
-                                "route": ""
+                                "label": "Going Grunge",
+                                "route": "grunge"
                             },
                             {
                                 "fig": "/assets/nav/men/men-wedding-attire__new-in.webp",
-                                "label": "wedding attire",
-                                "route": ""
+                                "label": "Wedding Attire",
+                                "route": "wedding"
                             }
                         ],
                         "women": [
                             {
                                 "fig": "/assets/nav/women/women-new-in__top-shop-denim.webp",
-                                "label": "topshop denim",
-                                "route": ""
+                                "label": "Topshop Denim",
+                                "route": "topshop"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__denim-weekend-collective.webp",
-                                "label": "denim weekend collective",
-                                "route": ""
+                                "label": "Denim Weekend Collective",
+                                "route": "denim"
                             }
                         ]
                     }
@@ -286,7 +286,7 @@
             ]
         },
         {
-            "label": "clothing",
+            "label": "Clothing",
             "route": "clothing",
             "nestedNav": [
                 {
@@ -295,60 +295,60 @@
                     "routes": {
                         "men": [
                             {
-                                "label": "new in",
-                                "route": ""
+                                "label": "New In",
+                                "route": "new in"
                             },
                             {
-                                "label": "jackets & coats",
-                                "route": ""
+                                "label": "Jackets & Coats",
+                                "route": "coats & jackets"
                             },
                             {
-                                "label": "jumpers & cardigans",
-                                "route": ""
+                                "label": "Jumpers & Cardigans",
+                                "route": "jumpers & cardigans"
                             },
                             {
-                                "label": "shirts",
-                                "route": ""
+                                "label": "Shirts",
+                                "route": "shirts"
                             },
                             {
-                                "label": "jeans",
-                                "route": ""
+                                "label": "Jeans",
+                                "route": "jeans"
                             },
                             {
                                 "label": "T-Shirts & Vests",
-                                "route": ""
+                                "route": "t-shirts & vests"
                             },
                             {
                                 "label": "Hoodies & Sweatshirts",
-                                "route": ""
+                                "route": "hoodies & vests"
                             },
                             {
-                                "label": "Co-ords",
-                                "route": ""
+                                "label": "Co-Ords",
+                                "route": "co-ords"
                             },
                             {
                                 "label": "designer",
-                                "route": ""
+                                "route": "designer"
                             },
                             {
-                                "label": "joggers",
-                                "route": ""
+                                "label": "Joggers",
+                                "route": "joggers"
                             },
                             {
-                                "label": "loungewear",
-                                "route": ""
+                                "label": "Loungewear",
+                                "route": "loungewear"
                             },
                             {
-                                "label": "multipacks",
-                                "route": ""
+                                "label": "Multipacks",
+                                "route": "multipacks"
                             },
                             {
-                                "label": "polo shirts",
-                                "route": ""
+                                "label": "Polo Shirts",
+                                "route": "polo shirts"
                             },
                             {
-                                "label": "shorts",
-                                "route": ""
+                                "label": "Shorts",
+                                "route": "shorts"
                             },
                             {
                                 "label": "socks",
@@ -381,104 +381,104 @@
                         ],
                         "women": [
                             {
-                                "label": "new in",
-                                "route": ""
+                                "label": "New In",
+                                "route": "new in"
                             },
                             {
-                                "label": "coats & jackets",
-                                "route": ""
+                                "label": "Coats & Jackets",
+                                "route": "coats & jackets"
                             },
                             {
-                                "label": "jumpers & cardigans",
-                                "route": ""
+                                "label": "Jumpers & Cardigans",
+                                "route": "jumpers & cardigans"
                             },
                             {
-                                "label": "dresses",
-                                "route": ""
+                                "label": "Dresses",
+                                "route": "dresses"
                             },
                             {
-                                "label": "lingerie & Nightwear",
-                                "route": ""
+                                "label": "Lingerie & Nightwear",
+                                "route": "lingerie & nightwear"
                             },
                             {
-                                "label": "tracksuits & Joggers",
-                                "route": ""
+                                "label": "Tracksuits & Joggers",
+                                "route": "tracksuits & joggers"
                             },
                             {
                                 "label": "Tops",
-                                "route": ""
+                                "route": "tops"
                             },
                             {
-                                "label": "blazers",
-                                "route": ""
+                                "label": "Blazers",
+                                "route": "blazers"
                             },
                             {
-                                "label": "cargo trousers",
-                                "route": ""
+                                "label": "Cargo Trousers",
+                                "route": "cargo trousers"
                             },
                             {
-                                "label": "Co-ords",
-                                "route": ""
+                                "label": "Co-Ords",
+                                "route": "co-ords"
                             },
                             {
                                 "label": "Designer",
-                                "route": ""
+                                "route": "designer"
                             },
                             {
                                 "label": "Exclusive at ASOS",
-                                "route": ""
+                                "route": "asos"
                             },
                             {
-                                "label": "hoodies & sweatshirts",
-                                "route": ""
+                                "label": "Hoodies & Sweatshirts",
+                                "route": "hoodies & sweatshirts"
                             },
                             {
-                                "label": "jeans",
-                                "route": ""
+                                "label": "Jeans",
+                                "route": "jeans"
                             },
                             {
-                                "label": "jumpsuits & Playsuits",
-                                "route": ""
+                                "label": "Jumpsuits & Playsuits",
+                                "route": "jumpsuits & playsuits"
                             },
                             {
-                                "label": "loungewear",
-                                "route": ""
+                                "label": "Loungewear",
+                                "route": "loungewear"
                             },
                             {
-                                "label": "multipacks",
-                                "route": ""
+                                "label": "Multipacks",
+                                "route": "multipacks"
                             },
                             {
-                                "label": "shirts & Blouses",
-                                "route": ""
+                                "label": "Shirts & Blouses",
+                                "route": "shirts & blouses"
                             },
                             {
-                                "label": "shorts",
-                                "route": ""
+                                "label": "Shorts",
+                                "route": "shorts"
                             },
                             {
-                                "label": "skirts",
-                                "route": ""
+                                "label": "Skirts",
+                                "route": "skirts"
                             },
                             {
-                                "label": "socks & Tights",
-                                "route": ""
+                                "label": "Socks & Tights",
+                                "route": "socks & tights"
                             },
                             {
-                                "label": "sportswear",
-                                "route": ""
+                                "label": "Sportswear",
+                                "route": "sportswear"
                             },
                             {
                                 "label": "Suits & Tailoring",
-                                "route": ""
+                                "route": "suits * tailoring"
                             },
                             {
-                                "label": "swimwear & Beachwear",
-                                "route": ""
+                                "label": "Swimwear & Beachwear",
+                                "route": "swimwear & Beachwear"
                             },
                             {
-                                "label": "trousers & leggings",
-                                "route": ""
+                                "label": "Trousers & Leggings",
+                                "route": "trousers & leggings"
                             }
                         ]
                     }
@@ -566,11 +566,6 @@
                         ],
                         "women": [
                             {
-                                "fig": "/assets/nav/women/women-clothing__wedding.webp",
-                                "label": "wedding",
-                                "route": ""
-                            },
-                            {
                                 "fig": "/assets/nav/women/women-clothing__holiday.webp",
                                 "label": "holiday",
                                 "route": ""
@@ -588,11 +583,6 @@
                             {
                                 "fig": "/assets/nav/women/women-clothing__ski-and-snowboard.webp",
                                 "label": "ski & snowboard",
-                                "route": ""
-                            },
-                            {
-                                "fig": "/assets/nav/women/women-clothing__students-edit.webp",
-                                "label": "students edit",
                                 "route": ""
                             }
                         ]

@@ -11,7 +11,7 @@ const GenerateParagraphs: React.FC<GenerateParagraphsType> = ({ text, id }) => {
     <>
       {createFragmentsForMarkUp(text).map((separation, i) => {
         const reg = /<b>(.*?)<b>/gim;
-        const regBetweenMatch = /(?<=<b>)([\w\s&]+)(?=<b>)/gi;
+        const regBetweenMatch = /(?<=<b>)([\w\s&.]+)(?=<b>)/gi;
 
         const query = separation?.match(regBetweenMatch)?.[0];
 

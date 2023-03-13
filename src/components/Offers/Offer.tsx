@@ -14,7 +14,15 @@ const Offer: React.FC = (props) => {
 
   return (
     <React.Fragment key={`random--offer---${randomNumber}`}>
-      {offers.map((el) => (el.id === randomNumber ? el.element : <></>))}
+      {offers.map((el, i) =>
+        el.id === randomNumber ? (
+          <React.Fragment key={`offer--${i}--${randomNumber}`}>
+            {el.element}
+          </React.Fragment>
+        ) : (
+          <React.Fragment key={`offer--${i}--${randomNumber}`}></React.Fragment>
+        )
+      )}
     </React.Fragment>
   );
 };

@@ -1,18 +1,22 @@
 import React from "react";
 import useAppStore from "../../store/app";
 
-import { Container } from "../Layouts";
+import { Container, Spinner } from "../Layouts";
 import ProductCard from "../Layouts/ProductCard/ProductCard";
 
 const Products: React.FC = () => {
-  const products = useAppStore((state) => state.products);
+  const { products, loadingStatus } = useAppStore((state) => ({
+    products: state.products,
+    loadingStatus: state.productsLoadingStatus,
+  }));
 
   return (
-    <div>
+    <div className="relative">
+      {loadingStatus.loading && <Spinner />}
       <Container>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,_300px))] justify-center gap-x-6 gap-y-8 py-5 min-h-screen">
-          {/* <div className="flex gap-4"> */}
-          {products[0] &&
+          {!loadingStatus.loading &&
+            products[0] &&
             products.map((product) => (
               <ProductCard
                 product={{
@@ -22,6 +26,7 @@ const Products: React.FC = () => {
                   price: product.price,
                   sale: product.sale,
                   colour: product.colour,
+                  productType: product.productType,
                 }}
                 key={product._id}
               />

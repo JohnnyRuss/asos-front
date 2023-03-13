@@ -37,8 +37,20 @@ const ProductCard: React.FC<ProductCardType> = ({ product }) => {
           </svg>
         </button>
       </figure>
-      <div className="flex flex-col h-1/5">
-        <span className="text-app-sm">{product.title}</span>
+      <div className="flex flex-col h-1/5 relative group/title">
+        <span>{product._id}</span>
+
+        <span className="text-app-sm ">{product.title}</span>
+        <div className="hidden group-hover/title:block absolute top-[25px] border border-app-gray p-2 shadow-2xl z-10 bg-app-white rounded-md">
+          <div>
+            <span className="font-bold">categories:</span>
+            <ul className="list-disc pl-5">
+              {product.productType.map((type, i) => (
+                <li key={`${product._id}--${type}__${i}`}>{type}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <span className="text-app-xsm mt-auto pt-1`">{product.colour}</span>
         <div className="flex items-center justify-between font-bold mt-1">
           <span>£{product.price}</span>

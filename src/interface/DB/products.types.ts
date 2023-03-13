@@ -27,6 +27,7 @@ export interface ProductLabelT {
   price: number;
   sale?: number;
   colour: string;
+  productType: string[];
 }
 
 interface ProductSizeT {
