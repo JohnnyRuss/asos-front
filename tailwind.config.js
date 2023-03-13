@@ -14,8 +14,10 @@ module.exports = {
         "app-gray-tint": "#eeeeee",
         "app-gray-shade": "#dddddd",
         "app-green": "#26E066",
+        "app-green-shade": "#018849",
         "app-red": "#d01345",
         "app-cyan": "#9CF0E0",
+        "app-blue-tint": "#cde2f5",
       },
       fontSize: {
         "app-2xl": "32px",

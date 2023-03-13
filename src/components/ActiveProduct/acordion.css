@@ -1,0 +1,59 @@
+.acordion-btn__animated-icon {
+  position: relative;
+}
+
+.acordion-btn__animated-icon:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 10px;
+  width: 16px;
+  height: 2px;
+  background: #000000;
+}
+
+.acordion-btn__animated-icon::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 10px;
+  width: 16px;
+  height: 2px;
+  background: #000000;
+}
+
+.active.acordion-btn__animated-icon::before {
+  animation: rotateIconOnOpen 0.2s ease-in forwards;
+}
+
+.inactive.acordion-btn__animated-icon::before {
+  animation: rotateIconOnClose 0.2s ease-in forwards;
+}
+
+@keyframes rotateIconOnOpen {
+  0% {
+    transform: rotate(90deg);
+  }
+  1000% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateIconOnClose {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.tab {
+  animation: tabPopUp 0.2s ease forwards;
+}
+
+@keyframes tabPopUp {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

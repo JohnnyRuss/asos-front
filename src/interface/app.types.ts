@@ -1,7 +1,11 @@
+import { ProductT } from "./DB/products.types";
+
 export interface AppT {
   navigation: NavigationT;
   footer: FooterT;
   landing: LandingT;
+  products: ProductT[];
+  product: ProductT | null;
 }
 
 ///////////////////////////////////////////////////////
@@ -115,4 +119,5 @@ interface TrendingBrandsT {
 interface TrendingBrandT {
   _id: string;
   fig: string;
+  name: string;
 }

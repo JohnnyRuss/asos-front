@@ -2,21 +2,21 @@
     "hero": {
         "men": [
             {
-                "fig": "./assets/hero/men/hero-men.webp",
+                "fig": "/assets/hero/men/hero-men.webp",
                 "label": ""
             },
             {
-                "fig": "./assets/hero/men/hero-men-2.webp",
+                "fig": "/assets/hero/men/hero-men-2.webp",
                 "label": "new season"
             }
         ],
         "women": [
             {
-                "fig": "./assets/hero/women/hero-women.webp",
+                "fig": "/assets/hero/women/hero-women.webp",
                 "label": ""
             },
             {
-                "fig": "./assets/hero/women/hero-women-2.webp",
+                "fig": "/assets/hero/women/hero-women-2.webp",
                 "label": ""
             }
         ]
@@ -28,25 +28,25 @@
                     "_id": "landing-catalog__1",
                     "title": "summer starterpak",
                     "label": "Never too early",
-                    "fig": "./assets/catalog/men/catalog-men-1.webp"
+                    "fig": "/assets/catalog/men/catalog-men-1.webp"
                 },
                 {
                     "_id": "landing-catalog__2",
                     "title": "new balance",
                     "label": "Can't beat  a classic",
-                    "fig": "./assets/catalog/men/catalog-men-2.webp"
+                    "fig": "/assets/catalog/men/catalog-men-2.webp"
                 },
                 {
                     "_id": "landing-catalog__3",
                     "title": "sunnies",
                     "label": "The shade of it all",
-                    "fig": "./assets/catalog/men/catalog-men-3.webp"
+                    "fig": "/assets/catalog/men/catalog-men-3.webp"
                 },
                 {
                     "_id": "landing-catalog__4",
                     "title": "asos design denim",
                     "label": "The jean scene",
-                    "fig": "./assets/catalog/men/catalog-men-4.webp"
+                    "fig": "/assets/catalog/men/catalog-men-4.webp"
                 }
             ],
             "sub": [
@@ -55,7 +55,7 @@
                     "chapter": 0,
                     "title": "best dressed",
                     "label": "It's gonna be you",
-                    "fig": "./assets/catalog/men/catalog-men-sub-1.webp",
+                    "fig": "/assets/catalog/men/catalog-men-sub-1.webp",
                     "actionLabel": "shop the edit"
                 },
                 {
@@ -63,7 +63,7 @@
                     "chapter": 0,
                     "title": "topman new season",
                     "label": "Legends only",
-                    "fig": "./assets/catalog/men/catalog-men-sub-2.webp",
+                    "fig": "/assets/catalog/men/catalog-men-sub-2.webp",
                     "actionLabel": "shop the brand"
                 }
             ]
@@ -74,25 +74,25 @@
                     "_id": "landing-catalog__1",
                     "title": "soft layer",
                     "label": "Comfy chic",
-                    "fig": "./assets/catalog/women/catalog-women-1.webp"
+                    "fig": "/assets/catalog/women/catalog-women-1.webp"
                 },
                 {
                     "_id": "landing-catalog__2",
                     "title": "asos design utility",
                     "label": "Pocket picks",
-                    "fig": "./assets/catalog/women/catalog-women-2.webp"
+                    "fig": "/assets/catalog/women/catalog-women-2.webp"
                 },
                 {
                     "_id": "landing-catalog__3",
                     "title": "balletcore",
                     "label": "Barre-raising looks",
-                    "fig": "./assets/catalog/women/catalog-women-3.webp"
+                    "fig": "/assets/catalog/women/catalog-women-3.webp"
                 },
                 {
                     "_id": "landing-catalog__4",
                     "title": "workwear dresses",
                     "label": "Black is always ellegant",
-                    "fig": "./assets/catalog/women/catalog-women-4.webp"
+                    "fig": "/assets/catalog/women/catalog-women-4.webp"
                 }
             ],
             "sub": [
@@ -101,7 +101,7 @@
                     "chapter": 0,
                     "title": "topshop denim",
                     "label": "Legends only",
-                    "fig": "./assets/catalog/women/catalog-women-sub-1.webp",
+                    "fig": "/assets/catalog/women/catalog-women-sub-1.webp",
                     "actionLabel": "shop the brand"
                 },
                 {
@@ -109,7 +109,7 @@
                     "chapter": 0,
                     "title": "spring stuff",
                     "label": "Getting warmer...",
-                    "fig": "./assets/catalog/women/catalog-women-sub-2.webp",
+                    "fig": "/assets/catalog/women/catalog-women-sub-2.webp",
                     "actionLabel": "shop now"
                 },
                 {
@@ -117,7 +117,7 @@
                     "chapter": 1,
                     "title": "new in:denim icons",
                     "label": "Fantasy fits",
-                    "fig": "./assets/catalog/women/catalog-women-sub-3.webp",
+                    "fig": "/assets/catalog/women/catalog-women-sub-3.webp",
                     "actionLabel": "shop asos design"
                 },
                 {
@@ -125,7 +125,7 @@
                     "chapter": 1,
                     "title": "new miss selfridge",
                     "label": "Spring essentials",
-                    "fig": "./assets/catalog/women/catalog-women-sub-4.webp",
+                    "fig": "/assets/catalog/women/catalog-women-sub-4.webp",
                     "actionLabel": "shop the brand"
                 }
             ]
@@ -134,14 +134,66 @@
     "trendingBrands": {
         "men": [
             {
-                "_id": "",
-                "fig": ""
+                "_id": "men__brand-1",
+                "fig": "/assets/brands/tommy-hilfiger.webp",
+                "name": "t o m m y h i l f i g e r"
+            },
+            {
+                "_id": "men__brand-2",
+                "fig": "/assets/brands/north-face.webp",
+                "name": "the north face"
+            },
+            {
+                "_id": "men__brand-3",
+                "fig": "/assets/brands/adidas.webp",
+                "name": "adidas"
+            },
+            {
+                "_id": "men__brand-4",
+                "fig": "/assets/brands/carhartt.webp",
+                "name": "carhartt"
+            },
+            {
+                "_id": "men__brand-5",
+                "fig": "/assets/brands/ellesse.webp",
+                "name": "ellesse"
+            },
+            {
+                "_id": "men__brand-6",
+                "fig": "/assets/brands/dr-martens.webp",
+                "name": "dr martens"
             }
         ],
         "women": [
             {
-                "_id": "",
-                "fig": ""
+                "_id": "women__brand-1",
+                "fig": "/assets/brands/monkl.webp",
+                "name": "monkl"
+            },
+            {
+                "_id": "women__brand-2",
+                "fig": "/assets/brands/never-fully-dressed.webp",
+                "name": "never fully dressed"
+            },
+            {
+                "_id": "women__brand-3",
+                "fig": "/assets/brands/topshop.webp",
+                "name": "topshop"
+            },
+            {
+                "_id": "women__brand-4",
+                "fig": "/assets/brands/reclaimed-vintage.webp",
+                "name": "reclaimed vintage"
+            },
+            {
+                "_id": "women__brand-5",
+                "fig": "/assets/brands/collusion.webp",
+                "name": "collusion"
+            },
+            {
+                "_id": "women__brand-6",
+                "fig": "/assets/brands/weekday.webp",
+                "name": "weekday"
             }
         ]
     }
