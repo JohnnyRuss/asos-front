@@ -9,7 +9,10 @@ import { NestedNavRouteT } from "../../../interface/app.types";
 
 interface SubNavPopUpType {
   listOf: "men" | "women";
-  listRoute: string;
+  listRoute: {
+    label: string;
+    route: string;
+  };
   rootRoute: string;
 }
 
@@ -19,7 +22,7 @@ const SubNavPopUp: React.FC<SubNavPopUpType> = ({
   rootRoute,
 }) => {
   const nav = useAppStore().navigation.sub.find(
-    (block) => block.route === listRoute
+    (block) => block.route === listRoute.route
   )?.nestedNav;
 
   return (
@@ -102,13 +105,16 @@ function ListTitle({ title }: { title: string }) {
 
 interface NestedListQueryT {
   search_for: string;
-  search_in: string;
+  search_in: {
+    label: string;
+    route: string;
+  };
 }
 
 interface NestedListT {
-  routes: NestedNavRouteT[];
   title: string;
   query: NestedListQueryT;
+  routes: NestedNavRouteT[];
 }
 
 function TextOnlyList({ routes, title, query }: NestedListT) {
@@ -152,7 +158,10 @@ function TextOnlyListEl({
             state={{
               search_for: query.search_for,
               search_in: query.search_in,
-              search: route.route,
+              search: {
+                label: route.label,
+                route: route.route,
+              },
             }}
           >
             {route.label}
@@ -199,7 +208,10 @@ function FigXListEl({
             state={{
               search_for: query.search_for,
               search_in: query.search_in,
-              search: route.route,
+              search: {
+                label: route.label,
+                route: route.route,
+              },
             }}
           >
             <figure className="min-w-[40px] w-10 h-10 min-h-[40px] aspect-square rounded-full overflow-hidden border-2 border-app-gray-shade group-hover/fig-x:border-app-blue transition-colors duration-200">
@@ -231,12 +243,15 @@ function FigYList({ routes, title, query }: NestedListT) {
             key={`nested-nav--route__fig-y__${i}-${route.route}`}
           >
             <Link
-            className="flex flex-col items-center gap-2"
+              className="flex flex-col items-center gap-2"
               to={`/${query.search_for}/products`}
               state={{
                 search_for: query.search_for,
                 search_in: query.search_in,
-                search: route.route,
+                search: {
+                  label: route.label,
+                  route: route.route,
+                },
               }}
             >
               <figure className="min-w-[80px] w-20 h-20 min-h-[80px] aspect-square rounded-full overflow-hidden border-2 border-app-gray-shade group-hover/fig-y:border-app-blue transition-colors duration-200">

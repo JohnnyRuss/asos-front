@@ -74,7 +74,7 @@ const useAppStore = create<StateT>()(
           // });
 
           const { data } = await axios.get(
-            `http://localhost:4013/api/v1/products?search_for=${search_for}&search_in=${search_in}&search=${search}`
+            `http://localhost:4013/api/v1/products?search_for=${search_for}&search_in=${search_in}${search ? `&search=${search}`:""}`
           );
 
           set({ products: data });

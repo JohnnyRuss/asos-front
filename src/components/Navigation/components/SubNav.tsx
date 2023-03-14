@@ -12,7 +12,10 @@ const SubNav: React.FC = () => {
 
   const rootRoute = useGetRootRoute();
 
-  const [listRoute, setListRoute] = useState<string>("");
+  const [listRoute, setListRoute] = useState<{ label: string; route: string }>({
+    label: "",
+    route: "",
+  });
 
   function controllNavOnEnter(e: React.MouseEvent) {
     e.stopPropagation();
@@ -25,10 +28,20 @@ const SubNav: React.FC = () => {
       target.closest("[data-nav-pointer]")
     ) {
       if (target.closest("[data-nav-pointer]")) {
-        const aim: string = target.dataset.pointedSubnav!;
-        if (aim !== listRoute) setListRoute(aim);
+        const route: string = target.dataset.pointedSubnavRoute!;
+        const label: string = target.dataset.pointedSubnavLabel!;
+
+        if (route !== listRoute.route)
+          setListRoute({
+            label,
+            route,
+          });
       }
-    } else return setListRoute("");
+    } else
+      return setListRoute({
+        label: "",
+        route: "",
+      });
   }
 
   return (
@@ -42,11 +55,12 @@ const SubNav: React.FC = () => {
             {[...(rootRoute === "men" ? menNav : womenNav)].map((route) => (
               <li
                 className={`cursor-pointer h-full flex items-center px-2 ${
-                  listRoute === route.route
+                  listRoute.route === route.route
                     ? "bg-app-gray-tint text-app-dark-gray"
                     : ""
                 }`}
-                data-pointed-subnav={route.route}
+                data-pointed-subnav-route={route.route}
+                data-pointed-subnav-label={route.label}
                 data-nav-pointer
                 key={route.route}
               >
@@ -54,7 +68,8 @@ const SubNav: React.FC = () => {
               </li>
             ))}
           </ul>
-          {listRoute && (
+          
+          {listRoute.route && (
             <SubNavPopUp
               listOf={rootRoute === "men" ? "men" : "women"}
               listRoute={listRoute}

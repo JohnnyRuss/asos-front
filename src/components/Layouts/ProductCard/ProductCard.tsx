@@ -1,20 +1,34 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { createImageUrl } from "../../../lib";
 import { ProductLabelT } from "../../../interface/DB/products.types";
 
 interface ProductCardType {
   product: ProductLabelT;
+  passRouteQuery: boolean;
 }
 
-const ProductCard: React.FC<ProductCardType> = ({ product }) => {
+const ProductCard: React.FC<ProductCardType> = ({
+  product,
+  passRouteQuery,
+}) => {
   const [activeFig, setActiveFig] = useState<number>(0);
+  const { state } = useLocation();
 
   return (
     <Link
-      to={`/women/products/${product._id}`}
       className="h-full flex flex-col gap-3"
+      to={`/women/products/${product._id}`}
+      state={
+        passRouteQuery
+          ? {
+              search_for: state.search_for,
+              search_in: state.search_in,
+              search: state.search,
+            }
+          : null
+      }
     >
       <figure
         className="h-4/5 relative"
@@ -37,10 +51,12 @@ const ProductCard: React.FC<ProductCardType> = ({ product }) => {
           </svg>
         </button>
       </figure>
+
       <div className="flex flex-col h-1/5 relative group/title">
         <span>{product._id}</span>
 
         <span className="text-app-sm ">{product.title}</span>
+
         <div className="hidden group-hover/title:block absolute top-[25px] border border-app-gray p-2 shadow-2xl z-10 bg-app-white rounded-md">
           <div>
             <span className="font-bold">categories:</span>
@@ -51,7 +67,9 @@ const ProductCard: React.FC<ProductCardType> = ({ product }) => {
             </ul>
           </div>
         </div>
+
         <span className="text-app-xsm mt-auto pt-1`">{product.colour}</span>
+        
         <div className="flex items-center justify-between font-bold mt-1">
           <span>£{product.price}</span>
           {product.sale && <span>£{product.sale}</span>}

@@ -33,17 +33,21 @@ const ProductDetails: React.FC = () => {
             </div>
           )}
 
-          <span>
+          <div>
             <span className="font-bold uppercase text-app-xsm">colour:</span>
             &nbsp;
             <span className="uppercase tracking-[2px]">{product.colour}</span>
-          </span>
+          </div>
 
           <div className="flex flex-col">
             <label htmlFor="" className="font-bold uppercase text-app-xsm">
               size:
             </label>
-            <select name="" id="" className="w-60 h-10 cursor-pointer outline-none border border-app-gray p-1 rounded-md">
+            <select
+              name=""
+              id=""
+              className="w-60 h-10 cursor-pointer outline-none border border-app-gray p-1 rounded-md"
+            >
               <option value="" disabled>
                 Please Select Size
               </option>
@@ -54,10 +58,11 @@ const ProductDetails: React.FC = () => {
                     !size.inStock ? "opacity-5" : ""
                   }`}
                   disabled={!size.inStock}
+                  value=""
                 >
-                  {size.mainSize && <span>{size.mainSize} - </span>}
-                  <span>{size.size}</span>
-                  {!size.inStock && <span>&nbsp;&nbsp;Not In Stock</span>}
+                  {size.mainSize && <>{size.mainSize} - </>}
+                  <>{size.size}</>
+                  {!size.inStock && <>&nbsp;&nbsp;Not In Stock</>}
                 </option>
               ))}
             </select>

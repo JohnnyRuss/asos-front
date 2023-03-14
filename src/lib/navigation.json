@@ -16,23 +16,23 @@
                 "route": "new in"
             },
             {
-                "label": "clothing",
+                "label": "Clothing",
                 "route": "clothing"
             },
             {
-                "label": "shoes",
+                "label": "Shoes",
                 "route": "shoes"
             },
             {
-                "label": "sportswear",
+                "label": "Sportswear",
                 "route": "sportswear"
             },
             {
-                "label": "jeans",
+                "label": "Jeans",
                 "route": "jeans"
             },
             {
-                "label": "brands",
+                "label": "Brands",
                 "route": "brands"
             }
         ],
@@ -42,27 +42,27 @@
                 "route": "new in"
             },
             {
-                "label": "clothing",
+                "label": "Clothing",
                 "route": "clothing"
             },
             {
-                "label": "dresses",
+                "label": "Dresses",
                 "route": "dresses"
             },
             {
-                "label": "shoes",
+                "label": "Shoes",
                 "route": "shoes"
             },
             {
-                "label": "sportswear",
+                "label": "Sportswear",
                 "route": "sportswear"
             },
             {
-                "label": "jeans",
+                "label": "Jeans",
                 "route": "jeans"
             },
             {
-                "label": "brands",
+                "label": "Brands",
                 "route": "brands"
             }
         ]
@@ -1685,7 +1685,7 @@
                             {
                                 "fig": "/assets/nav/men/men-brands__streetwear.webp",
                                 "label": "Streetwear",
-                                "route": "streetwear"
+                                "route": "streetwears"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__trainers.webp",
@@ -1712,7 +1712,7 @@
                             {
                                 "fig": "/assets/nav/women/women-brands__streetwear.webp",
                                 "label": "Streetwear",
-                                "route": "streetwear"
+                                "route": "streetwears"
                             },
                             {
                                 "fig": "/assets/nav/women/women-brands__trainers.webp",

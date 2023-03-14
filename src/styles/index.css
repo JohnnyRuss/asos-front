@@ -6,4 +6,18 @@
   body {
     @apply font-sans-serif;
   }
+
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 1rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background: #dddddd;
+  }
 }

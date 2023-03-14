@@ -2,14 +2,16 @@ import React from "react";
 
 import useAppStore from "../../store/app";
 
-import { Container, Spinner } from "../Layouts";
+import { Container, Spinner, Path } from "../Layouts";
 import ProductDetails from "./ProductDetails";
 import Slider from "./Slider";
-import Path from "./Path";
 
 const ActiveProduct: React.FC = () => {
-  const loadingStatus = useAppStore((state) => state.productLoadingStatus);
-  console.log(loadingStatus);
+  const { loadingStatus, productTitle } = useAppStore((state) => ({
+    loadingStatus: state.productLoadingStatus,
+    productTitle: state.product?.title,
+  }));
+
   return (
     <div className="relative">
       {loadingStatus.loading && <Spinner />}
@@ -17,7 +19,7 @@ const ActiveProduct: React.FC = () => {
         <div className="min-h-screen">
           {!loadingStatus.loading && (
             <>
-              <Path />
+              <Path title={productTitle} />
               <div className="flex gap-4 justify-center py-10">
                 <Slider />
                 <ProductDetails />

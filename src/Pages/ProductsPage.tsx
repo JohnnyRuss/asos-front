@@ -15,15 +15,20 @@ const ProductsPage: React.FC = () => {
   const getProducts = useAppStore((state) => state.getProducts);
 
   useEffect(() => {
+    // console.log(state);
     const routeState = {
-      search_for: state.search_for,
-      search_in: state.search_in,
-      search: state.search,
+      search_for: state?.search_for || "",
+      search_in: state?.search_in || "",
+      search: state?.search || "",
     };
 
     if (!routeState.search_for || !routeState.search_in) return;
 
-    getProducts(routeState);
+    getProducts({
+      search_for: routeState.search_for,
+      search_in: routeState.search_in.route,
+      search: routeState.search.route || "",
+    });
   }, [state]);
 
   return <Products />;
