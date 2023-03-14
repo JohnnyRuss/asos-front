@@ -17,6 +17,7 @@ module.exports = {
         "app-green-shade": "#018849",
         "app-red": "#d01345",
         "app-cyan": "#9CF0E0",
+        "app-blue": "#1481ee",
         "app-blue-tint": "#cde2f5",
       },
       fontSize: {

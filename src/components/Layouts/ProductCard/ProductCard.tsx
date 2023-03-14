@@ -25,11 +25,11 @@ const ProductCard: React.FC<ProductCardType> = ({ product }) => {
           src={createImageUrl(product.media.pictures[activeFig])}
           alt={product.title}
         />
-        <button className="absolute bottom-2 right-2 bg-app-white p-2 rounded-full">
+        <button className="absolute bottom-4 right-2 bg-app-white p-2 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
+            width="15"
+            height="15"
             fill="#000000"
             viewBox="0 0 256 256"
           >

@@ -9,7 +9,6 @@ import footerData from "../lib/footer.json";
 import landingData from "../lib/landing.json";
 
 import { AppT } from "../interface/app.types";
-import { error } from "console";
 interface StateT extends AppT {
   productsLoadingStatus: {
     loading: boolean;
@@ -67,6 +66,12 @@ const useAppStore = create<StateT>()(
               message: "",
             },
           });
+
+          // console.log({
+          //   search_for,
+          //   search_in,
+          //   search,
+          // });
 
           const { data } = await axios.get(
             `http://localhost:4013/api/v1/products?search_for=${search_for}&search_in=${search_in}&search=${search}`

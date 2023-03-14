@@ -14,7 +14,11 @@ const Products: React.FC = () => {
     <div className="relative">
       {loadingStatus.loading && <Spinner />}
       <Container>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,_300px))] justify-center gap-x-6 gap-y-8 py-5 min-h-screen">
+        <span className="flex items-center justify-center gap-2 text-app-sm">
+          <span>{products.length.toLocaleString()}</span>
+          <span>styles found</span>
+        </span>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,_300px))] justify-center content-start gap-x-6 gap-y-8 py-5 min-h-screen">
           {!loadingStatus.loading &&
             products[0] &&
             products.map((product) => (

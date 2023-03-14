@@ -147,7 +147,7 @@ function TextOnlyListEl({
           key={`nested-nav--route__text-only__${i}-${route.route}--${route.label}`}
         >
           <Link
-            className="inline-block w-full"
+            className="inline-block w-full hover:text-app-blue transition-colors duration-200"
             to={`/${query.search_for}/products`}
             state={{
               search_for: query.search_for,
@@ -163,58 +163,46 @@ function TextOnlyListEl({
   );
 }
 
-function FigXList({ routes, title }: NestedListT) {
+function FigXList({ routes, title, query }: NestedListT) {
   return (
     <div className="flex-1 flex flex-col items-start gap-4 border-x border-x-app-gray-shade px-5">
       <ListTitle title={title} />
       {routes.length > 6 ? (
         <div className="flex gap-16">
-          <FigXListEl routes={routes.slice(0, 6)} />
-          <FigXListEl routes={routes.slice(6)} />
+          <FigXListEl routes={routes.slice(0, 6)} query={query} />
+          <FigXListEl routes={routes.slice(6)} query={query} />
         </div>
       ) : (
-        <FigXListEl routes={routes} />
+        <FigXListEl routes={routes} query={query} />
       )}
     </div>
   );
 }
 
-function FigXListEl({ routes }: { routes: NestedNavRouteT[] }) {
+function FigXListEl({
+  routes,
+  query,
+}: {
+  routes: NestedNavRouteT[];
+  query: NestedListQueryT;
+}) {
   return (
-    <ul className="flex flex-col gap-3 text-app-sm capitalize">
+    <ul className="w-full flex flex-col gap-3 text-app-sm capitalize">
       {routes.map((route, i) => (
         <li
-          className="flex items-center gap-2"
+          className="w-full group/fig-x"
           key={`nested-nav--route__fig-x__${i}-${route.route}`}
         >
-          <figure className="min-w-[40px] w-10 h-10 min-h-[40px] aspect-square rounded-full overflow-hidden border border-app-gray-shade">
-            <img
-              src={route.fig}
-              alt={route.label}
-              className="w-full h-full object-cover object-center"
-              loading="lazy"
-            />
-          </figure>
-          <span className="h-full flex items-center border-b border-b-app-gray w-full">
-            {route.label}
-          </span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function FigYList({ routes, title }: NestedListT) {
-  return (
-    <div className="flex-1 flex flex-col items-center gap-4 border-x border-x-app-gray-shade px-5">
-      <ListTitle title={title} />
-      <ul className="grid grid-cols-2 gap-x-14 gap-y-10 text-app-sm capitalize">
-        {routes.map((route, i) => (
-          <li
-            className="flex flex-col items-center gap-2"
-            key={`nested-nav--route__fig-y__${i}-${route.route}`}
+          <Link
+            className="flex gap-2"
+            to={`/${query.search_for}/products`}
+            state={{
+              search_for: query.search_for,
+              search_in: query.search_in,
+              search: route.route,
+            }}
           >
-            <figure className="min-w-[80px] w-20 h-20 min-h-[80px] aspect-square rounded-full overflow-hidden border border-app-gray-shade">
+            <figure className="min-w-[40px] w-10 h-10 min-h-[40px] aspect-square rounded-full overflow-hidden border-2 border-app-gray-shade group-hover/fig-x:border-app-blue transition-colors duration-200">
               <img
                 src={route.fig}
                 alt={route.label}
@@ -222,7 +210,47 @@ function FigYList({ routes, title }: NestedListT) {
                 loading="lazy"
               />
             </figure>
-            <span>{route.label}</span>
+            <span className="flex items-center w-full min-h-full border-b border-b-app-gray group-hover/fig-x:text-app-blue group-hover/fig-x:border-b-app-blue transition-colors duration-200">
+              {route.label}
+            </span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function FigYList({ routes, title, query }: NestedListT) {
+  return (
+    <div className="flex-1 flex flex-col items-center gap-4 border-x border-x-app-gray-shade px-5">
+      <ListTitle title={title} />
+      <ul className="grid grid-cols-2 gap-x-14 gap-y-10 text-app-sm capitalize">
+        {routes.map((route, i) => (
+          <li
+            className="group/fig-y"
+            key={`nested-nav--route__fig-y__${i}-${route.route}`}
+          >
+            <Link
+            className="flex flex-col items-center gap-2"
+              to={`/${query.search_for}/products`}
+              state={{
+                search_for: query.search_for,
+                search_in: query.search_in,
+                search: route.route,
+              }}
+            >
+              <figure className="min-w-[80px] w-20 h-20 min-h-[80px] aspect-square rounded-full overflow-hidden border-2 border-app-gray-shade group-hover/fig-y:border-app-blue transition-colors duration-200">
+                <img
+                  src={route.fig}
+                  alt={route.label}
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+              </figure>
+              <span className="group-hover/fig-y:text-app-blue transition-colors duration-200 text-center">
+                {route.label}
+              </span>
+            </Link>
           </li>
         ))}
       </ul>
