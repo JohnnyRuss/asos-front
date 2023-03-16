@@ -295,6 +295,10 @@
                     "routes": {
                         "men": [
                             {
+                                "label": "View All",
+                                "route": "all"
+                            },
+                            {
                                 "label": "New In",
                                 "route": "new in"
                             },
@@ -327,7 +331,7 @@
                                 "route": "co-ords"
                             },
                             {
-                                "label": "designer",
+                                "label": "Designer",
                                 "route": "designer"
                             },
                             {
@@ -336,7 +340,7 @@
                             },
                             {
                                 "label": "Loungewear",
-                                "route": "loungewear"
+                                "route": "loungewears"
                             },
                             {
                                 "label": "Multipacks",
@@ -351,11 +355,7 @@
                                 "route": "shorts"
                             },
                             {
-                                "label": "socks",
-                                "route": "socks"
-                            },
-                            {
-                                "label": "sportswear",
+                                "label": "Sportswear",
                                 "route": "sportswear"
                             },
                             {
@@ -363,15 +363,15 @@
                                 "route": "suits-and-tailoring,suits,tailoring"
                             },
                             {
-                                "label": "swimwear",
+                                "label": "Swimwear",
                                 "route": "swimwears,beachwears"
                             },
                             {
-                                "label": "tracksuits",
+                                "label": "Tracksuits",
                                 "route": "tracksuits"
                             },
                             {
-                                "label": "trousers & chinos",
+                                "label": "Trousers & Chinos",
                                 "route": "trousers-and-chinos,chinos,trousers"
                             }
                         ],
@@ -486,12 +486,12 @@
                         "men": [
                             {
                                 "fig": "/assets/nav/men/men-clothing__plus-size.webp",
-                                "label": "plus size",
+                                "label": "Plus Size",
                                 "route": "plus size"
                             },
                             {
                                 "fig": "/assets/nav/men/men-clothing__tall.webp",
-                                "label": "tall",
+                                "label": "Tall",
                                 "route": "tall"
                             }
                         ],
@@ -526,7 +526,7 @@
                         "men": [
                             {
                                 "fig": "/assets/nav/men/men-clothing__holiday.webp",
-                                "label": "holiday",
+                                "label": "Holiday",
                                 "route": "holiday"
                             },
                             {
@@ -536,49 +536,44 @@
                             },
                             {
                                 "fig": "/assets/nav/men/men-clothing__festival.webp",
-                                "label": "festival",
+                                "label": "Festival",
                                 "route": "festival"
                             },
                             {
                                 "fig": "/assets/nav/men/men-clothing__partywear.webp",
-                                "label": "partywear",
-                                "route": "partywears"
+                                "label": "Partywear",
+                                "route": "partywears,party"
                             },
                             {
                                 "fig": "/assets/nav/men/men-clothing__linen-looks.webp",
-                                "label": "linen looks",
+                                "label": "Linen looks",
                                 "route": "linen looks,linen"
                             },
                             {
-                                "fig": "/assets/nav/men/men-clothing__ski-and-snowboard.webp",
-                                "label": "ski & Snowboard",
-                                "route": "ski-and-snowboard,ski,snowboard"
-                            },
-                            {
                                 "fig": "/assets/nav/men/men-clothing__wedding.webp",
-                                "label": "wedding",
+                                "label": "Wedding",
                                 "route": "wedding"
                             }
                         ],
                         "women": [
                             {
                                 "fig": "/assets/nav/women/women-clothing__holiday.webp",
-                                "label": "holiday",
+                                "label": "Holiday",
                                 "route": "holiday"
                             },
                             {
                                 "fig": "/assets/nav/women/women-clothing__modest-fashion.webp",
-                                "label": "modest fashion",
+                                "label": "Modest Fashion",
                                 "route": "modest fashion,modest,fashion"
                             },
                             {
                                 "fig": "/assets/nav/women/women-clothing__linen-looks.webp",
-                                "label": "linen looks",
+                                "label": "Linen Looks",
                                 "route": "linen looks,linen"
                             },
                             {
                                 "fig": "/assets/nav/women/women-clothing__ski-and-snowboard.webp",
-                                "label": "ski & snowboard",
+                                "label": "Ski & Snowboard",
                                 "route": "ski-and-snowboard,ski,snowboard"
                             }
                         ]
@@ -1043,7 +1038,7 @@
                             },
                             {
                                 "label": "Jaggers",
-                                "route": "jaggers"
+                                "route": "joggers"
                             },
                             {
                                 "label": "Trousers & Tights",
@@ -1610,12 +1605,12 @@
                             {
                                 "fig": "/assets/nav/men/men-brands__asos-design.webp",
                                 "label": "ASOS DESIGN",
-                                "route": "asos,asos design"
+                                "route": "asos design"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__asos-4505.webp",
                                 "label": "ASOS 4505",
-                                "route": "asos,asos 4505"
+                                "route": "asos 4505"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__topman.webp",
@@ -1630,7 +1625,7 @@
                             {
                                 "fig": "/assets/nav/men/men-brands__reclaimed-vintage.webp",
                                 "label": "ReclaimedVintage",
-                                "route": "reclaimed-vintage"
+                                "route": "reclaimed vintage"
                             }
                         ],
                         "women": [
