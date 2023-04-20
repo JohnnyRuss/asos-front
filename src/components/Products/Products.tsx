@@ -1,8 +1,8 @@
 import React from "react";
 import useAppStore from "../../store/app";
 
-import { Container, Spinner, Path } from "../Layouts";
-import ProductCard from "../Layouts/ProductCard/ProductCard";
+import { Container, Spinner, Path, ProductCard, Filter } from "../Layouts";
+import Heading from "./components/Heading";
 
 const Products: React.FC = () => {
   const { products, loadingStatus } = useAppStore((state) => ({
@@ -13,11 +13,16 @@ const Products: React.FC = () => {
   return (
     <div className="relative min-h-screen">
       {loadingStatus.loading && <Spinner />}
+
+      <Path />
+
+      <Heading />
+
+      <Filter />
+
       {!loadingStatus.loading && (
         <Container>
-          <Path />
-
-          <span className="flex items-center justify-center gap-2 text-app-sm">
+          <span className="flex items-center justify-center gap-2 text-app-sm mt-4">
             <span>{products.length.toLocaleString()}</span>
             <span>styles found</span>
           </span>

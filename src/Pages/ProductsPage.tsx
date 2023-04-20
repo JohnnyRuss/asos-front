@@ -15,7 +15,6 @@ const ProductsPage: React.FC = () => {
   const getProducts = useAppStore((state) => state.getProducts);
 
   useEffect(() => {
-    // console.log(state);
     const routeState = {
       search_for: state?.search_for || "",
       search_in: state?.search_in || "",
