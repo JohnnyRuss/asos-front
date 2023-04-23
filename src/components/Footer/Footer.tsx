@@ -1,10 +1,8 @@
 import React from "react";
-import useAppStore from "../../store/app";
-import { Container } from "../Layouts";
+import useAppStore from "store/app";
+import { Container } from "components/Layouts";
 
-interface FooterType {}
-
-const Footer: React.FC<FooterType> = (props) => {
+const Footer: React.FC = () => {
   const footer = useAppStore().footer;
   return (
     <footer>

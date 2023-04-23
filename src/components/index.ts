@@ -1,0 +1,10 @@
+export { default as ActiveProduct } from "components/ActiveProduct/ActiveProduct";
+export { default as Brands } from "components/Brands/Brands";
+export { default as CatalogMain } from "components/Catalog/CatalogMain";
+export { default as CatalogSpecial } from "components/Catalog/CatalogSpecial";
+export { default as Footer } from "components/Footer/Footer";
+export { default as Hero } from "components/Hero/Hero";
+export { default as Navigation } from "components/Navigation/Navigation";
+export { default as Offer } from "components/Offers/Offer";
+export { default as NewHere } from "components/Offers/NewHere";
+export { default as Products } from "components/Products/Products";

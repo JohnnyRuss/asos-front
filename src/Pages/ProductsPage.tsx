@@ -1,11 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import useAppStore from "../store/app";
 
-import { useScrollUp } from "../hooks";
-
-import Products from "../components/Products/Products";
+import { Products } from "components";
+import useAppStore from "store/app";
+import { useScrollUp } from "hooks";
 
 const ProductsPage: React.FC = () => {
   useScrollUp();

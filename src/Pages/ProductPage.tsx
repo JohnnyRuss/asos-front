@@ -2,10 +2,9 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { useScrollUp } from "../hooks";
-
-import useAppStore from "../store/app";
-import ActiveProduct from "../components/ActiveProduct/ActiveProduct";
+import { ActiveProduct } from "components";
+import { useScrollUp } from "hooks";
+import useAppStore from "store/app";
 
 const ProductPage: React.FC = () => {
   useScrollUp();

@@ -1,13 +1,10 @@
 import React from "react";
 
-import useAppStore from "../../store/app";
-import { useGetRootRoute, useGetRandomNumber } from "../../hooks";
+import useAppStore from "store/app";
+import { useGetRootRoute, useGetRandomNumber } from "hooks";
+import { Container, Button } from "components/Layouts";
 
-import { Container, Button } from "../Layouts";
-
-interface CatalogSpecialType {}
-
-const CatalogSpecial: React.FC<CatalogSpecialType> = (props) => {
+const CatalogSpecial: React.FC = () => {
   const catalogs = useAppStore().landing.landingCatalog;
 
   const rootRoute = useGetRootRoute();

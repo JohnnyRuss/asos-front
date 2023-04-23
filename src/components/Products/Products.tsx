@@ -1,8 +1,14 @@
 import React from "react";
-import useAppStore from "../../store/app";
 
-import { Container, Spinner, Path, ProductCard, Filter } from "../Layouts";
+import {
+  Container,
+  Spinner,
+  Path,
+  ProductCard,
+  Filter,
+} from "components/Layouts";
 import Heading from "./components/Heading";
+import useAppStore from "store/app";
 
 const Products: React.FC = () => {
   const { products, loadingStatus } = useAppStore((state) => ({

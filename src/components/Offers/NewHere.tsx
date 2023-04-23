@@ -1,21 +1,6 @@
-import React from "react";
+import { Container } from "components/Layouts";
 
-import "./offers.css";
-import { Container } from "../Layouts";
-import Offer from "./Offer";
-
-const Offers: React.FC = () => {
-  return (
-    <>
-      <NewHereOffer />
-      <Offer />
-    </>
-  );
-};
-
-export default Offers;
-
-function NewHereOffer() {
+export default function NewHere() {
   return (
     <div className="bg-app-black text-app-white">
       <Container>
@@ -32,7 +17,7 @@ function NewHereOffer() {
           <button className="border border-app-white w-28">MEN</button>
 
           {false && (
-            <blockquote className="title absolute top-[100%] w-[760px]  text-center bg-app-gray-shade text-app-black rounded-md text-app-sm">
+            <blockquote className="absolute top-[100%] w-[760px] z-[2] left-1/2 -translate-x-1/2 translate-y-3 py-2 px-3 after:content-[''] after:absolute after:w-4 after:h-4 after:top-0 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rotate-45 after:z-[-1] after:bg-inherit text-center bg-app-gray-shade text-app-black rounded-md text-app-sm">
               *Enter code HELLOASOS at checkout to receive discount on first
               order only over €30. Ends 09:00 UTC+2 28.08.2023. Code can be used
               on first order only up to a maximum pre-discount spend of €690.

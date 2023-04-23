@@ -1,6 +1,5 @@
 import React from "react";
-import useAppStore from "../../store/app";
-
+import useAppStore from "store/app";
 import ProductAccordion from "./ProductAccordion";
 
 const ProductDetails: React.FC = () => {

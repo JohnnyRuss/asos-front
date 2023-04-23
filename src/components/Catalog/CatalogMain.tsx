@@ -1,9 +1,8 @@
 import React from "react";
 
-import useAppStore from "../../store/app";
-import { useGetRootRoute } from "../../hooks";
-
-import { Container } from "../Layouts";
+import useAppStore from "store/app";
+import { useGetRootRoute } from "hooks";
+import { Container } from "components/Layouts";
 
 const CatalogMain: React.FC = () => {
   const catalogs = useAppStore().landing.landingCatalog;

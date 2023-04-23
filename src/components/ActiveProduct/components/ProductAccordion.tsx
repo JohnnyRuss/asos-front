@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import useAppStore from "../../store/app";
-import { GenerateParagraphs } from "../Layouts";
+import useAppStore from "store/app";
+import { GenerateParagraphs } from "components/Layouts";
 import "./acordion.css";
 
 const ProductAccordion: React.FC = () => {

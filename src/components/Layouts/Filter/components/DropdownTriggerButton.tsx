@@ -5,14 +5,16 @@ interface DropdownTriggerButtonType {
   onClick: () => void;
 }
 
-const DropdownTriggerButton: React.FC<DropdownTriggerButtonType> = ({
-  caption,
-  onClick,
-}) => {
+const DropdownTriggerButton = React.forwardRef<
+  HTMLButtonElement,
+  DropdownTriggerButtonType
+>(({ caption, onClick }, ref) => {
   return (
     <button
       className="flex items-center justify-between p-2 w-full capitalize"
       onClick={onClick}
+      ref={ref}
+      id="dropdown-trigger"
     >
       <span>{caption}</span>
       <span>
@@ -28,6 +30,6 @@ const DropdownTriggerButton: React.FC<DropdownTriggerButtonType> = ({
       </span>
     </button>
   );
-};
+});
 
 export default DropdownTriggerButton;

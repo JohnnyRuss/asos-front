@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import useAppStore from "../../store/app";
-import { useGetRootRoute } from "../../hooks";
-
-import { Container } from "../Layouts";
+import useAppStore from "store/app";
+import { useGetRootRoute } from "hooks";
+import { Container } from "components/Layouts";
 
 const Brands: React.FC = () => {
   const brands = useAppStore().landing.trendingBrands;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { Container } from "../";
+import { Container } from "components/Layouts";
 import Arrow from "./Arrow";
 
 interface PathType {

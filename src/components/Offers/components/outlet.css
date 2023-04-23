@@ -51,22 +51,3 @@
     transform: rotate(calc(360deg * 3));
   }
 }
-
-.title {
-  z-index: 2;
-  left: 50%;
-  transform: translate(-50%, 11px);
-  padding: 6px 12px;
-}
-
-.title:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  z-index: -1;
-  width: 15px;
-  height: 15px;
-  background: inherit;
-}

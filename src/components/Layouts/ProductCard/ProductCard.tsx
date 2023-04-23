@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { createImageUrl } from "../../../lib";
-import { ProductLabelT } from "../../../interface/DB/products.types";
+import { createImageUrl } from "lib";
+import { ProductLabelT } from "interface/DB/products.types";
 
 interface ProductCardType {
   product: ProductLabelT;
@@ -53,11 +53,11 @@ const ProductCard: React.FC<ProductCardType> = ({
       </figure>
 
       <div className="flex flex-col h-1/5 relative group/title">
-        <span>{product._id}</span>
+        {/* <span>{product._id}</span> */}
 
         <span className="text-app-sm ">{product.title}</span>
 
-        <div className="hidden group-hover/title:block absolute top-[25px] border border-app-gray p-2 shadow-2xl z-10 bg-app-white rounded-md">
+        {/* <div className="hidden group-hover/title:block absolute top-[25px] border border-app-gray p-2 shadow-2xl z-10 bg-app-white rounded-md">
           <div>
             <span className="font-bold">categories:</span>
             <ul className="list-disc pl-5">
@@ -66,7 +66,7 @@ const ProductCard: React.FC<ProductCardType> = ({
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
 
         <span className="text-app-xsm mt-auto pt-1`">{product.colour}</span>
         

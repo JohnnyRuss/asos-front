@@ -1,14 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import useAppStore from "../../store/app";
-import { useGetRootRoute, useGetRandomNumber } from "../../hooks";
+import useAppStore from "store/app";
+import { useGetRootRoute, useGetRandomNumber } from "hooks";
+import { Container, Button } from "components/Layouts";
 
-import { Container, Button } from "../Layouts";
-
-interface HeroType {}
-
-const Hero: React.FC<HeroType> = (props) => {
+const Hero: React.FC = () => {
   const navigate = useNavigate();
 
   const heros = useAppStore().landing.hero;

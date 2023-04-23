@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { useGetRootRoute } from "../../../hooks";
+import { useGetRootRoute } from "hooks";
 
-import { Container } from "../../Layouts";
+import { Container } from "components/Layouts";
 import MainNavList from "./MainNavList";
 import MainNavSearch from "./MainNavSearch";
 import MainNavActions from "./MainNavActions";
