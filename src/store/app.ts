@@ -8,7 +8,7 @@ import navData from "../lib/navigation.json";
 import footerData from "../lib/footer.json";
 import landingData from "../lib/landing.json";
 
-import { AppT } from "../interface/app.types";
+import { AppT } from "../interface/store/app";
 interface StateT extends AppT {
   productsLoadingStatus: {
     loading: boolean;

@@ -23,9 +23,9 @@ const ProductCard: React.FC<ProductCardType> = ({
       state={
         passRouteQuery
           ? {
-              search_for: state.search_for,
-              search_in: state.search_in,
-              search: state.search,
+              search_for: state?.search_for,
+              search_in: state?.search_in,
+              search: state?.search,
             }
           : null
       }
@@ -69,7 +69,7 @@ const ProductCard: React.FC<ProductCardType> = ({
         </div> */}
 
         <span className="text-app-xsm mt-auto pt-1`">{product.colour}</span>
-        
+
         <div className="flex items-center justify-between font-bold mt-1">
           <span>£{product.price}</span>
           {product.sale && <span>£{product.sale}</span>}

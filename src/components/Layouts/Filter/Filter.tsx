@@ -1,34 +1,103 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from "react";
+
+import { useFilterStore } from "store";
+
 import { Container } from "components/Layouts";
 import Dropdown from "./components/Dropdown";
 import DropdownListItem from "./components/DropdownListItem";
 
-interface FillterType {}
+const Fillter: React.FC = () => {
+  const { setFilter, resetFilter, filter } = useFilterStore((state) => ({
+    setFilter: state.setFilter,
+    filter: state.filter,
+    resetFilter: state.resetFilter,
+  }));
 
-const Fillter: React.FC<FillterType> = (props) => {
+  useEffect(() => {
+    return () => {
+      resetFilter();
+    };
+  }, []);
+
   return (
     <div className="bg-app-gray-tint">
       <Container>
         <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,300px))] gap-4 py-2">
-          <Dropdown activeLabel="sort" name="SORT">
-            <DropdownListItem>recomended</DropdownListItem>
-            <DropdownListItem>recomended</DropdownListItem>
+          {/* SORT */}
+          <Dropdown activeLabel={filter.sort || "sort"} dropdownName="SORT">
+            {["new", "price high to low", "price low to high"].map((option) => (
+              <DropdownListItem
+                onClick={({ key, value }) => setFilter(key, value)}
+                name="sort"
+                value={option}
+                key={`dropdown-${option}`}
+              >
+                {option}
+              </DropdownListItem>
+            ))}
           </Dropdown>
-          <Dropdown activeLabel="category" name="CATEGORY">
-            <DropdownListItem>recomended</DropdownListItem>
-            <DropdownListItem>recomended</DropdownListItem>
+
+          {/* CATEGORY */}
+          <Dropdown
+            activeLabel={filter.category || "category"}
+            dropdownName="CATEGORY"
+          >
+            {["tops", "t-shirts"].map((option) => (
+              <DropdownListItem
+                onClick={({ key, value }) => setFilter(key, value)}
+                name="category"
+                value={option}
+                key={`dropdown-${option}`}
+              >
+                {option}
+              </DropdownListItem>
+            ))}
           </Dropdown>
-          <Dropdown activeLabel="product type" name="PRODUCT_TYPE">
-            <DropdownListItem>recomended</DropdownListItem>
-            <DropdownListItem>recomended</DropdownListItem>
+
+          {/* PRODUCT TYPE */}
+          <Dropdown
+            activeLabel={filter.productType || "product type"}
+            dropdownName="PRODUCT_TYPE"
+          >
+            {["co-ords", "jeans"].map((option) => (
+              <DropdownListItem
+                onClick={({ key, value }) => setFilter(key, value)}
+                name="productType"
+                value={option}
+                key={`dropdown-${option}`}
+              >
+                {option}
+              </DropdownListItem>
+            ))}
           </Dropdown>
-          <Dropdown activeLabel="brand" name="BRAND">
-            <DropdownListItem>recomended</DropdownListItem>
-            <DropdownListItem>recomended</DropdownListItem>
+
+          {/* BRAND */}
+          <Dropdown activeLabel={filter.brand || "brand"} dropdownName="BRAND">
+            {["nike", "adidas"].map((option) => (
+              <DropdownListItem
+                onClick={({ key, value }) => setFilter(key, value)}
+                name="brand"
+                value={option}
+                key={`dropdown-${option}`}
+              >
+                {option}
+              </DropdownListItem>
+            ))}
           </Dropdown>
-          <Dropdown activeLabel="size" name="SIZE">
-            <DropdownListItem>recomended</DropdownListItem>
-            <DropdownListItem>recomended</DropdownListItem>
+
+          {/* SIZE */}
+          <Dropdown activeLabel={filter.size || "size"} dropdownName="SIZE">
+            {["xs", "s"].map((option) => (
+              <DropdownListItem
+                onClick={({ key, value }) => setFilter(key, value)}
+                name="size"
+                value={option}
+                key={`dropdown-${option}`}
+              >
+                {option}
+              </DropdownListItem>
+            ))}
           </Dropdown>
         </div>
       </Container>

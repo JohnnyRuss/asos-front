@@ -2,27 +2,63 @@ import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
 
-export type FilterT =
-  | "INACTIVE"
-  | "SORT"
-  | "CATEGORY"
-  | "PRODUCT_TYPE"
-  | "BRAND"
-  | "SIZE";
+import { FilterStateT } from "interface";
 
-interface StateT {
-  activeFilter: FilterT;
-}
-
-const useFilterStore = create<StateT>()(
+const useFilterStore = create<FilterStateT>()(
   devtools(
     immer(
       persist(
         (set) => ({
-          activeFilter: "INACTIVE",
+          activeDropdown: "INACTIVE",
+
+          filter: {
+            sort: "",
+            category: "",
+            productType: "",
+            brand: "",
+            size: "",
+          },
+
+          setActiveDropdown: (filter: FilterStateT["activeDropdown"]) => {
+            set({
+              activeDropdown: filter,
+            });
+          },
+
+          setFilter: (key: keyof FilterStateT["filter"], value: string) => {
+            set((state) => ({
+              filter: {
+                ...state.filter,
+                [key]: value,
+              },
+            }));
+          },
+
+          resetFilter: () => {
+            set({
+              filter: {
+                sort: "",
+                category: "",
+                productType: "",
+                brand: "",
+                size: "",
+              },
+            });
+          },
         }),
-        { name: "filter" }
+        // Persist Options
+        {
+          name: "filter",
+          partialize: (state) =>
+            Object.fromEntries(
+              Object.entries(state).filter(
+                (key) => !["activeDropdown"].includes(key[0])
+              )
+            ),
+        }
       )
     )
   )
 );
+
+export default useFilterStore;

@@ -1,19 +1,28 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import DropdownTriggerButton from "./DropdownTriggerButton";
 
-import { FilterT } from "store/filter";
+import { useFilterStore } from "store";
+
+import { FilterStateT } from "interface";
 interface DropdownType {
   children: React.ReactNode;
   activeLabel: string;
-  name: FilterT;
+  dropdownName: FilterStateT["activeDropdown"];
 }
 
-const Dropdown: React.FC<DropdownType> = ({ children, activeLabel }) => {
+const Dropdown: React.FC<DropdownType> = ({
+  children,
+  activeLabel,
+  dropdownName,
+}) => {
   const dropdownBodyRef = useRef<HTMLUListElement>(null);
   const dropdownButtonRef = useRef<HTMLButtonElement>(null);
 
-  const [activeDropdown, setActiveDropdown] = useState(false);
+  const { activeDropdown, setActiveDropdown } = useFilterStore((state) => ({
+    activeDropdown: state.activeDropdown,
+    setActiveDropdown: state.setActiveDropdown,
+  }));
 
   function globalClickListener({ target }: MouseEvent): void {
     if (
@@ -24,13 +33,20 @@ const Dropdown: React.FC<DropdownType> = ({ children, activeLabel }) => {
     )
       return;
 
-    setActiveDropdown(false);
+    setActiveDropdown("INACTIVE");
     document.removeEventListener("click", globalClickListener);
   }
 
   function toggleDropdown(): void {
-    setActiveDropdown((prev) => !prev);
-    !activeDropdown && document.addEventListener("click", globalClickListener);
+    if (activeDropdown === "INACTIVE") {
+      setActiveDropdown(dropdownName);
+      document.addEventListener("click", globalClickListener);
+    } else if (activeDropdown === dropdownName) {
+      setActiveDropdown("INACTIVE");
+      document.removeEventListener("click", globalClickListener);
+    } else {
+      setActiveDropdown(dropdownName);
+    }
   }
 
   useEffect(() => {
@@ -42,7 +58,8 @@ const Dropdown: React.FC<DropdownType> = ({ children, activeLabel }) => {
   return (
     <div
       className={`relative border-y border-y-app-gray-shade rounded-md ${
-        activeDropdown && "border border-app-blue border-y-app-blue"
+        activeDropdown === dropdownName &&
+        "border border-app-blue border-y-app-blue"
       }`}
     >
       <DropdownTriggerButton
@@ -50,7 +67,8 @@ const Dropdown: React.FC<DropdownType> = ({ children, activeLabel }) => {
         onClick={toggleDropdown}
         ref={dropdownButtonRef}
       />
-      {activeDropdown && (
+
+      {activeDropdown === dropdownName && (
         <ul
           ref={dropdownBodyRef}
           className="absolute top-full left-0 right-0 p-2 flex flex-col gap-2 rounded-sm shadow-2xl z-[1] bg-app-gray-tint"

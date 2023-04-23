@@ -5,7 +5,7 @@ import useAppStore from "../../../store/app";
 
 import { Container } from "../../Layouts";
 
-import { NestedNavRouteT } from "../../../interface/app.types";
+import { NestedNavRouteT } from "../../../interface/store/app";
 
 interface SubNavPopUpType {
   listOf: "men" | "women";

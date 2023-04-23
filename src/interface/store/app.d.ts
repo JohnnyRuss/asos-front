@@ -1,4 +1,4 @@
-import { ProductT } from "./DB/products.types";
+import { ProductT } from "../DB/products.types";
 
 export interface AppT {
   navigation: NavigationT;
