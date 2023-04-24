@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import useAppStore from "store/app";
+import useAppStore from "store/appStore";
 import { useGetRootRoute } from "hooks";
 import { Container } from "components/Layouts";
 

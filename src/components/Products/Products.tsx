@@ -8,10 +8,10 @@ import {
   Filter,
 } from "components/Layouts";
 import Heading from "./components/Heading";
-import useAppStore from "store/app";
+import { useProductsStore } from "store";
 
 const Products: React.FC = () => {
-  const { products, loadingStatus } = useAppStore((state) => ({
+  const { products, loadingStatus } = useProductsStore((state) => ({
     products: state.products,
     loadingStatus: state.productsLoadingStatus,
   }));

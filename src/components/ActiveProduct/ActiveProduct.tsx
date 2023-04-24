@@ -1,13 +1,13 @@
 import React from "react";
 
-import useAppStore from "../../store/app";
+import { useProductsStore } from "store";
 
 import { Container, Spinner, Path } from "components/Layouts";
 import ProductDetails from "./components/ProductDetails";
 import Slider from "./components/Slider";
 
 const ActiveProduct: React.FC = () => {
-  const { loadingStatus, productTitle } = useAppStore((state) => ({
+  const { loadingStatus, productTitle } = useProductsStore((state) => ({
     loadingStatus: state.productLoadingStatus,
     productTitle: state.product?.title,
   }));

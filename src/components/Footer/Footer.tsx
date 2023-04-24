@@ -1,5 +1,5 @@
 import React from "react";
-import useAppStore from "store/app";
+import useAppStore from "store/appStore";
 import { Container } from "components/Layouts";
 
 const Footer: React.FC = () => {

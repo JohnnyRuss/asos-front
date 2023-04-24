@@ -2,8 +2,7 @@ import React from "react";
 
 // import { useControllNavOnScroll } from "../../hooks";
 
-import MainNav from "./components/MainNav";
-import SubNav from "./components/SubNav";
+import { MainNav, SecondaryNav } from "./components";
 
 const Navigation: React.FC = () => {
   // const isVisible = useControllNavOnScroll();
@@ -12,7 +11,7 @@ const Navigation: React.FC = () => {
     <nav className="sticky z-10 top-0">
       <>
         <MainNav />
-        <SubNav />
+        <SecondaryNav />
       </>
     </nav>
   );

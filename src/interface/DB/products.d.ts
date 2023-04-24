@@ -1,17 +1,17 @@
 export interface ProductT {
+  brand?: ProductBrandT;
+  sizes: ProductSizeT[];
+  productType: ProductTypeT[];
   details: ProductDetailsT;
   sizeAndFit: ProductSizeAndFitT;
   about: AboutProductT;
   media: ProductMediaT;
   _id: string;
-  brand?: ProductBrandT;
   for: string;
-  productType: string[];
   title: string;
   price: number;
   sale?: number;
   colour: string;
-  sizes: ProductSizeT[];
   productCode: number;
   createdAt: string;
   updatedAt: string;
@@ -27,7 +27,16 @@ export interface ProductLabelT {
   price: number;
   sale?: number;
   colour: string;
-  productType: string[];
+  productType: ProductTypeT[];
+}
+
+// includes
+interface ProductBrandT {
+  _id: string;
+  name: string;
+  fig: string;
+  history: string;
+  __v: number;
 }
 
 interface ProductSizeT {
@@ -38,12 +47,24 @@ interface ProductSizeT {
   mainSize?: string;
 }
 
-interface ProductBrandT {
-  _id: string;
-  name: string;
-  fig: string;
-  history: string;
-  __v: number;
+interface ProductTypeT {
+  label: string;
+  query: string;
+}
+
+interface ProductDetailsT {
+  title: string;
+  list: string[];
+}
+
+interface ProductSizeAndFitT {
+  modelWears: string;
+  modelHeight: string;
+}
+
+interface AboutProductT {
+  label: string;
+  texture: string;
 }
 
 interface ProductMediaT {
@@ -53,19 +74,4 @@ interface ProductMediaT {
 
 interface ProductVideoT {
   src: string;
-}
-
-interface AboutProductT {
-  label: string;
-  texture: string;
-}
-
-interface ProductSizeAndFitT {
-  modelWears: string;
-  modelHeight: string;
-}
-
-interface ProductDetailsT {
-  title: string;
-  list: string[];
 }

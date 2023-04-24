@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import { Products } from "components";
-import useAppStore from "store/app";
+import { useProductsStore } from "store";
 import { useScrollUp } from "hooks";
 
 const ProductsPage: React.FC = () => {
@@ -11,7 +11,7 @@ const ProductsPage: React.FC = () => {
 
   const { state } = useLocation();
 
-  const getProducts = useAppStore((state) => state.getProducts);
+  const getProducts = useProductsStore((state) => state.getProducts);
 
   useEffect(() => {
     const routeState = {

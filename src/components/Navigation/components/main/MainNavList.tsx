@@ -1,12 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import useAppStore from "../../../store/app";
+import { useAppStore } from "store";
 
-interface MainNavListType {}
-
-const MainNavList: React.FC<MainNavListType> = (props) => {
-  const navigation = useAppStore().navigation.main;
+const MainNavList: React.FC = () => {
+  const navigation = useAppStore(({ navigation }) => navigation.main);
 
   return (
     <ul className="h-full flex items-center gap-4 uppercase font-semibold text-app-base">

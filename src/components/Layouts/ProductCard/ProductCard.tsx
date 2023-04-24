@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { createImageUrl } from "lib";
-import { ProductLabelT } from "interface/DB/products.types";
+import { ProductLabelT } from "interface/DB/products";
 
 interface ProductCardType {
   product: ProductLabelT;

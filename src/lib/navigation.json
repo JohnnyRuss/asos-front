@@ -9,7 +9,7 @@
             "route": "/men"
         }
     ],
-    "subNavs": {
+    "secondary": {
         "men": [
             {
                 "label": "New In",
@@ -67,7 +67,7 @@
             }
         ]
     },
-    "sub": [
+    "nested": [
         {
             "label": "New In",
             "route": "new in",

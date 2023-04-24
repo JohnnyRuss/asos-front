@@ -1,9 +1,9 @@
 import React from "react";
-import useAppStore from "store/app";
+import { useProductsStore } from "store";
 import ProductAccordion from "./ProductAccordion";
 
 const ProductDetails: React.FC = () => {
-  const product = useAppStore((state) => state.product);
+  const product = useProductsStore((state) => state.product);
 
   return (
     <div className="flex flex-col gap-4 px-4">

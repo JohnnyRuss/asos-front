@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import useAppStore from "store/app";
+import useAppStore from "store/appStore";
 import { useGetRootRoute, useGetRandomNumber } from "hooks";
 import { Container, Button } from "components/Layouts";
 

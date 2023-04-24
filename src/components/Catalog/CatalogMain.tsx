@@ -1,6 +1,6 @@
 import React from "react";
 
-import useAppStore from "store/app";
+import useAppStore from "store/appStore";
 import { useGetRootRoute } from "hooks";
 import { Container } from "components/Layouts";
 

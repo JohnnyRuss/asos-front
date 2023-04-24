@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import useAppStore from "store/app";
+import { useProductsStore } from "store";
 import { GenerateParagraphs } from "components/Layouts";
 import "./acordion.css";
 
 const ProductAccordion: React.FC = () => {
-  const { brand, productDetails, productCode, sizeAndFit, about } = useAppStore(
-    (state) => ({
+  const { brand, productDetails, productCode, sizeAndFit, about } =
+    useProductsStore((state) => ({
       brand: state.product?.brand,
       productDetails: state.product?.details,
       productCode: state.product?.productCode,
       sizeAndFit: state.product?.sizeAndFit,
       about: state.product?.about,
-    })
-  );
+    }));
 
   const [activeAcordion, setActiveAcordion] = useState<
     "DETAILS" | "BRAND" | "SIZE_&_FIT" | "ABOUT" | undefined
