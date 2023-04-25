@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import useAppStore from "store/appStore";
+import { useAppStore } from "store";
 import { useGetRootRoute } from "hooks";
 import { Container } from "components/Layouts";
 
 const Brands: React.FC = () => {
-  const brands = useAppStore().landing.trendingBrands;
+  const brands = useAppStore(({ landing }) => landing.trendingBrands);
 
   const rootRoute = useGetRootRoute();
-  const brandsToRender = brands[rootRoute === "women" ? "women" : "men"];
+  const brandsToRender = brands[rootRoute.label === "women" ? "women" : "men"];
 
   return (
     <div>

@@ -8,7 +8,8 @@ const CatalogSpecial: React.FC = () => {
   const catalogs = useAppStore().landing.landingCatalog;
 
   const rootRoute = useGetRootRoute();
-  const listToRender = catalogs[rootRoute === "men" ? "men" : "women"].sub;
+  const listToRender =
+    catalogs[rootRoute.label === "men" ? "men" : "women"].sub;
 
   const randomNumber = useGetRandomNumber({
     max: listToRender.length / 2,

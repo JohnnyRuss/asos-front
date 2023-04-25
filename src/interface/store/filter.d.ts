@@ -1,3 +1,16 @@
+import { ProductT } from "interface";
+
+export interface FilterStoreT extends FilterStoreActionsT {
+  activeDropdown: DropdownT;
+  filter: FilterT;
+}
+
+interface FilterStoreActionsT {
+  setActiveDropdown: (filter: DropdownTS) => void;
+  setFilter: (key: keyof FilterT, value: string) => void;
+  resetFilter: () => void;
+}
+
 export type DropdownT =
   | "INACTIVE"
   | "SORT"
@@ -12,12 +25,4 @@ export type FilterT = {
   productType: string;
   brand: string;
   size: string;
-};
-
-export type FilterStateT = {
-  activeDropdown: DropdownT;
-  setActiveDropdown: (filter: DropdownTS) => void;
-  filter: FilterT;
-  setFilter: (key: keyof FilterT, value: string) => void;
-  resetFilter: () => void;
 };

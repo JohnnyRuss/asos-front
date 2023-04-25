@@ -1,10 +1,6 @@
-export interface NestedListQueryT {
-  search_for: string;
-  search_in: {
-    label: string;
-    route: string;
-  };
-}
+import { NavBaseQueryT } from "interface";
+
+export interface NestedListQueryT extends NavBaseQueryT {}
 
 export interface NestedListT {
   title: string;

@@ -13,7 +13,7 @@
         "men": [
             {
                 "label": "New In",
-                "route": "new in"
+                "route": "new-in"
             },
             {
                 "label": "Clothing",
@@ -39,7 +39,7 @@
         "women": [
             {
                 "label": "New In",
-                "route": "new in"
+                "route": "new-in"
             },
             {
                 "label": "Clothing",
@@ -70,7 +70,7 @@
     "nested": [
         {
             "label": "New In",
-            "route": "new in",
+            "route": "new-in",
             "nestedNav": [
                 {
                     "listType": "TEXT_ONLY",
@@ -300,7 +300,7 @@
                             },
                             {
                                 "label": "New In",
-                                "route": "new in"
+                                "route": "new-in"
                             },
                             {
                                 "label": "Jackets & Coats",
@@ -378,7 +378,7 @@
                         "women": [
                             {
                                 "label": "New In",
-                                "route": "new in"
+                                "route": "new-in"
                             },
                             {
                                 "label": "View All",
@@ -597,7 +597,7 @@
                             },
                             {
                                 "label": "New In",
-                                "route": "new in"
+                                "route": "new-in"
                             },
                             {
                                 "label": "Evening Dresses",
@@ -725,7 +725,7 @@
                                 "route": "all"
                             },
                             {
-                                "label": "new in",
+                                "label": "new-in",
                                 "route": ""
                             },
                             {
@@ -771,7 +771,7 @@
                                 "route": "all"
                             },
                             {
-                                "label": "new in",
+                                "label": "new-in",
                                 "route": ""
                             },
                             {
@@ -1014,7 +1014,7 @@
                             },
                             {
                                 "label": "New In",
-                                "route": "new in"
+                                "route": "new-in"
                             },
                             {
                                 "label": "Trainers",
@@ -1052,7 +1052,7 @@
                             },
                             {
                                 "label": "New In",
-                                "route": "new in"
+                                "route": "new-in"
                             },
                             {
                                 "label": "Trainers",
@@ -1670,7 +1670,7 @@
                             {
                                 "fig": "/assets/nav/men/men-brands__new-in-2.webp",
                                 "label": "New In",
-                                "route": "new in"
+                                "route": "new-in"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__outdoors.webp",
@@ -1697,7 +1697,7 @@
                             {
                                 "fig": "/assets/nav/women/women-brands__new-in.webp",
                                 "label": "New In",
-                                "route": "new in"
+                                "route": "new-in"
                             },
                             {
                                 "fig": "/assets/nav/women/women-brands__outdoor.webp",

@@ -8,7 +8,8 @@ const CatalogMain: React.FC = () => {
   const catalogs = useAppStore().landing.landingCatalog;
 
   const rootRoute = useGetRootRoute();
-  const listToRender = catalogs[rootRoute === "men" ? "men" : "women"].main;
+  const listToRender =
+    catalogs[rootRoute.label === "men" ? "men" : "women"].main;
 
   return (
     <Container>
@@ -23,7 +24,9 @@ const CatalogMain: React.FC = () => {
               />
             </figure>
             <div className="flex flex-col items-center mt-3">
-              <span className="uppercase font-bold text-app-big">{block.title}</span>
+              <span className="uppercase font-bold text-app-big">
+                {block.title}
+              </span>
               <span className="text-app-base">{block.label}</span>
             </div>
           </div>

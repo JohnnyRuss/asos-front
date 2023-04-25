@@ -46,7 +46,7 @@ const SecondaryNav: React.FC = () => {
       <Container>
         <div onMouseOver={controllNavOnEnter}>
           <SecondaryNavList
-            navList={rootRoute === "men" ? menNav : womenNav}
+            navList={rootRoute.label === "men" ? menNav : womenNav}
             activeRoute={secondaryRoute}
           />
 

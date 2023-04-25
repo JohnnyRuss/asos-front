@@ -1,0 +1,1 @@
+export {default as useGetProductsQueryStr} from "./useGetProductsQueryStr"

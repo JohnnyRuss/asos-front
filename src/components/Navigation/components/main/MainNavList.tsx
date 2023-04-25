@@ -12,6 +12,11 @@ const MainNavList: React.FC = () => {
         <li className="h-full" key={route.route}>
           <NavLink
             to={route.route}
+            state={{
+              search_for: route,
+              search_in: null,
+              search: null,
+            }}
             className={({ isActive }) =>
               (isActive ? "bg-app-gray" : "") + ` flex items-center h-full px-3`
             }

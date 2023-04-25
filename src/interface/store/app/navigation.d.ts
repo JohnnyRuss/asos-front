@@ -4,7 +4,16 @@ export interface NavigationT {
   nested: NestedNavigationT[];
 }
 
-export type NavigationRootRouteT = "men" | "women";
+export type NavigationRootRouteT = {
+  label: "men" | "women";
+  route: "men" | "women";
+};
+
+export interface NavBaseQueryT {
+  search_for: NavigationRootRouteT;
+  search_in?: NavLinkT | null;
+  search?: NavLinkT | null;
+}
 
 // PARTIALS
 interface SecondaryNavigationT {

@@ -16,7 +16,7 @@ const NavTextOnlyListItem: React.FC<NavTextOnlyListItemType> = ({
     <li>
       <Link
         className="inline-block w-full hover:text-app-blue transition-colors duration-200"
-        to={`/${query.search_for}/products`}
+        to={`/${query.search_for.route}/products`}
         state={{
           search_for: query.search_for,
           search_in: query.search_in,

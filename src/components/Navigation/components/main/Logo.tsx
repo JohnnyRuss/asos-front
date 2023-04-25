@@ -7,7 +7,14 @@ const Logo: React.FC = () => {
   const rootRoute = useGetRootRoute();
 
   return (
-    <Link to={rootRoute}>
+    <Link
+      to={rootRoute.route}
+      state={{
+        search_for: rootRoute,
+        search_in: null,
+        search: null,
+      }}
+    >
       <figure className="w-24 border-r border-r-app-gray pr-4 ">
         <img
           src="/assets/logo/logo-big-white.webp"

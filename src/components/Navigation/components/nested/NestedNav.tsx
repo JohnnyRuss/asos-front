@@ -31,7 +31,7 @@ const NestedNav: React.FC<NestedNavType> = ({ secondaryRoute, rootRoute }) => {
           {nestedNav &&
             nestedNav.map((nav, i) => {
               const title = nav.title;
-              const routes = nav.routes[rootRoute];
+              const routes = nav.routes[rootRoute.label];
               const listType = nav.listType;
 
               if (listType === "TEXT_ONLY")

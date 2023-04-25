@@ -4,17 +4,19 @@ import { useLocation } from "react-router-dom";
 import { NavigationRootRouteT } from "interface";
 
 export default function useGetRootRoute(): NavigationRootRouteT {
-  const { pathname } = useLocation();
+  const { state } = useLocation();
 
-  const [activeRootRoute, setActiveRootRoute] =
-    useState<NavigationRootRouteT>("women");
+  const [activeRootRoute, setActiveRootRoute] = useState<NavigationRootRouteT>({
+    label: "women",
+    route: "women",
+  });
 
   useEffect(() => {
-    const rootRoute = pathname.split("/")[1];
+    const { search_for: rootRoute } = state;
 
-    if (rootRoute && (rootRoute === "men" || rootRoute === "women"))
+    if (rootRoute && (rootRoute.route === "men" || rootRoute.route === "women"))
       setActiveRootRoute(rootRoute);
-  }, [pathname]);
+  }, [state]);
 
   return activeRootRoute;
 }

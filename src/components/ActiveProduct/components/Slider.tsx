@@ -1,6 +1,6 @@
 import React from "react";
 import { useProductsStore } from "store";
-import { createImageUrl } from "lib";
+import { createImageUrl } from "utils";
 
 const Slider: React.FC = () => {
   const { productMedia } = useProductsStore((state) => ({

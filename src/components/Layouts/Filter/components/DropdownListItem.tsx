@@ -1,16 +1,16 @@
 import React from "react";
 
-import { FilterStateT } from "interface";
+import { FilterStoreT } from "interface";
 
 interface DropdownListItemType {
   children: React.ReactNode;
-  name: keyof FilterStateT["filter"];
+  name: keyof FilterStoreT["filter"];
   value: string;
   onClick: ({
     key,
     value,
   }: {
-    key: keyof FilterStateT["filter"];
+    key: keyof FilterStoreT["filter"];
     value: string;
   }) => void;
 }
@@ -26,7 +26,7 @@ const DropdownListItem: React.FC<DropdownListItemType> = ({
       onClick={({ target }: React.MouseEvent<HTMLLIElement>) =>
         onClick({
           key: (target as HTMLElement).dataset
-            .name as keyof FilterStateT["filter"],
+            .name as keyof FilterStoreT["filter"],
           value: (target as HTMLElement).dataset.value!,
         })
       }

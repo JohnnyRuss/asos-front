@@ -4,11 +4,11 @@ import DropdownTriggerButton from "./DropdownTriggerButton";
 
 import { useFilterStore } from "store";
 
-import { FilterStateT } from "interface";
+import { FilterStoreT } from "interface";
 interface DropdownType {
   children: React.ReactNode;
   activeLabel: string;
-  dropdownName: FilterStateT["activeDropdown"];
+  dropdownName: FilterStoreT["activeDropdown"];
 }
 
 const Dropdown: React.FC<DropdownType> = ({

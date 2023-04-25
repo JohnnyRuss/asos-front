@@ -2,9 +2,9 @@ import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
 
-import { FilterStateT } from "interface";
+import { FilterStoreT } from "interface";
 
-const useFilterStore = create<FilterStateT>()(
+const useFilterStore = create<FilterStoreT>()(
   devtools(
     immer(
       persist(
@@ -19,13 +19,13 @@ const useFilterStore = create<FilterStateT>()(
             size: "",
           },
 
-          setActiveDropdown: (filter: FilterStateT["activeDropdown"]) => {
+          setActiveDropdown: (filter: FilterStoreT["activeDropdown"]) => {
             set({
               activeDropdown: filter,
             });
           },
 
-          setFilter: (key: keyof FilterStateT["filter"], value: string) => {
+          setFilter: (key: keyof FilterStoreT["filter"], value: string) => {
             set((state) => ({
               filter: {
                 ...state.filter,

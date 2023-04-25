@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
 
   const rootRoute = useGetRootRoute();
 
-  const listToRender = heros[rootRoute === "men" ? "men" : "women"];
+  const listToRender = heros[rootRoute.label === "men" ? "men" : "women"];
   const randomNumber = useGetRandomNumber({
     max: listToRender.length,
   });
