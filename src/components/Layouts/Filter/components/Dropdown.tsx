@@ -8,6 +8,7 @@ import { FilterStoreT } from "interface";
 interface DropdownType {
   children: React.ReactNode;
   activeLabel: string;
+  isActiveFiler: boolean;
   dropdownName: FilterStoreT["activeDropdown"];
 }
 
@@ -15,6 +16,7 @@ const Dropdown: React.FC<DropdownType> = ({
   children,
   activeLabel,
   dropdownName,
+  isActiveFiler,
 }) => {
   const dropdownBodyRef = useRef<HTMLUListElement>(null);
   const dropdownButtonRef = useRef<HTMLButtonElement>(null);
@@ -57,9 +59,12 @@ const Dropdown: React.FC<DropdownType> = ({
 
   return (
     <div
-      className={`relative border-y border-y-app-gray-shade rounded-md ${
-        activeDropdown === dropdownName &&
-        "border border-app-blue border-y-app-blue"
+      className={`relative ${
+        activeDropdown === dropdownName
+          ? "rounded-md border border-y-app-blue border-x-app-blue"
+          : isActiveFiler
+          ? "border-t border-t-app-blue"
+          : "border-y border-y-app-gray-shade"
       }`}
     >
       <DropdownTriggerButton
@@ -71,7 +76,7 @@ const Dropdown: React.FC<DropdownType> = ({
       {activeDropdown === dropdownName && (
         <ul
           ref={dropdownBodyRef}
-          className="absolute top-full left-0 right-0 p-2 flex flex-col gap-2 rounded-sm shadow-2xl z-[1] bg-app-gray-tint"
+          className="absolute top-full left-0 right-0 p-2 max-h-72 overflow-auto overflow-x-hidden flex flex-col gap-2 rounded-sm shadow-2xl z-[1] bg-app-gray-tint"
         >
           {children}
         </ul>

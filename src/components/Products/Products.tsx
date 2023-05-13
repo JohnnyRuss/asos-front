@@ -1,58 +1,55 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from "react";
 
-import {
-  Container,
-  Spinner,
-  Path,
-  ProductCard,
-  Filter,
-} from "components/Layouts";
+import { useProductsStore, useFilterStore } from "store";
+import { useGetProductsQueryStr } from "hooks";
+
 import Heading from "./components/Heading";
-import { useProductsStore } from "store";
+import ProducsCount from "./components/ProducsCount";
+import ProductsList from "./components/ProductsList";
+import { Container, Spinner, Path, Filter } from "components/Layouts";
 
 const Products: React.FC = () => {
-  const { products, loadingStatus } = useProductsStore((state) => ({
-    products: state.products,
-    loadingStatus: state.productsLoadingStatus,
-  }));
+  const { products, loadingStatus, getFilteredProducts } = useProductsStore(
+    (state) => ({
+      products: state.products,
+      loadingStatus: state.productsLoadingStatus,
+      getFilteredProducts: state.getFilteredProducts,
+    })
+  );
+
+  const activeFilters = useFilterStore((state) => state.filter);
+  const getProductsQueryStr = useGetProductsQueryStr();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      getFilteredProducts(getProductsQueryStr(), activeFilters);
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [activeFilters]);
 
   return (
     <div className="relative min-h-screen">
-      {loadingStatus.loading && <Spinner />}
-
       <Path />
 
       <Heading />
 
       <Filter />
 
-      {!loadingStatus.loading && (
-        <Container>
-          <span className="flex items-center justify-center gap-2 text-app-sm mt-4">
-            <span>{products.length.toLocaleString()}</span>
-            <span>styles found</span>
-          </span>
+      <Container>
+        {loadingStatus.loading && <Spinner />}
 
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,_300px))] justify-center content-start gap-x-6 gap-y-8 py-5 ">
-            {products[0] &&
-              products.map((product) => (
-                <ProductCard
-                  product={{
-                    title: product.title,
-                    _id: product._id,
-                    media: product.media,
-                    price: product.price,
-                    sale: product.sale,
-                    colour: product.colour,
-                    productType: product.productType,
-                  }}
-                  key={product._id}
-                  passRouteQuery={true}
-                />
-              ))}
-          </div>
-        </Container>
-      )}
+        {!loadingStatus.loading && (
+          <>
+            <ProducsCount productsCount={products.length} />
+
+            <ProductsList products={products} />
+          </>
+        )}
+      </Container>
     </div>
   );
 };

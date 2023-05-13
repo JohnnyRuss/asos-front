@@ -1,17 +1,21 @@
-import { ProductT } from "interface";
-
 export interface FilterStoreT extends FilterStoreActionsT {
-  activeDropdown: DropdownT;
-  filter: FilterT;
+  activeDropdown: FilterDropdownT;
+  filter: ActiveFiltersT;
+  productsFilter: ProductFiltersT;
 }
 
-interface FilterStoreActionsT {
+export interface FilterStoreActionsT {
   setActiveDropdown: (filter: DropdownTS) => void;
-  setFilter: (key: keyof FilterT, value: string) => void;
+  setFilter: (key: keyof ActiveFiltersT, value: string) => void;
   resetFilter: () => void;
+  getProductsFilterQuery: (params: {
+    search_for: string;
+    search_in: string;
+    search: string;
+  }) => void;
 }
 
-export type DropdownT =
+type FilterDropdownT =
   | "INACTIVE"
   | "SORT"
   | "CATEGORY"
@@ -19,10 +23,26 @@ export type DropdownT =
   | "BRAND"
   | "SIZE";
 
-export type FilterT = {
+type ActiveFiltersT = {
   sort: string;
-  category: string;
-  productType: string;
-  brand: string;
-  size: string;
+  productType: string[];
+  brand: string[];
+  size: string[];
 };
+
+interface ProductFiltersT {
+  sort: ProductFilterT[];
+  productType: ProductFilterT[];
+  size: string[];
+  brand: FilterBrandT[];
+}
+
+interface ProductFilterT {
+  label: string;
+  query: string;
+}
+
+interface FilterBrandT {
+  _id: string;
+  name: string;
+}

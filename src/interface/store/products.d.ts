@@ -1,4 +1,5 @@
-import { ProductT } from "interface/DB/products";
+import { ProductT } from "interface/DB";
+import { ActiveFiltersT } from "interface/store";
 
 export interface ProductsStoreT extends ProductsStoreActionsT {
   products: ProductT[];
@@ -8,14 +9,21 @@ export interface ProductsStoreT extends ProductsStoreActionsT {
   productLoadingStatus: RequestStatusT;
 }
 
+interface GetProductsBaseQueryT {
+  search_for: string;
+  search_in: string;
+  search: string;
+}
+
 interface ProductsStoreActionsT {
-  getProducts: (params: {
-    search_for: string;
-    search_in: string;
-    search: string;
-  }) => void;
+  getProducts: (params: GetProductsBaseQueryT) => void;
 
   getProduct: (productId: string) => void;
+
+  getFilteredProducts: (
+    baseQuery: GetProductsBaseQueryT,
+    params: ActiveFiltersT
+  ) => void;
 }
 
 interface RequestStatusT {

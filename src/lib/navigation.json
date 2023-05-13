@@ -2,11 +2,11 @@
     "main": [
         {
             "label": "women",
-            "route": "/women"
+            "route": "women"
         },
         {
             "label": "men",
-            "route": "/men"
+            "route": "men"
         }
     ],
     "secondary": {

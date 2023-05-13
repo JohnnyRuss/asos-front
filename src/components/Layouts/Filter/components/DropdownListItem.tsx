@@ -1,18 +1,13 @@
 import React from "react";
 
-import { FilterStoreT } from "interface";
+import { FilterStoreT, FilterStoreActionsT } from "interface";
 
 interface DropdownListItemType {
   children: React.ReactNode;
   name: keyof FilterStoreT["filter"];
   value: string;
-  onClick: ({
-    key,
-    value,
-  }: {
-    key: keyof FilterStoreT["filter"];
-    value: string;
-  }) => void;
+  isActive: boolean;
+  onClick: FilterStoreActionsT["setFilter"];
 }
 
 const DropdownListItem: React.FC<DropdownListItemType> = ({
@@ -20,19 +15,21 @@ const DropdownListItem: React.FC<DropdownListItemType> = ({
   onClick,
   name,
   value,
+  isActive,
 }) => {
   return (
     <li
       onClick={({ target }: React.MouseEvent<HTMLLIElement>) =>
-        onClick({
-          key: (target as HTMLElement).dataset
-            .name as keyof FilterStoreT["filter"],
-          value: (target as HTMLElement).dataset.value!,
-        })
+        onClick(
+          (target as HTMLElement).dataset.name as keyof FilterStoreT["filter"],
+          (target as HTMLElement).dataset.value!
+        )
       }
       data-name={name}
       data-value={value}
-      className="py-2 px-3 cursor-pointer rounded-md bg-app-white transition-all hover:shadow-md"
+      className={`py-2 px-3 cursor-pointer rounded-md  transition-all hover:shadow-md first-letter:capitalize ${
+        isActive ? "bg-app-blue text-app-white" : "bg-app-white"
+      }`}
     >
       {children}
     </li>

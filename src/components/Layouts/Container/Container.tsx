@@ -5,7 +5,7 @@ interface ContainerType {
 }
 
 const Container: React.FC<ContainerType> = ({ children }) => {
-  return <div className="w-full max-w-container-lg mx-auto">{children}</div>;
+  return <div className="w-full max-w-container-lg mx-auto relative">{children}</div>;
 };
 
 export default Container;

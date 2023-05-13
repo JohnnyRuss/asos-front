@@ -53,6 +53,47 @@ const useProductsStore = create<ProductsStoreT>()(
         }
       },
 
+      getFilteredProducts: async (
+        { search_for, search_in, search },
+        { brand, productType, size, sort }
+      ) => {
+        try {
+          // set({
+          //   productsLoadingStatus: {
+          //     loading: true,
+          //     error: false,
+          //     message: "",
+          //   },
+          // });
+
+          let baseQuery: string = `products?search_for=${search_for}&search_in=${search_in}${
+            search ? `&search=${search}` : ""
+          }`;
+
+          if (sort) baseQuery += `&${sort}`;
+          if (Array.isArray(productType) && productType[0])
+            baseQuery += `&${productType.join(",")}`;
+          if (Array.isArray(brand) && brand[0])
+            baseQuery += `&${brand.join(",")}`;
+          if (Array.isArray(size) && size[0]) baseQuery += `&${size.join(",")}`;
+
+          console.log(baseQuery);
+          // const { data } = await axiosQuery.get(baseQuery);
+
+          // set({ products: data });
+        } catch (error) {
+          console.log(error);
+        } finally {
+          // set({
+          //   productsLoadingStatus: {
+          //     loading: false,
+          //     error: true,
+          //     message: "",
+          //   },
+          // });
+        }
+      },
+
       getProduct: async (productId) => {
         try {
           set({
