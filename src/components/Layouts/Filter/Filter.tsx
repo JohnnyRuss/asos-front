@@ -77,38 +77,47 @@ const Fillter: React.FC = () => {
               "product type"
             }
           >
-            {productsFilter.productType?.map((option) => (
-              <DropdownListItem
-                name="productType"
-                value={option.query}
-                onClick={(key, value) => setFilter(key, value)}
-                isActive={filter.productType.includes(option.query)}
-                key={`dropdown-${option.query}`}
-              >
-                {option.label}
-              </DropdownListItem>
-            ))}
+            {productsFilter.productType
+              ?.sort((optionA, optionB) =>
+                optionA?.label > optionB?.label ? 1 : -1
+              )
+              .map((option) => (
+                <DropdownListItem
+                  name="productType"
+                  value={option.query}
+                  onClick={(key, value) => setFilter(key, value)}
+                  isActive={filter.productType.includes(option.query)}
+                  key={`dropdown-${option.query}`}
+                >
+                  {option.label}
+                </DropdownListItem>
+              ))}
           </Dropdown>
 
           {/* BRAND */}
           <Dropdown
             activeLabel={
-              detectActiveFilterLabel(productsFilter, "brand", filter) || "brand"
+              detectActiveFilterLabel(productsFilter, "brand", filter) ||
+              "brand"
             }
             isActiveFiler={Object.values(filter.brand).length > 0}
             dropdownName="BRAND"
           >
-            {productsFilter.brand?.map((option) => (
-              <DropdownListItem
-                name="brand"
-                value={option.name}
-                onClick={(key, value) => setFilter(key, value)}
-                isActive={filter.brand.includes(option.name)}
-                key={`dropdown-${option._id}`}
-              >
-                {option.name}
-              </DropdownListItem>
-            ))}
+            {productsFilter.brand
+              ?.sort((optionA, optionB) =>
+                optionA?.name > optionB?.name ? 1 : -1
+              )
+              .map((option) => (
+                <DropdownListItem
+                  name="brand"
+                  value={option._id}
+                  onClick={(key, value) => setFilter(key, value)}
+                  isActive={filter.brand.includes(option._id)}
+                  key={`dropdown-${option._id}`}
+                >
+                  {option.name}
+                </DropdownListItem>
+              ))}
           </Dropdown>
 
           {/* SIZE */}
@@ -119,17 +128,19 @@ const Fillter: React.FC = () => {
               detectActiveFilterLabel(productsFilter, "size", filter) || "size"
             }
           >
-            {productsFilter.size?.map((option) => (
-              <DropdownListItem
-                name="size"
-                value={option}
-                onClick={(key, value) => setFilter(key, value)}
-                isActive={filter.size.includes(option)}
-                key={`dropdown-${option}`}
-              >
-                {option}
-              </DropdownListItem>
-            ))}
+            {productsFilter.size
+              ?.sort((optionA, optionB) => (optionA > optionB ? 1 : -1))
+              .map((option) => (
+                <DropdownListItem
+                  name="size"
+                  value={option}
+                  onClick={(key, value) => setFilter(key, value)}
+                  isActive={filter.size.includes(option)}
+                  key={`dropdown-${option}`}
+                >
+                  {option}
+                </DropdownListItem>
+              ))}
           </Dropdown>
         </div>
       </Container>

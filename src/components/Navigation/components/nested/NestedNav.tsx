@@ -22,7 +22,7 @@ const NestedNav: React.FC<NestedNavType> = ({ secondaryRoute, rootRoute }) => {
   );
 
   return (
-    <div className="absolute z-10 left-0 right-0 h-screen bg-app-black-tr">
+    <div className="fixed z-10 left-0 right-0 h-screen bg-app-black-tr">
       <Container>
         <div
           data-sub-nav-list

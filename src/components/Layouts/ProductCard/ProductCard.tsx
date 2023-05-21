@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCardType> = ({
             <span className="font-bold">categories:</span>
             <ul className="list-disc pl-5">
               {product.productType.map((type, i) => (
-                <li key={`${product._id}--${type}__${i}`}>{type}</li>
+                <li key={`${product._id}--${type}__${i}`}>{type.query}</li>
               ))}
             </ul>
           </div>

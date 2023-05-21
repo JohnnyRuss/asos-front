@@ -99,7 +99,7 @@
                             },
                             {
                                 "label": "T-Shirt & Vests",
-                                "route": "t-shirt,vests"
+                                "route": "t-shirts,vests"
                             },
                             {
                                 "label": "Sportswear",
@@ -398,7 +398,7 @@
                             },
                             {
                                 "label": "Lingerie & Nightwear",
-                                "route": "lingerie,nightwear"
+                                "route": "lingerie,nightwears"
                             },
                             {
                                 "label": "Tracksuits & Joggers",
@@ -1163,64 +1163,64 @@
                             {
                                 "fig": "/assets/nav/men/men-sportswear__adidas.webp",
                                 "label": "Adidas",
-                                "route": "adidas"
+                                "route": "640ccd80411cc14043b6e006"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__asos-4505.webp",
                                 "label": "ASOS 4505",
-                                "route": "asos,asos 4505"
+                                "route": "640ccd80411cc14043b6e010,640ee48999f7d3d589ed82d4"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__converse.webp",
                                 "label": "Converse",
-                                "route": "converse"
+                                "route": "640f6947aa94bba860603100"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__new-balance.webp",
                                 "label": "New Balance",
-                                "route": "new balance"
+                                "route": "640f7274aac482796625f7e4"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__nike.webp",
                                 "label": "Nike",
-                                "route": "nike"
+                                "route": "640ce6083f9bc2e2bdf9bddc"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__the-north-face.webp",
                                 "label": "The North Face",
-                                "route": "the north face"
+                                "route": "640ccd80411cc14043b6e005"
                             }
                         ],
                         "women": [
                             {
                                 "fig": "/assets/nav/women/women-sportswear__adidas.webp",
                                 "label": "Adidas",
-                                "route": "adidas"
+                                "route": "640ccd80411cc14043b6e006"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__asos-4505.webp",
                                 "label": "ASOS 4505",
-                                "route": "asos,asos 4505"
+                                "route": "640ccd80411cc14043b6e010,640ee48999f7d3d589ed82d4"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__converse.webp",
                                 "label": "Converse",
-                                "route": "converse"
+                                "route": "640f6947aa94bba860603100"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__new-balance-2.webp",
                                 "label": "New Balance",
-                                "route": "new balance"
+                                "route": "640f7274aac482796625f7e4"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__nike.webp",
                                 "label": "Nike",
-                                "route": "nike"
+                                "route": "640ce6083f9bc2e2bdf9bddc"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__the-north-face.webp",
                                 "label": "The North Face",
-                                "route": "the north face"
+                                "route": "640ccd80411cc14043b6e005"
                             }
                         ]
                     }
@@ -1238,7 +1238,7 @@
                             {
                                 "fig": "/assets/nav/men/men-sportswear__new-balance-fig-only.webp",
                                 "label": "New Balance",
-                                "route": "new balance"
+                                "route": "640f7274aac482796625f7e4"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__outdoors-fig-only.webp",
@@ -1260,7 +1260,7 @@
                             {
                                 "fig": "/assets/nav/women/women-sportswear__new-balance.webp",
                                 "label": "New Balance",
-                                "route": "new balance"
+                                "route": "640f7274aac482796625f7e4"
                             }
                         ]
                     }

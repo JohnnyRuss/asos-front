@@ -8,8 +8,12 @@ export default function detectActiveFilterLabel(
   return key === "sort"
     ? productsFilter.sort.find((sortType) => sortType.query === filter?.sort)
         ?.label || ""
-    : key === "size" || key === "brand"
+    : key === "size"
     ? filter[key][filter[key].length - 1] || ""
+    : key === "brand"
+    ? productsFilter[key].find(
+        (br) => br._id === filter[key][filter[key].length - 1]
+      )?.name || ""
     : productsFilter[key].find(
         (type) => type.query === filter[key][filter.productType.length - 1]
       )?.label || "";
