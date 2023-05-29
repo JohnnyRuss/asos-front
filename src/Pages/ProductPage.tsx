@@ -9,12 +9,18 @@ import { useProductsStore } from "store";
 const ProductPage: React.FC = () => {
   useScrollUp();
 
-  const getProduct = useProductsStore((state) => state.getProduct);
+  const { getProduct, getRelatedProducts } = useProductsStore((state) => ({
+    getProduct: state.getProduct,
+    getRelatedProducts: state.getRelatedProducts,
+  }));
   const { productId } = useParams();
 
   useEffect(() => {
-    productId && getProduct(productId);
-  }, []);
+    if (productId) {
+      getProduct(productId);
+      getRelatedProducts(productId);
+    }
+  }, [productId]);
 
   return <ActiveProduct />;
 };

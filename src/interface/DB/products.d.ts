@@ -30,6 +30,20 @@ export interface ProductLabelT {
   productType: ProductTypeT[];
 }
 
+export interface RelatedProductT {
+  _id: string;
+  brand: {
+    _id: string;
+    name: string;
+  } | null;
+  media: {
+    pictures: string[];
+    video: string[];
+  };
+  price: number;
+  sale: number | null;
+}
+
 // includes
 interface ProductBrandT {
   _id: string;

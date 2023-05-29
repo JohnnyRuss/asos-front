@@ -9,6 +9,7 @@ const useProductsStore = create<ProductsStoreT>()(
   devtools(
     immer((set) => ({
       products: [],
+      relatedProducts: [],
       product: null,
 
       productsLoadingStatus: {
@@ -117,6 +118,15 @@ const useProductsStore = create<ProductsStoreT>()(
               message: "",
             },
           });
+        }
+      },
+
+      getRelatedProducts: async (productId) => {
+        try {
+          const { data } = await axiosQuery(`products/${productId}/related`);
+          set({ relatedProducts: data });
+        } catch (error) {
+          console.log(error);
         }
       },
     }))

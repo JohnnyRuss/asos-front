@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import Figure from "./components/Figure";
-import HeartButton from "./components/HeartButton";
+import { HeartButton } from "components/Layouts";
 
 import { ProductLabelT } from "interface/DB/products";
 interface ProductCardType {

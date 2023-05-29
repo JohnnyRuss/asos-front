@@ -1,8 +1,9 @@
-import { ProductT } from "interface/DB";
+import { ProductT, RelatedProductT } from "interface/DB";
 import { ActiveFiltersT } from "interface/store";
 
 export interface ProductsStoreT extends ProductsStoreActionsT {
   products: ProductT[];
+  relatedProducts: RelatedProductT[];
   product: ProductT | null;
 
   productsLoadingStatus: RequestStatusT;
@@ -24,6 +25,8 @@ interface ProductsStoreActionsT {
     baseQuery: GetProductsBaseQueryT,
     params: ActiveFiltersT
   ) => void;
+
+  getRelatedProducts: (productId: string) => void;
 }
 
 interface RequestStatusT {

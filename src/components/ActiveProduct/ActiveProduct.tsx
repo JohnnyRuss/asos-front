@@ -5,6 +5,7 @@ import { useProductsStore } from "store";
 import { Container, Spinner, Path } from "components/Layouts";
 import ProductDetails from "./components/ProductDetails";
 import Slider from "./components/Slider";
+import RelatedProducts from "./components/RelatedProducts";
 
 const ActiveProduct: React.FC = () => {
   const { loadingStatus, productTitle } = useProductsStore((state) => ({
@@ -17,7 +18,7 @@ const ActiveProduct: React.FC = () => {
       {loadingStatus.loading && <Spinner />}
 
       <Container>
-        <div className="min-h-screen">
+        <div className="min-h-screen pb-20">
           {!loadingStatus.loading && (
             <>
               <Path title={productTitle} />
@@ -26,6 +27,7 @@ const ActiveProduct: React.FC = () => {
                 <Slider />
                 <ProductDetails />
               </div>
+              <RelatedProducts />
             </>
           )}
         </div>
