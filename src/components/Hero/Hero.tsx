@@ -11,7 +11,6 @@ const Hero: React.FC = () => {
   const heros = useAppStore().landing.hero;
 
   const rootRoute = useGetRootRoute();
-
   const listToRender = heros[rootRoute.label === "men" ? "men" : "women"];
   const randomNumber = useGetRandomNumber({
     max: listToRender.length,
@@ -19,18 +18,34 @@ const Hero: React.FC = () => {
 
   const activeHero = listToRender[randomNumber];
 
+  function onShop() {
+    navigate("products", {
+      state: {
+        search_for: rootRoute,
+        search_in: {
+          label: activeHero.query.search_in.label,
+          route: activeHero.query.search_in.query,
+        },
+        search: {
+          label: activeHero.query.search.label,
+          route: activeHero.query.search.query,
+        },
+      },
+    });
+  }
+
   return (
     <Container>
       <figure className="relative my-5 w-full">
         <img
           src={activeHero?.fig}
-          alt={activeHero?.label || "asos hero"}
+          alt={activeHero?.fig || "asos hero"}
           className="w-full"
         />
         <Button
           label="shop now"
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          onClick={() => navigate("/women/products")}
+          onClick={() => onShop()}
         />
       </figure>
     </Container>

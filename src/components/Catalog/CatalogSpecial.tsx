@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import useAppStore from "store/appStore";
 import { useGetRootRoute, useGetRandomNumber } from "hooks";
 import { Container, Button } from "components/Layouts";
 
 const CatalogSpecial: React.FC = () => {
+  const navigate = useNavigate();
+
   const catalogs = useAppStore().landing.landingCatalog;
 
   const rootRoute = useGetRootRoute();
@@ -38,6 +41,21 @@ const CatalogSpecial: React.FC = () => {
                 </span>
                 <span className="text-app-base">{block.label}</span>
                 <Button
+                  onClick={() =>
+                    navigate("products", {
+                      state: {
+                        search_for: rootRoute,
+                        search_in: {
+                          label: block.query.search_in.label,
+                          route: block.query.search_in.query,
+                        },
+                        search: {
+                          label: block.query.search.label,
+                          route: block.query.search.query,
+                        },
+                      },
+                    })
+                  }
                   label="shop now"
                   className="border-2 border-app-black mt-3"
                 />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import useAppStore from "store/appStore";
 import { useGetRootRoute } from "hooks";
@@ -15,7 +16,22 @@ const CatalogMain: React.FC = () => {
     <Container>
       <div className="flex justify-between gap-10 my-10">
         {listToRender.map((block) => (
-          <div key={block._id} className="w-1/4 flex flex-col">
+          <Link
+            key={block._id}
+            to="products"
+            state={{
+              search_for: rootRoute,
+              search_in: {
+                label: block.query.search_in.label,
+                route: block.query.search_in.query,
+              },
+              search: {
+                label: block.query.search.label,
+                route: block.query.search.query,
+              },
+            }}
+            className="w-1/4 flex flex-col"
+          >
             <figure className="w-full h-[380px] overflow-hidden">
               <img
                 src={block.fig}
@@ -29,7 +45,7 @@ const CatalogMain: React.FC = () => {
               </span>
               <span className="text-app-base">{block.label}</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </Container>

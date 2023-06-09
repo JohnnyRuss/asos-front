@@ -4,19 +4,29 @@ export interface LandingT {
   trendingBrands: TrendingBrandsT;
 }
 
+interface QueryT {
+  search_in: QueryFragmentsT;
+  search: QueryFragmentsT;
+}
+
+interface QueryFragmentsT {
+  query: string;
+  label: string;
+}
+
 interface HerosT {
   men: HeroT[];
   women: HeroT[];
 }
 
-interface HeroT {
-  fig: string;
-  label?: string;
-}
-
 interface LandingCatalogsT {
   men: LandingCatalogT;
   women: LandingCatalogT;
+}
+
+interface HeroT {
+  fig: string;
+  query: QueryT;
 }
 
 interface LandingCatalogT {
@@ -29,6 +39,7 @@ interface CatalogMainT {
   title: string;
   label: string;
   fig: string;
+  query: QueryT;
 }
 
 interface CatalogSubT {
@@ -38,6 +49,7 @@ interface CatalogSubT {
   label: string;
   fig: string;
   actionLabel: string;
+  query: QueryT;
 }
 
 interface TrendingBrandsT {

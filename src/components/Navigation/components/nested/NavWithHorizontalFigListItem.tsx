@@ -6,16 +6,18 @@ import { NestedListQueryT } from "./types";
 interface NavWithHorizontalFigListItemType {
   route: NavLinkWithFigT;
   query: NestedListQueryT;
+  onClick: () => void;
 }
 
 const NavWithHorizontalFigListItem: React.FC<
   NavWithHorizontalFigListItemType
-> = ({ query, route }) => {
+> = ({ query, route, onClick }) => {
   return (
     <li className="w-full group/fig-x">
       <Link
         className="flex gap-2"
         to={`/${query.search_for.route}/products`}
+        onClick={onClick}
         state={{
           search_for: query.search_for,
           search_in: query.search_in,

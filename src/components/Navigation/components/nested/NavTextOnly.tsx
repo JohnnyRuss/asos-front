@@ -5,7 +5,12 @@ import NavTextOnlyList from "./NavTextOnlyList";
 
 import { NestedListT } from "./types";
 
-const NavTextOnly: React.FC<NestedListT> = ({ query, routes, title }) => {
+const NavTextOnly: React.FC<NestedListT> = ({
+  query,
+  routes,
+  title,
+  clearDropdownState,
+}) => {
   const maxRouteInRow = 15;
   return (
     <NestedNavContainer title={title}>
@@ -14,11 +19,20 @@ const NavTextOnly: React.FC<NestedListT> = ({ query, routes, title }) => {
           <NavTextOnlyList
             query={query}
             routes={routes.slice(0, maxRouteInRow)}
+            clearDropdownState={clearDropdownState}
           />
-          <NavTextOnlyList query={query} routes={routes.slice(maxRouteInRow)} />
+          <NavTextOnlyList
+            query={query}
+            routes={routes.slice(maxRouteInRow)}
+            clearDropdownState={clearDropdownState}
+          />
         </div>
       ) : (
-        <NavTextOnlyList query={query} routes={routes} />
+        <NavTextOnlyList
+          query={query}
+          routes={routes}
+          clearDropdownState={clearDropdownState}
+        />
       )}
     </NestedNavContainer>
   );

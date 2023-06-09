@@ -12,9 +12,14 @@ import { NavigationRootRouteT, NavLinkT } from "interface";
 interface NestedNavType {
   rootRoute: NavigationRootRouteT;
   secondaryRoute: NavLinkT;
+  clearDropdownState: () => void;
 }
 
-const NestedNav: React.FC<NestedNavType> = ({ secondaryRoute, rootRoute }) => {
+const NestedNav: React.FC<NestedNavType> = ({
+  secondaryRoute,
+  rootRoute,
+  clearDropdownState,
+}) => {
   const nestedNav = useAppStore(
     ({ navigation }) =>
       navigation.nested.find((nav) => nav.route === secondaryRoute.route)
@@ -44,6 +49,7 @@ const NestedNav: React.FC<NestedNavType> = ({ secondaryRoute, rootRoute }) => {
                       search_in: secondaryRoute,
                     }}
                     key={`sub-nav--list__${listType}-${i}`}
+                    clearDropdownState={clearDropdownState}
                   />
                 );
               else if (listType === "ROUNDED_FIG_X")
@@ -56,6 +62,7 @@ const NestedNav: React.FC<NestedNavType> = ({ secondaryRoute, rootRoute }) => {
                       search_in: secondaryRoute,
                     }}
                     key={`sub-nav--list__${listType}-${i}`}
+                    clearDropdownState={clearDropdownState}
                   />
                 );
               else if (listType === "ROUNDED_FIG_Y")
@@ -68,6 +75,7 @@ const NestedNav: React.FC<NestedNavType> = ({ secondaryRoute, rootRoute }) => {
                       search_in: secondaryRoute,
                     }}
                     key={`sub-nav--list__${listType}-${i}`}
+                    clearDropdownState={clearDropdownState}
                   />
                 );
               else if (listType === "FIG_ONLY")
@@ -80,6 +88,7 @@ const NestedNav: React.FC<NestedNavType> = ({ secondaryRoute, rootRoute }) => {
                       search_in: secondaryRoute,
                     }}
                     key={`sub-nav--list__${listType}-${i}`}
+                    clearDropdownState={clearDropdownState}
                   />
                 );
               else return <></>;

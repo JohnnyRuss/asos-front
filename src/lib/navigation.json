@@ -20,10 +20,6 @@
                 "route": "clothing"
             },
             {
-                "label": "Shoes",
-                "route": "shoes"
-            },
-            {
                 "label": "Sportswear",
                 "route": "sportswear"
             },
@@ -48,10 +44,6 @@
             {
                 "label": "Dresses",
                 "route": "dresses"
-            },
-            {
-                "label": "Shoes",
-                "route": "shoes"
             },
             {
                 "label": "Sportswear",
@@ -146,32 +138,32 @@
                             {
                                 "fig": "/assets/nav/men/men-asos-design__new-in.webp",
                                 "label": "ASOS DESIGN",
-                                "route": "640ccd80411cc14043b6e010"
+                                "route": "asos"
                             },
                             {
                                 "fig": "/assets/nav/men/men-adidas__new-in.webp",
                                 "label": "Adidas",
-                                "route": "640ccd80411cc14043b6e006"
+                                "route": "adidas"
                             },
                             {
                                 "fig": "/assets/nav/men/men-new-balance__new-in.webp",
                                 "label": "New Balance",
-                                "route": "640f7274aac482796625f7e4"
+                                "route": "new balance"
                             },
                             {
                                 "fig": "/assets/nav/men/men-nike__new-in.webp",
                                 "label": "Nike",
-                                "route": "640ce6083f9bc2e2bdf9bddc"
+                                "route": "nike"
                             },
                             {
                                 "fig": "/assets/nav/men/men-jack-and-jones__new-in.webp",
                                 "label": "Jack & Jones",
-                                "route": "6411d5473189461af2f3a0d5"
+                                "route": "jack_jones"
                             },
                             {
                                 "fig": "/assets/nav/men/men-the-north-face__new-in.webp",
                                 "label": "The North Face",
-                                "route": "640ccd80411cc14043b6e005"
+                                "route": "the north face"
                             }
                         ],
                         "women": [
@@ -193,17 +185,17 @@
                             {
                                 "fig": "/assets/nav/women/women-new-in__adidas.webp",
                                 "label": "Adidas",
-                                "route": "640ccd80411cc14043b6e006"
+                                "route": "adidas"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__nike.webp",
                                 "label": "Nike",
-                                "route": "640ce6083f9bc2e2bdf9bddc"
+                                "route": "nike"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__stradovarius.webp",
                                 "label": "Stradivarius",
-                                "route": "640ce9ce4cfdd1f3222bc91e"
+                                "route": "stradivarius"
                             }
                         ]
                     }
@@ -273,7 +265,7 @@
                             {
                                 "fig": "/assets/nav/women/women-new-in__top-shop-denim.webp",
                                 "label": "Topshop Denim",
-                                "route": "640ccd80411cc14043b6e00c,jeans"
+                                "route": "topshop"
                             },
                             {
                                 "fig": "/assets/nav/women/women-new-in__denim-weekend-collective.webp",
@@ -426,7 +418,7 @@
                             },
                             {
                                 "label": "Exclusive at ASOS",
-                                "route": "640ccd80411cc14043b6e010"
+                                "route": "asos"
                             },
                             {
                                 "label": "Hoodies & Sweatshirts",
@@ -532,7 +524,7 @@
                             {
                                 "fig": "/assets/nav/men/men-clothing__asos-basics.webp",
                                 "label": "ASOS Basics",
-                                "route": "640ccd80411cc14043b6e010"
+                                "route": "asos"
                             },
                             {
                                 "fig": "/assets/nav/men/men-clothing__festival.webp",
@@ -694,17 +686,17 @@
                             {
                                 "fig": "/assets/nav/women/women-dresses__asos-design.webp",
                                 "label": "asos design",
-                                "route": "640ccd80411cc14043b6e010"
+                                "route": "asos"
                             },
                             {
                                 "fig": "/assets/nav/women/women-dresses__topshop.webp",
                                 "label": "topshop",
-                                "route": "640ccd80411cc14043b6e00c"
+                                "route": "topshop"
                             },
                             {
                                 "fig": "/assets/nav/women/women-dresses__asos-luxe.webp",
                                 "label": "asos luxe",
-                                "route": "640eeb337d110219a914ea3d"
+                                "route": "asos edition"
                             }
                         ]
                     }
@@ -1163,64 +1155,64 @@
                             {
                                 "fig": "/assets/nav/men/men-sportswear__adidas.webp",
                                 "label": "Adidas",
-                                "route": "640ccd80411cc14043b6e006"
+                                "route": "adidas"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__asos-4505.webp",
                                 "label": "ASOS 4505",
-                                "route": "640ccd80411cc14043b6e010,640ee48999f7d3d589ed82d4"
+                                "route": "asos 4505,asos edition"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__converse.webp",
                                 "label": "Converse",
-                                "route": "640f6947aa94bba860603100"
+                                "route": "converse"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__new-balance.webp",
                                 "label": "New Balance",
-                                "route": "640f7274aac482796625f7e4"
+                                "route": "new balance"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__nike.webp",
                                 "label": "Nike",
-                                "route": "640ce6083f9bc2e2bdf9bddc"
+                                "route": "nike"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__the-north-face.webp",
                                 "label": "The North Face",
-                                "route": "640ccd80411cc14043b6e005"
+                                "route": "the north face"
                             }
                         ],
                         "women": [
                             {
                                 "fig": "/assets/nav/women/women-sportswear__adidas.webp",
                                 "label": "Adidas",
-                                "route": "640ccd80411cc14043b6e006"
+                                "route": "adidas"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__asos-4505.webp",
                                 "label": "ASOS 4505",
-                                "route": "640ccd80411cc14043b6e010,640ee48999f7d3d589ed82d4"
+                                "route": "asos 4505,asos edition"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__converse.webp",
                                 "label": "Converse",
-                                "route": "640f6947aa94bba860603100"
+                                "route": "converse"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__new-balance-2.webp",
                                 "label": "New Balance",
-                                "route": "640f7274aac482796625f7e4"
+                                "route": "new balance"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__nike.webp",
                                 "label": "Nike",
-                                "route": "640ce6083f9bc2e2bdf9bddc"
+                                "route": "nike"
                             },
                             {
                                 "fig": "/assets/nav/women/women-sportswear__the-north-face.webp",
                                 "label": "The North Face",
-                                "route": "640ccd80411cc14043b6e005"
+                                "route": "the north face"
                             }
                         ]
                     }
@@ -1238,7 +1230,7 @@
                             {
                                 "fig": "/assets/nav/men/men-sportswear__new-balance-fig-only.webp",
                                 "label": "New Balance",
-                                "route": "640f7274aac482796625f7e4"
+                                "route": "new balance"
                             },
                             {
                                 "fig": "/assets/nav/men/men-sportswear__outdoors-fig-only.webp",
@@ -1260,7 +1252,7 @@
                             {
                                 "fig": "/assets/nav/women/women-sportswear__new-balance.webp",
                                 "label": "New Balance",
-                                "route": "640f7274aac482796625f7e4"
+                                "route": "new balance"
                             }
                         ]
                     }
@@ -1435,59 +1427,59 @@
                             {
                                 "fig": "/assets/nav/men/men-jeans__asos-design.webp",
                                 "label": "ASOS DESIGN",
-                                "route": "640ccd80411cc14043b6e010"
+                                "route": "asos"
                             },
                             {
                                 "fig": "/assets/nav/men/men-jeans__topman.webp",
                                 "label": "Topman",
-                                "route": "6411fe0dc3ae3dc1356642ef"
+                                "route": "topman"
                             },
                             {
                                 "fig": "/assets/nav/men/men-jeans__pull-and-bear.webp",
                                 "label": "Pull&Bear",
-                                "route": "640d037d4527df15392689d9"
+                                "route": "pull_bear"
                             },
                             {
                                 "fig": "/assets/nav/men/men-jeans__levis.webp",
                                 "label": "Levi's",
-                                "route": "640f618d90847895e74b7580"
+                                "route": "levis's"
                             },
                             {
                                 "fig": "/assets/nav/men/men-jeans__jack-and-jones.webp",
                                 "label": "Jack & Jones",
-                                "route": "6411d5473189461af2f3a0d5"
+                                "route": "jack_jones"
                             },
                             {
                                 "fig": "/assets/nav/men/men-jeans__only-and-sons.webp",
                                 "label": "Only & Sons",
-                                "route": "6412557e0c17ff968afa6b8f"
+                                "route": "only_sons"
                             }
                         ],
                         "women": [
                             {
                                 "fig": "/assets/nav/women/women-jeans__asos-design.webp",
                                 "label": "ASOS DESIGN",
-                                "route": "640ccd80411cc14043b6e010"
+                                "route": "asos"
                             },
                             {
                                 "fig": "/assets/nav/women/women-jeans__topshop.webp",
                                 "label": "topshop",
-                                "route": "640ccd80411cc14043b6e00c"
+                                "route": "topshop"
                             },
                             {
                                 "fig": "/assets/nav/women/women-jeans__stradivarius.webp",
                                 "label": "stradivarius",
-                                "route": "640ce9ce4cfdd1f3222bc91e"
+                                "route": "stradivarius"
                             },
                             {
                                 "fig": "/assets/nav/women/women-jeans__levis.webp",
                                 "label": "Levi's",
-                                "route": "640f618d90847895e74b7580"
+                                "route": "levi's"
                             },
                             {
                                 "fig": "/assets/nav/women/women-jeans__river-island.webp",
                                 "label": "River Island",
-                                "route": "640ef8058458acdde577b84d"
+                                "route": "river island"
                             }
                         ]
                     }
@@ -1505,89 +1497,89 @@
                         "men": [
                             {
                                 "label": "Adidas",
-                                "route": "640ccd80411cc14043b6e006"
+                                "route": "adidas"
                             },
                             {
                                 "label": "Bershka",
-                                "route": "640cf40f3b1612ef20b8d76d"
+                                "route": "bershka"
                             },
                             {
                                 "label": "New Balance",
-                                "route": "640f7274aac482796625f7e4"
+                                "route": "new balance"
                             },
                             {
                                 "label": "New Look",
-                                "route": "6410b555b2d15a165bc0b5b3"
+                                "route": "new look"
                             },
                             {
                                 "label": "Nike",
-                                "route": "640ce6083f9bc2e2bdf9bddc"
+                                "route": "nike"
                             },
                             {
                                 "label": "Pull&Bear",
-                                "route": "640d037d4527df15392689d9"
+                                "route": "pull_bear"
                             },
                             {
                                 "label": "Puma",
-                                "route": "6410c1e1b0616bc9913474c9"
+                                "route": "puma"
                             },
                             {
                                 "label": "River Island",
-                                "route": "640ef8058458acdde577b84d"
+                                "route": "river island"
                             },
                             {
                                 "label": "The North Face",
-                                "route": "640ccd80411cc14043b6e005"
+                                "route": "the north face"
                             },
                             {
                                 "label": "Tommy Hilfiger",
-                                "route": "640ccd80411cc14043b6e004"
+                                "route": "tommy hilfiger"
                             },
                             {
                                 "label": "Jack & Jones",
-                                "route": "6411d5473189461af2f3a0d5"
+                                "route": "jack_jones"
                             }
                         ],
                         "women": [
                             {
                                 "label": "Adidas",
-                                "route": "640ccd80411cc14043b6e006"
+                                "route": "adidas"
                             },
                             {
                                 "label": "Bershka",
-                                "route": "640cf40f3b1612ef20b8d76d"
+                                "route": "bershka"
                             },
                             {
                                 "label": "New Balance",
-                                "route": "640f7274aac482796625f7e4"
+                                "route": "new balance"
                             },
                             {
                                 "label": "New Look",
-                                "route": "6410b555b2d15a165bc0b5b3"
+                                "route": "new look"
                             },
                             {
                                 "label": "Nike",
-                                "route": "640ce6083f9bc2e2bdf9bddc"
+                                "route": "nike"
                             },
                             {
                                 "label": "& Other Stories",
-                                "route": "6410be596e7fa7065d329ccc"
+                                "route": "other stories"
                             },
                             {
                                 "label": "Puma",
-                                "route": "6410c1e1b0616bc9913474c9"
+                                "route": "puma"
                             },
                             {
                                 "label": "River Island",
-                                "route": "640ef8058458acdde577b84d"
+                                "route": "river island"
                             },
                             {
                                 "label": "The North Face",
-                                "route": "640ccd80411cc14043b6e005"
+                                "route": "the north face"
                             },
                             {
                                 "label": "Tommy Hilfiger",
-                                "route": "640ccd80411cc14043b6e004"
+                                "route": "tommy hilfiger"
                             }
                         ]
                     }
@@ -1605,27 +1597,27 @@
                             {
                                 "fig": "/assets/nav/men/men-brands__asos-design.webp",
                                 "label": "ASOS DESIGN",
-                                "route": "640ccd80411cc14043b6e010"
+                                "route": "asos"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__asos-4505.webp",
                                 "label": "ASOS 4505",
-                                "route": "640ee48999f7d3d589ed82d4"
+                                "route": "asos 4505"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__topman.webp",
                                 "label": "Topman",
-                                "route": "6411fe0dc3ae3dc1356642ef"
+                                "route": "topman"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__collusion.webp",
                                 "label": "COLLUSION",
-                                "route": "640ccd80411cc14043b6e00e"
+                                "route": "collusion"
                             },
                             {
                                 "fig": "/assets/nav/men/men-brands__reclaimed-vintage.webp",
                                 "label": "ReclaimedVintage",
-                                "route": "640ccd80411cc14043b6e00d"
+                                "route": "reclaimed vintage"
                             }
                         ],
                         "women": [
@@ -1637,27 +1629,27 @@
                             {
                                 "fig": "/assets/nav/women/women-brands__asos-design.webp",
                                 "label": "ASOS DESIGN",
-                                "route": "640ccd80411cc14043b6e010"
+                                "route": "asos"
                             },
                             {
                                 "fig": "/assets/nav/women/women-brands__topshop.webp",
                                 "label": "Topshop",
-                                "route": "640ccd80411cc14043b6e00c"
+                                "route": "topshop"
                             },
                             {
                                 "fig": "/assets/nav/women/women-brands__collusion.webp",
                                 "label": "COLLUSION",
-                                "route": "640ccd80411cc14043b6e00e"
+                                "route": "collusion"
                             },
                             {
                                 "fig": "/assets/nav/women/women-brands__miss-selfridge.webp",
                                 "label": "Miss Selfridge",
-                                "route": "640eeb337d110219a914ea3d"
+                                "route": "miss selfridge"
                             },
                             {
                                 "fig": "/assets/nav/women/women-brands__asos-4505.webp",
                                 "label": "ASOS 4505",
-                                "route": "640ee48999f7d3d589ed82d4"
+                                "route": "asos 4505"
                             }
                         ]
                     }
@@ -1735,7 +1727,7 @@
                             {
                                 "fig": "/assets/nav/men/men-brands__asos-brands.webp",
                                 "label": "ASOS BRANDS",
-                                "route": "640ccd80411cc14043b6e010,640ee48999f7d3d589ed82d4,640eeb337d110219a914ea3d"
+                                "route": "asos,asos edition,asos 4505"
                             }
                         ],
                         "women": [
@@ -1747,7 +1739,7 @@
                             {
                                 "fig": "/assets/nav/women/women-brands__asos-brands.webp",
                                 "label": "ASOS BRANDS",
-                                "route": "640ccd80411cc14043b6e010,640ee48999f7d3d589ed82d4,640eeb337d110219a914ea3d"
+                                "route": "asos,asos edition,asos 4505"
                             }
                         ]
                     }

@@ -2,22 +2,48 @@
     "hero": {
         "men": [
             {
+                "label": "new in",
                 "fig": "/assets/hero/men/hero-men.webp",
-                "label": ""
+                "query": {
+                    "search_in": {
+                        "label": "new in",
+                        "query": "new-in"
+                    },
+                    "search": {
+                        "label": "all",
+                        "query": "all"
+                    }
+                }
             },
             {
+                "label": "topman",
                 "fig": "/assets/hero/men/hero-men-2.webp",
-                "label": "new season"
+                "query": {
+                    "search_in": {
+                        "label": "topman",
+                        "query": "topman"
+                    },
+                    "search": {
+                        "label": "all",
+                        "query": "all"
+                    }
+                }
             }
         ],
         "women": [
             {
+                "label": "asos",
                 "fig": "/assets/hero/women/hero-women.webp",
-                "label": ""
-            },
-            {
-                "fig": "/assets/hero/women/hero-women-2.webp",
-                "label": ""
+                "query": {
+                    "search_in": {
+                        "label": "asos",
+                        "query": "asos,asos 4505,asos edition"
+                    },
+                    "search": {
+                        "label": "all",
+                        "query": "all"
+                    }
+                }
             }
         ]
     },
@@ -28,25 +54,65 @@
                     "_id": "landing-catalog__1",
                     "title": "summer starterpak",
                     "label": "Never too early",
-                    "fig": "/assets/catalog/men/catalog-men-1.webp"
+                    "fig": "/assets/catalog/men/catalog-men-1.webp",
+                    "query": {
+                        "search_in": {
+                            "label": "summer",
+                            "query": "swimwears"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__2",
                     "title": "new balance",
                     "label": "Can't beat  a classic",
-                    "fig": "/assets/catalog/men/catalog-men-2.webp"
+                    "fig": "/assets/catalog/men/catalog-men-2.webp",
+                    "query": {
+                        "search_in": {
+                            "label": "new balance",
+                            "query": "new balance"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__3",
                     "title": "sunnies",
                     "label": "The shade of it all",
-                    "fig": "/assets/catalog/men/catalog-men-3.webp"
+                    "fig": "/assets/catalog/men/catalog-men-3.webp",
+                    "query": {
+                        "search_in": {
+                            "label": "sunnies",
+                            "query": "swimwears"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__4",
                     "title": "asos design denim",
                     "label": "The jean scene",
-                    "fig": "/assets/catalog/men/catalog-men-4.webp"
+                    "fig": "/assets/catalog/men/catalog-men-4.webp",
+                    "query": {
+                        "search_in": {
+                            "label": "asos",
+                            "query": "asos,asos 4505,asos edition"
+                        },
+                        "search": {
+                            "label": "jeans",
+                            "query": "jeans"
+                        }
+                    }
                 }
             ],
             "sub": [
@@ -56,7 +122,17 @@
                     "title": "best dressed",
                     "label": "It's gonna be you",
                     "fig": "/assets/catalog/men/catalog-men-sub-1.webp",
-                    "actionLabel": "shop the edit"
+                    "actionLabel": "shop the edit",
+                    "query": {
+                        "search_in": {
+                            "label": "best dressed",
+                            "query": "suits,tailoring"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__sub-2",
@@ -64,7 +140,17 @@
                     "title": "topman new season",
                     "label": "Legends only",
                     "fig": "/assets/catalog/men/catalog-men-sub-2.webp",
-                    "actionLabel": "shop the brand"
+                    "actionLabel": "shop the brand",
+                    "query": {
+                        "search_in": {
+                            "label": "topman",
+                            "query": "topman"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 }
             ]
         },
@@ -73,26 +159,66 @@
                 {
                     "_id": "landing-catalog__1",
                     "title": "soft layer",
-                    "label": "Comfy chic",
-                    "fig": "/assets/catalog/women/catalog-women-1.webp"
+                    "label": "Feel your style",
+                    "fig": "/assets/catalog/women/catalog-women-1.webp",
+                    "query": {
+                        "search_in": {
+                            "label": "streetwear",
+                            "query": "streetwears"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__2",
                     "title": "asos design utility",
                     "label": "Pocket picks",
-                    "fig": "/assets/catalog/women/catalog-women-2.webp"
+                    "fig": "/assets/catalog/women/catalog-women-2.webp",
+                    "query": {
+                        "search_in": {
+                            "label": "asos",
+                            "query": "asos"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__3",
-                    "title": "balletcore",
+                    "title": "Training",
                     "label": "Barre-raising looks",
-                    "fig": "/assets/catalog/women/catalog-women-3.webp"
+                    "fig": "/assets/catalog/women/catalog-women-3.webp",
+                    "query": {
+                        "search_in": {
+                            "label": "training",
+                            "query": "yoga,training,sportswear"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__4",
                     "title": "workwear dresses",
                     "label": "Black is always ellegant",
-                    "fig": "/assets/catalog/women/catalog-women-4.webp"
+                    "fig": "/assets/catalog/women/catalog-women-4.webp",
+                    "query": {
+                        "search_in": {
+                            "label": "dresses",
+                            "query": "dresses"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 }
             ],
             "sub": [
@@ -102,15 +228,35 @@
                     "title": "topshop denim",
                     "label": "Legends only",
                     "fig": "/assets/catalog/women/catalog-women-sub-1.webp",
-                    "actionLabel": "shop the brand"
+                    "actionLabel": "shop the brand",
+                    "query": {
+                        "search_in": {
+                            "label": "topshop",
+                            "query": "topshop"
+                        },
+                        "search": {
+                            "label": "jeans",
+                            "query": "jeans"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__sub-2",
                     "chapter": 0,
-                    "title": "spring stuff",
+                    "title": "Bershka",
                     "label": "Getting warmer...",
                     "fig": "/assets/catalog/women/catalog-women-sub-2.webp",
-                    "actionLabel": "shop now"
+                    "actionLabel": "shop now",
+                    "query": {
+                        "search_in": {
+                            "label": "bershka",
+                            "query": "bershka"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__sub-2",
@@ -118,7 +264,17 @@
                     "title": "new in:denim icons",
                     "label": "Fantasy fits",
                     "fig": "/assets/catalog/women/catalog-women-sub-3.webp",
-                    "actionLabel": "shop asos design"
+                    "actionLabel": "shop asos design",
+                    "query": {
+                        "search_in": {
+                            "label": "jeans",
+                            "query": "jeans"
+                        },
+                        "search": {
+                            "label": "new",
+                            "query": "new-in"
+                        }
+                    }
                 },
                 {
                     "_id": "landing-catalog__sub-2",
@@ -126,7 +282,17 @@
                     "title": "new miss selfridge",
                     "label": "Spring essentials",
                     "fig": "/assets/catalog/women/catalog-women-sub-4.webp",
-                    "actionLabel": "shop the brand"
+                    "actionLabel": "shop the brand",
+                    "query": {
+                        "search_in": {
+                            "label": "Miss Selfridge",
+                            "query": "miss selfridge"
+                        },
+                        "search": {
+                            "label": "all",
+                            "query": "all"
+                        }
+                    }
                 }
             ]
         }

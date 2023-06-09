@@ -8,11 +8,13 @@ import { NestedListQueryT } from "./types";
 interface NavWithHorizontalFigListType {
   routes: NavLinkWithFigT[];
   query: NestedListQueryT;
+  clearDropdownState: () => void;
 }
 
 const NavWithHorizontalFigList: React.FC<NavWithHorizontalFigListType> = ({
   routes,
   query,
+  clearDropdownState,
 }) => {
   return (
     <NestedNavListContainer>
@@ -21,6 +23,7 @@ const NavWithHorizontalFigList: React.FC<NavWithHorizontalFigListType> = ({
           route={route}
           query={query}
           key={`nested-nav--route__fig-x__${i}-${route.route}`}
+          onClick={clearDropdownState}
         />
       ))}
     </NestedNavListContainer>

@@ -9,10 +9,15 @@ const NavWithVerticalFig: React.FC<NestedListT> = ({
   query,
   routes,
   title,
+  clearDropdownState,
 }) => {
   return (
     <NestedNavContainer title={title}>
-      <NavWithVerticalFigList routes={routes} query={query} />
+      <NavWithVerticalFigList
+        routes={routes}
+        query={query}
+        clearDropdownState={clearDropdownState}
+      />
     </NestedNavContainer>
   );
 };

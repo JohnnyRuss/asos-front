@@ -6,4 +6,5 @@ export interface NestedListT {
   title: string;
   query: NestedListQueryT;
   routes: NavLinkWithFigT[];
+  clearDropdownState;
 }

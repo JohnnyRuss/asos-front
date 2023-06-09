@@ -22,6 +22,13 @@ const SecondaryNav: React.FC = () => {
     route: "",
   });
 
+  let timeoutId: any = undefined;
+
+  function clearDropdownState() {
+    timeoutId && clearTimeout(timeoutId);
+    setSecondaryRoute({ label: "", route: "" });
+  }
+
   function controllNavOnEnter(e: React.MouseEvent) {
     e.stopPropagation();
 
@@ -36,22 +43,31 @@ const SecondaryNav: React.FC = () => {
         const route: string = target.dataset.pointedSubnavRoute as string;
         const label: string = target.dataset.pointedSubnavLabel as string;
 
-        if (route !== secondaryRoute.route) setSecondaryRoute({ label, route });
+        if (route !== secondaryRoute.route)
+          timeoutId = setTimeout(() => {
+            setSecondaryRoute({ label, route });
+          }, 300);
       }
-    } else return setSecondaryRoute({ label: "", route: "" });
+    } else return clearDropdownState();
   }
+
+  const controllNavOnLeave = () => clearDropdownState();
 
   return (
     <div className="relative bg-app-gray text-app-white">
       <Container>
-        <div onMouseOver={controllNavOnEnter}>
+        <div onMouseOver={controllNavOnEnter} onMouseLeave={controllNavOnLeave}>
           <SecondaryNavList
             navList={rootRoute.label === "men" ? menNav : womenNav}
             activeRoute={secondaryRoute}
           />
 
           {secondaryRoute.route && (
-            <NestedNav rootRoute={rootRoute} secondaryRoute={secondaryRoute} />
+            <NestedNav
+              rootRoute={rootRoute}
+              secondaryRoute={secondaryRoute}
+              clearDropdownState={clearDropdownState}
+            />
           )}
         </div>
       </Container>

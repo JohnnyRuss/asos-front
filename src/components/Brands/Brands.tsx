@@ -21,7 +21,14 @@ const Brands: React.FC = () => {
           <ul className="flex items-center gap-4 flex-wrap justify-center">
             {brandsToRender.map((brand) => (
               <li className="max-w-[15%]" key={brand._id}>
-                <Link to="products" state={{ brand: brand.name }}>
+                <Link
+                  to="products"
+                  state={{
+                    search_for: rootRoute,
+                    search_in: { label: "All", route: "all" },
+                    search: { label: brand.name, route: brand._id },
+                  }}
+                >
                   <figure className="w-full overflow-hidden">
                     <img
                       src={brand.fig}

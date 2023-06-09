@@ -8,9 +8,14 @@ import { NestedListQueryT } from "./types";
 interface NavTextOnlyListType {
   routes: NavLinkWithFigT[];
   query: NestedListQueryT;
+  clearDropdownState: () => void;
 }
 
-const NavTextOnlyList: React.FC<NavTextOnlyListType> = ({ routes, query }) => {
+const NavTextOnlyList: React.FC<NavTextOnlyListType> = ({
+  routes,
+  query,
+  clearDropdownState,
+}) => {
   return (
     <NestedNavListContainer>
       {routes.map((route, i) => (
@@ -18,6 +23,7 @@ const NavTextOnlyList: React.FC<NavTextOnlyListType> = ({ routes, query }) => {
           route={route}
           query={query}
           key={`nested-nav--route__text-only__${i}-${route.route}--${route.label}`}
+          onClick={clearDropdownState}
         />
       ))}
     </NestedNavListContainer>

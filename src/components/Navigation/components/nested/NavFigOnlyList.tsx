@@ -8,9 +8,14 @@ import NavFigOnlyListItem from "./NavFigOnlyListItem";
 interface NavFigOnlyListType {
   routes: NavLinkWithFigT[];
   query: NestedListQueryT;
+  clearDropdownState: () => void;
 }
 
-const NavFigOnlyList: React.FC<NavFigOnlyListType> = ({ query, routes }) => {
+const NavFigOnlyList: React.FC<NavFigOnlyListType> = ({
+  query,
+  routes,
+  clearDropdownState,
+}) => {
   return (
     <NestedNavListContainer>
       {routes.map((route, i) => (
@@ -18,6 +23,7 @@ const NavFigOnlyList: React.FC<NavFigOnlyListType> = ({ query, routes }) => {
           query={query}
           route={route}
           key={`nested-nav--route__fig-only__${i}-${route.route}`}
+          onClick={clearDropdownState}
         />
       ))}
     </NestedNavListContainer>
