@@ -8,7 +8,7 @@ import { Container, Button } from "components/Layouts";
 const Hero: React.FC = () => {
   const navigate = useNavigate();
 
-  const heros = useAppStore().landing.hero;
+  const heros = useAppStore().hero;
 
   const rootRoute = useGetRootRoute();
   const listToRender = heros[rootRoute.label === "men" ? "men" : "women"];
@@ -24,11 +24,11 @@ const Hero: React.FC = () => {
         search_for: rootRoute,
         search_in: {
           label: activeHero.query.search_in.label,
-          route: activeHero.query.search_in.query,
+          query: activeHero.query.search_in.query,
         },
         search: {
           label: activeHero.query.search.label,
-          route: activeHero.query.search.query,
+          query: activeHero.query.search.query,
         },
       },
     });

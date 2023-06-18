@@ -22,7 +22,7 @@ const NavFigOnlyList: React.FC<NavFigOnlyListType> = ({
         <NavFigOnlyListItem
           query={query}
           route={route}
-          key={`nested-nav--route__fig-only__${i}-${route.route}`}
+          key={`nested-nav--route__fig-only__${i}-${route.query}`}
           onClick={clearDropdownState}
         />
       ))}

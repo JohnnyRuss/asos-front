@@ -19,14 +19,14 @@ const SecondaryNav: React.FC = () => {
 
   const [secondaryRoute, setSecondaryRoute] = useState<NavLinkT>({
     label: "",
-    route: "",
+    query: "",
   });
 
   let timeoutId: any = undefined;
 
   function clearDropdownState() {
     timeoutId && clearTimeout(timeoutId);
-    setSecondaryRoute({ label: "", route: "" });
+    setSecondaryRoute({ label: "", query: "" });
   }
 
   function controllNavOnEnter(e: React.MouseEvent) {
@@ -43,9 +43,9 @@ const SecondaryNav: React.FC = () => {
         const route: string = target.dataset.pointedSubnavRoute as string;
         const label: string = target.dataset.pointedSubnavLabel as string;
 
-        if (route !== secondaryRoute.route)
+        if (route !== secondaryRoute.query)
           timeoutId = setTimeout(() => {
-            setSecondaryRoute({ label, route });
+            setSecondaryRoute({ label, query: route });
           }, 300);
       }
     } else return clearDropdownState();
@@ -62,7 +62,7 @@ const SecondaryNav: React.FC = () => {
             activeRoute={secondaryRoute}
           />
 
-          {secondaryRoute.route && (
+          {secondaryRoute.query && (
             <NestedNav
               rootRoute={rootRoute}
               secondaryRoute={secondaryRoute}

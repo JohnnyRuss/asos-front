@@ -16,14 +16,14 @@ const NavWithHorizontalFigListItem: React.FC<
     <li className="w-full group/fig-x">
       <Link
         className="flex gap-2"
-        to={`/${query.search_for.route}/products`}
+        to={`/${query.search_for.query}/products`}
         onClick={onClick}
         state={{
           search_for: query.search_for,
           search_in: query.search_in,
           search: {
             label: route.label,
-            route: route.route,
+            query: route.query,
           },
         }}
       >

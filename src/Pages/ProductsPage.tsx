@@ -17,7 +17,6 @@ const ProductsPage: React.FC = () => {
     const { search_for, search_in, search } = getProductsQueryStr();
 
     if (!search_for || !search_in) return;
-    console.log("runs effect");
     getProducts({ search_for, search_in, search });
   }, [state]);
 

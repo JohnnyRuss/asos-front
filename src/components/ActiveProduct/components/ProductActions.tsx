@@ -1,13 +1,19 @@
 import React from "react";
 
-interface ProductActionsType {}
+interface ProductActionsType {
+  handleAddToBag: () => void;
+}
 
-const ProductActions: React.FC<ProductActionsType> = (props) => {
+const ProductActions: React.FC<ProductActionsType> = ({ handleAddToBag }) => {
   return (
     <div className="flex gap-4">
-      <button className="bg-app-green-shade text-app-white py-2 w-60 rounded-md uppercase font-bold">
+      <button
+        onClick={handleAddToBag}
+        className="bg-app-green-shade text-app-white py-2 w-60 rounded-md uppercase font-bold"
+      >
         add to bag
       </button>
+
       <button className="bg-app-gray-shade rounded-full w-9 h-9 flex justify-center items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"

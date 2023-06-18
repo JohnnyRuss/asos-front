@@ -9,9 +9,9 @@ const MainNavList: React.FC = () => {
   return (
     <ul className="h-full flex items-center gap-4 uppercase font-semibold text-app-base">
       {navigation.map((route) => (
-        <li className="h-full" key={route.route}>
+        <li className="h-full" key={route.query}>
           <NavLink
-            to={route.route}
+            to={route.query}
             state={{
               search_for: route,
               search_in: null,

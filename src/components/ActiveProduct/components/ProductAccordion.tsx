@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useProductsStore } from "store";
 import { GenerateParagraphs } from "components/Layouts";
+
 import "./acordion.css";
+import Accordion from "./Accordion";
 
 const ProductAccordion: React.FC = () => {
   const { brand, productDetails, productCode, sizeAndFit, about } =
@@ -128,26 +130,3 @@ const ProductAccordion: React.FC = () => {
 };
 
 export default ProductAccordion;
-
-interface AccordionT {
-  buttonLabel: string;
-  children: React.ReactNode;
-  onClick: () => void;
-  active: boolean;
-}
-
-function Accordion({ buttonLabel, children, onClick, active }: AccordionT) {
-  return (
-    <div className="border-y border-y-app-gray-shade p-2">
-      <button
-        className={`${
-          active ? "active" : "inactive"
-        } acordion-btn__animated-icon capitalize font-bold w-full text-start`}
-        onClick={onClick}
-      >
-        {buttonLabel}
-      </button>
-      {children}
-    </div>
-  );
-}

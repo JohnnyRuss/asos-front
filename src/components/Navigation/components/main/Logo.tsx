@@ -8,7 +8,7 @@ const Logo: React.FC = () => {
 
   return (
     <Link
-      to={rootRoute.route}
+      to={rootRoute.query}
       state={{
         search_for: rootRoute,
         search_in: null,

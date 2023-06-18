@@ -9,7 +9,7 @@ interface ProductsListType {
 
 const ProductsList: React.FC<ProductsListType> = ({ products }) => {
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,_300px))] justify-center content-start gap-x-6 gap-y-8 py-5 ">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,_300px))] auto-rows-[500px] justify-center content-start gap-x-6 gap-y-8 py-5 ">
       {products[0] &&
         products.map((product) => (
           <ProductCard

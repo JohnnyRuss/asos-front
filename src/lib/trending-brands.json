@@ -1,0 +1,186 @@
+{
+  "men": [
+    {
+      "_id": "men__brand-1",
+      "fig": "/assets/brands/tommy-hilfiger.webp",
+      "name": "t o m m y h i l f i g e r",
+      "query": {
+        "search_in": {
+          "label": "tommy hilfiger",
+          "query": "tommy hillfiger"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "men__brand-2",
+      "fig": "/assets/brands/north-face.webp",
+      "name": "the north face",
+      "query": {
+        "search_in": {
+          "label": "the north face",
+          "query": "the north face"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "men__brand-3",
+      "fig": "/assets/brands/adidas.webp",
+      "name": "adidas",
+      "query": {
+        "search_in": {
+          "label": "adidas",
+          "query": "adidas"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "men__brand-4",
+      "fig": "/assets/brands/carhartt.webp",
+      "name": "carhartt",
+      "query": {
+        "search_in": {
+          "label": "carhartt",
+          "query": "carhartt"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "men__brand-5",
+      "fig": "/assets/brands/ellesse.webp",
+      "name": "ellesse",
+      "query": {
+        "search_in": {
+          "label": "ellesse",
+          "query": "ellesse"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "men__brand-6",
+      "fig": "/assets/brands/dr-martens.webp",
+      "name": "dr martens",
+      "query": {
+        "search_in": {
+          "label": "dr martens",
+          "query": "dr martens"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    }
+  ],
+  "women": [
+    {
+      "_id": "women__brand-1",
+      "fig": "/assets/brands/monkl.webp",
+      "name": "monkl",
+      "query": {
+        "search_in": {
+          "label": "monkl",
+          "query": "monkl"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "women__brand-2",
+      "fig": "/assets/brands/never-fully-dressed.webp",
+      "name": "never fully dressed",
+      "query": {
+        "search_in": {
+          "label": "never fully dressed",
+          "query": "never fully dressed"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "women__brand-3",
+      "fig": "/assets/brands/topshop.webp",
+      "name": "topshop",
+      "query": {
+        "search_in": {
+          "label": "topshop",
+          "query": "topshop"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "women__brand-4",
+      "fig": "/assets/brands/reclaimed-vintage.webp",
+      "name": "reclaimed vintage",
+      "query": {
+        "search_in": {
+          "label": "reclaimed vintage",
+          "query": "reclaimed vintage"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "women__brand-5",
+      "fig": "/assets/brands/collusion.webp",
+      "name": "collusion",
+      "query": {
+        "search_in": {
+          "label": "collusion",
+          "query": "collusion"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "women__brand-6",
+      "fig": "/assets/brands/weekday.webp",
+      "name": "weekday",
+      "query": {
+        "search_in": {
+          "label": "weekday",
+          "query": "weekday"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    }
+  ]
+}

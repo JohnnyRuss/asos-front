@@ -22,7 +22,7 @@ const NavWithHorizontalFigList: React.FC<NavWithHorizontalFigListType> = ({
         <NavWithHorizontalFigListItem
           route={route}
           query={query}
-          key={`nested-nav--route__fig-x__${i}-${route.route}`}
+          key={`nested-nav--route__fig-x__${i}-${route.query}`}
           onClick={clearDropdownState}
         />
       ))}

@@ -22,7 +22,7 @@ const NestedNav: React.FC<NestedNavType> = ({
 }) => {
   const nestedNav = useAppStore(
     ({ navigation }) =>
-      navigation.nested.find((nav) => nav.route === secondaryRoute.route)
+      navigation.nested.find((nav) => nav.query === secondaryRoute.query)
         ?.nestedNav
   );
 

@@ -32,6 +32,9 @@ module.exports = {
       maxWidth: {
         "container-lg": "1280px",
       },
+      height: {
+        "nav-h": "80px",
+      },
     },
   },
   plugins: [],

@@ -6,8 +6,17 @@ export interface NavigationT {
 
 export type NavigationRootRouteT = {
   label: "men" | "women";
-  route: "men" | "women";
+  query: "men" | "women";
 };
+
+export interface NavLinkT {
+  label: string;
+  query: string;
+}
+
+export interface NavLinkWithFigT extends NavLinkT {
+  fig?: string;
+}
 
 export interface NavBaseQueryT {
   search_for: NavigationRootRouteT;
@@ -43,11 +52,3 @@ interface NestedNavRoutesT {
 }
 
 // HELPERS
-export interface NavLinkT {
-  label: string;
-  route: string;
-}
-
-export interface NavLinkWithFigT extends NavLinkT {
-  fig?: string;
-}

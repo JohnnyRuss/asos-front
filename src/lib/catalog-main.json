@@ -1,0 +1,134 @@
+{
+  "men": [
+    {
+      "_id": "landing-catalog__1",
+      "title": "summer starterpak",
+      "label": "Never too early",
+      "fig": "/assets/catalog/men/catalog-men-1.webp",
+      "query": {
+        "search_in": {
+          "label": "summer",
+          "query": "swimwears"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "landing-catalog__2",
+      "title": "new balance",
+      "label": "Can't beat  a classic",
+      "fig": "/assets/catalog/men/catalog-men-2.webp",
+      "query": {
+        "search_in": {
+          "label": "new balance",
+          "query": "new balance"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "landing-catalog__3",
+      "title": "sunnies",
+      "label": "The shade of it all",
+      "fig": "/assets/catalog/men/catalog-men-3.webp",
+      "query": {
+        "search_in": {
+          "label": "sunnies",
+          "query": "swimwears"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "landing-catalog__4",
+      "title": "asos design denim",
+      "label": "The jean scene",
+      "fig": "/assets/catalog/men/catalog-men-4.webp",
+      "query": {
+        "search_in": {
+          "label": "asos",
+          "query": "asos,asos 4505,asos edition"
+        },
+        "search": {
+          "label": "jeans",
+          "query": "jeans"
+        }
+      }
+    }
+  ],
+  "women": [
+    {
+      "_id": "landing-catalog__1",
+      "title": "soft layer",
+      "label": "Feel your style",
+      "fig": "/assets/catalog/women/catalog-women-1.webp",
+      "query": {
+        "search_in": {
+          "label": "streetwear",
+          "query": "streetwears"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "landing-catalog__2",
+      "title": "asos design utility",
+      "label": "Pocket picks",
+      "fig": "/assets/catalog/women/catalog-women-2.webp",
+      "query": {
+        "search_in": {
+          "label": "asos",
+          "query": "asos"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "landing-catalog__3",
+      "title": "Training",
+      "label": "Barre-raising looks",
+      "fig": "/assets/catalog/women/catalog-women-3.webp",
+      "query": {
+        "search_in": {
+          "label": "training",
+          "query": "yoga,training,sportswear"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "_id": "landing-catalog__4",
+      "title": "workwear dresses",
+      "label": "Black is always ellegant",
+      "fig": "/assets/catalog/women/catalog-women-4.webp",
+      "query": {
+        "search_in": {
+          "label": "dresses",
+          "query": "dresses"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    }
+  ]
+}

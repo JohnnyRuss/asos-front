@@ -6,11 +6,10 @@ import { useGetRootRoute } from "hooks";
 import { Container } from "components/Layouts";
 
 const CatalogMain: React.FC = () => {
-  const catalogs = useAppStore().landing.landingCatalog;
+  const catalogs = useAppStore().catalogMain;
 
   const rootRoute = useGetRootRoute();
-  const listToRender =
-    catalogs[rootRoute.label === "men" ? "men" : "women"].main;
+  const listToRender = catalogs[rootRoute.label === "men" ? "men" : "women"];
 
   return (
     <Container>
@@ -23,11 +22,11 @@ const CatalogMain: React.FC = () => {
               search_for: rootRoute,
               search_in: {
                 label: block.query.search_in.label,
-                route: block.query.search_in.query,
+                query: block.query.search_in.query,
               },
               search: {
                 label: block.query.search.label,
-                route: block.query.search.query,
+                query: block.query.search.query,
               },
             }}
             className="w-1/4 flex flex-col"

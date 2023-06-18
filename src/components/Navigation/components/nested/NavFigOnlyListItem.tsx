@@ -18,12 +18,12 @@ const NavFigOnlyListItem: React.FC<NavFigOnlyListItemType> = ({
     <li className="relative">
       <Link
         className="flex flex-col items-center gap-2"
-        to={`${query.search_for.route}/products`}
+        to={`${query.search_for.query}/products`}
         onClick={onClick}
         state={{
           search_for: query.search_for,
           search_in: query.search_in,
-          search: { label: route.label, route: route.route },
+          search: { label: route.label, query: route.query },
         }}
       >
         <figure className="h-auto overflow-hidden">

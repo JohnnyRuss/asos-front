@@ -15,9 +15,9 @@ export default function useGetProductsQueryStr(): () => QueryStrT {
 
   function getProductsQueryStr(): QueryStrT {
     return {
-      search_for: state?.search_for.route || rootRoute.route,
-      search_in: state?.search_in?.route || "",
-      search: state?.search?.route || "",
+      search_for: state?.search_for.query || rootRoute.query,
+      search_in: state?.search_in?.query || "",
+      search: state?.search?.query || "",
     };
   }
 

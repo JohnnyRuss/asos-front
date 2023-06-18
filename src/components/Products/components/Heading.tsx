@@ -17,7 +17,7 @@ export default Heading;
 
 const Title: React.FC<{ caption: string }> = ({ caption }) => {
   return (
-    <h1 className="text-center font-semibold text-app-xl py-6 mt-2">
+    <h1 className="text-center font-semibold text-app-xl py-6 mt-2 capitalize">
       {caption}
     </h1>
   );

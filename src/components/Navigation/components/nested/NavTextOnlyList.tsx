@@ -22,7 +22,7 @@ const NavTextOnlyList: React.FC<NavTextOnlyListType> = ({
         <NavTextOnlyListItem
           route={route}
           query={query}
-          key={`nested-nav--route__text-only__${i}-${route.route}--${route.label}`}
+          key={`nested-nav--route__text-only__${i}-${route.query}--${route.label}`}
           onClick={clearDropdownState}
         />
       ))}

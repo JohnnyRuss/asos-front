@@ -16,13 +16,13 @@ const Path: React.FC<PathType> = ({ title }) => {
     <div className=" border-b border-b-app-gray-shade">
       <Container>
         <div className="flex items-center gap-2 text-app-xsm py-3">
-          <Link to={`/${state?.search_for.route}`}>
+          <Link to={`/${state?.search_for.query}`}>
             <span>HOME</span>
           </Link>
           <Arrow />
 
           <Link
-            to={`/${state?.search_for.route}/products`}
+            to={`/${state?.search_for.query}/products`}
             state={{
               search_for: state?.search_for,
               search_in: { label: "All", route: "all" },
@@ -34,7 +34,7 @@ const Path: React.FC<PathType> = ({ title }) => {
           <Arrow />
 
           <Link
-            to={`/${state?.search_for.route}/products`}
+            to={`/${state?.search_for.query}/products`}
             state={{
               search_for: state?.search_for,
               search_in: state?.search_in,
@@ -44,12 +44,12 @@ const Path: React.FC<PathType> = ({ title }) => {
             <span className="capitalize">{state?.search_in?.label}</span>
           </Link>
 
-          {state?.search?.route && (
+          {state?.search?.query && (
             <>
               <Arrow />
               <Link
                 className="capitalize"
-                to={`/${state?.search_for.route}/products`}
+                to={`/${state?.search_for.query}/products`}
                 state={{
                   search_for: state?.search_for,
                   search_in: state?.search_in,

@@ -1,0 +1,48 @@
+{
+  "men": [
+    {
+      "label": "new in",
+      "fig": "/assets/hero/men/hero-men.webp",
+      "query": {
+        "search_in": {
+          "label": "new in",
+          "query": "new-in"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    },
+    {
+      "label": "topman",
+      "fig": "/assets/hero/men/hero-men-2.webp",
+      "query": {
+        "search_in": {
+          "label": "topman",
+          "query": "topman"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    }
+  ],
+  "women": [
+    {
+      "label": "asos",
+      "fig": "/assets/hero/women/hero-women.webp",
+      "query": {
+        "search_in": {
+          "label": "asos",
+          "query": "asos,asos 4505,asos edition"
+        },
+        "search": {
+          "label": "all",
+          "query": "all"
+        }
+      }
+    }
+  ]
+}

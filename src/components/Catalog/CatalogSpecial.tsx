@@ -8,11 +8,10 @@ import { Container, Button } from "components/Layouts";
 const CatalogSpecial: React.FC = () => {
   const navigate = useNavigate();
 
-  const catalogs = useAppStore().landing.landingCatalog;
+  const catalogs = useAppStore().catalogSub;
 
   const rootRoute = useGetRootRoute();
-  const listToRender =
-    catalogs[rootRoute.label === "men" ? "men" : "women"].sub;
+  const listToRender = catalogs[rootRoute.label === "men" ? "men" : "women"];
 
   const randomNumber = useGetRandomNumber({
     max: listToRender.length / 2,
@@ -47,11 +46,11 @@ const CatalogSpecial: React.FC = () => {
                         search_for: rootRoute,
                         search_in: {
                           label: block.query.search_in.label,
-                          route: block.query.search_in.query,
+                          query: block.query.search_in.query,
                         },
                         search: {
                           label: block.query.search.label,
-                          route: block.query.search.query,
+                          query: block.query.search.query,
                         },
                       },
                     })

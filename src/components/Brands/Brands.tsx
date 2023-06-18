@@ -6,7 +6,7 @@ import { useGetRootRoute } from "hooks";
 import { Container } from "components/Layouts";
 
 const Brands: React.FC = () => {
-  const brands = useAppStore(({ landing }) => landing.trendingBrands);
+  const brands = useAppStore((state) => state.trendingBrands);
 
   const rootRoute = useGetRootRoute();
   const brandsToRender = brands[rootRoute.label === "women" ? "women" : "men"];
@@ -25,8 +25,8 @@ const Brands: React.FC = () => {
                   to="products"
                   state={{
                     search_for: rootRoute,
-                    search_in: { label: "All", route: "all" },
-                    search: { label: brand.name, route: brand._id },
+                    search_in: brand.query.search_in,
+                    search: brand.query.search,
                   }}
                 >
                   <figure className="w-full overflow-hidden">

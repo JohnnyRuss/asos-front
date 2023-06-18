@@ -18,14 +18,14 @@ const SecondaryNavList: React.FC<SecondaryNavListType> = ({
       {navList.map((route) => (
         <li
           className={`cursor-pointer h-full flex items-center px-2 transition-colors ${
-            activeRoute.route === route.route
+            activeRoute.query === route.query
               ? "bg-app-gray-tint text-app-dark-gray"
               : ""
           }`}
-          data-pointed-subnav-route={route.route}
+          data-pointed-subnav-route={route.query}
           data-pointed-subnav-label={route.label}
           data-nav-pointer
-          key={route.route}
+          key={route.query}
         >
           {route.label}
         </li>

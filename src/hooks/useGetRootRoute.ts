@@ -8,13 +8,14 @@ export default function useGetRootRoute(): NavigationRootRouteT {
 
   const [activeRootRoute, setActiveRootRoute] = useState<NavigationRootRouteT>({
     label: "women",
-    route: "women",
+    query: "women",
   });
 
   useEffect(() => {
     if (
       state?.search_for &&
-      (state?.search_for?.label === "men" || state?.search_for?.label === "women")
+      (state?.search_for?.label === "men" ||
+        state?.search_for?.label === "women")
     )
       setActiveRootRoute(state.search_for);
   }, [state]);

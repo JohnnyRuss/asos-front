@@ -5,6 +5,9 @@ import { immer } from "zustand/middleware/immer";
 import { axiosQuery } from "service";
 import { ProductsStoreT } from "interface";
 
+import { updateRequestStatus } from "./helpers";
+import { generateFilterQuery } from "functions";
+
 const useProductsStore = create<ProductsStoreT>()(
   devtools(
     immer((set) => ({
@@ -27,11 +30,7 @@ const useProductsStore = create<ProductsStoreT>()(
       getProducts: async ({ search_for, search_in, search }) => {
         try {
           set({
-            productsLoadingStatus: {
-              loading: true,
-              error: false,
-              message: "",
-            },
+            productsLoadingStatus: updateRequestStatus(),
           });
 
           const { data } = await axiosQuery.get(
@@ -41,15 +40,18 @@ const useProductsStore = create<ProductsStoreT>()(
           );
 
           set({ products: data });
-        } catch (error) {
+        } catch (error: any) {
           console.log(error);
+          set({
+            productLoadingStatus: updateRequestStatus(
+              false,
+              true,
+              error.message
+            ),
+          });
         } finally {
           set({
-            productsLoadingStatus: {
-              loading: false,
-              error: true,
-              message: "",
-            },
+            productsLoadingStatus: updateRequestStatus(false),
           });
         }
       },
@@ -60,37 +62,37 @@ const useProductsStore = create<ProductsStoreT>()(
       ) => {
         try {
           set({
-            productsLoadingStatus: {
-              loading: true,
-              error: false,
-              message: "",
-            },
+            productsLoadingStatus: updateRequestStatus(),
           });
 
           let baseQuery: string = `products?search_for=${search_for}&search_in=${search_in}${
             search ? `&search=${search}` : ""
           }`;
 
-          if (sort) baseQuery += `&sort=${sort}`;
-          if (Array.isArray(productType) && productType[0])
-            baseQuery += `&productType=${productType.join(",")}`;
-          if (Array.isArray(brand) && brand[0])
-            baseQuery += `&brand=${brand.join(",")}`;
-          if (Array.isArray(size) && size[0])
-            baseQuery += `&size=${size.join(",")}`;
+          const filterQuery = generateFilterQuery({
+            sort,
+            productType,
+            brand,
+            size,
+          });
+
+          if (filterQuery) baseQuery += filterQuery;
 
           const { data } = await axiosQuery.get(baseQuery);
 
           set({ products: data });
-        } catch (error) {
+        } catch (error: any) {
           console.log(error);
+          set({
+            productLoadingStatus: updateRequestStatus(
+              false,
+              true,
+              error.message
+            ),
+          });
         } finally {
           set({
-            productsLoadingStatus: {
-              loading: false,
-              error: true,
-              message: "",
-            },
+            productsLoadingStatus: updateRequestStatus(false),
           });
         }
       },
@@ -98,25 +100,23 @@ const useProductsStore = create<ProductsStoreT>()(
       getProduct: async (productId) => {
         try {
           set({
-            productLoadingStatus: {
-              loading: true,
-              error: false,
-              message: "",
-            },
+            productLoadingStatus: updateRequestStatus(),
           });
 
           const { data } = await axiosQuery.get(`products/${productId}`);
 
           set({ product: data });
-        } catch (error) {
-          console.log(error);
+        } catch (error: any) {
+          set({
+            productLoadingStatus: updateRequestStatus(
+              false,
+              true,
+              error.message
+            ),
+          });
         } finally {
           set({
-            productLoadingStatus: {
-              loading: false,
-              error: true,
-              message: "",
-            },
+            productLoadingStatus: updateRequestStatus(false),
           });
         }
       },

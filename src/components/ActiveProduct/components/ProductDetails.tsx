@@ -1,5 +1,5 @@
-import React from "react";
-import { useProductsStore } from "store";
+import React, { useState } from "react";
+import { useProductsStore, useShoppingCardStore } from "store";
 import ProductAccordion from "./ProductAccordion";
 import ProductSize from "./ProductSize";
 import ProductColor from "./ProductColor";
@@ -10,6 +10,23 @@ import ProductPrice from "./ProductPrice";
 
 const ProductDetails: React.FC = () => {
   const product = useProductsStore((state) => state.product);
+  const { addToBag } = useShoppingCardStore();
+
+  const [selectedSize, setSelectedSize] = useState<string>("");
+
+  function handleAddToBag() {
+    if (!selectedSize || !product) return;
+
+    addToBag({
+      productId: product._id,
+      color: product.colour,
+      price: product.price,
+      sizes: product.sizes,
+      selectedSizeId: selectedSize,
+      thumbnail: product.media.pictures[0],
+      title: product.title,
+    });
+  }
 
   return (
     <div className="flex flex-col gap-4 px-4">
@@ -25,15 +42,12 @@ const ProductDetails: React.FC = () => {
 
           <ProductColor colour={product.colour} />
 
-          <ProductSize sizes={product.sizes} />
+          <ProductSize
+            sizes={product.sizes}
+            setSelectedSize={setSelectedSize}
+          />
 
-          {/* <ul className="list-disc">
-            {product.productType.map((type) => (
-              <li key={`product--type-${type}`}>{type}</li>
-            ))}
-          </ul> */}
-
-          <ProductActions />
+          <ProductActions handleAddToBag={handleAddToBag} />
 
           <ProductAccordion />
 

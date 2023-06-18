@@ -22,7 +22,7 @@ const NavWithVerticalFigList: React.FC<NavWithVerticalFigListType> = ({
         <NavWithVerticalFigListItem
           query={query}
           route={route}
-          key={`nested-nav--route__fig-y__${i}-${route.route}`}
+          key={`nested-nav--route__fig-y__${i}-${route.query}`}
           onClick={clearDropdownState}
         />
       ))}
