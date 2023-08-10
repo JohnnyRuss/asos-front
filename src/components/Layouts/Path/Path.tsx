@@ -25,7 +25,7 @@ const Path: React.FC<PathType> = ({ title }) => {
             to={`/${state?.search_for.query}/products`}
             state={{
               search_for: state?.search_for,
-              search_in: { label: "All", route: "all" },
+              search_in: { label: "All", query: "all" },
               search: null,
             }}
           >

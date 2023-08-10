@@ -1,108 +1,43 @@
 import React from "react";
 
+import CartItem from "./CartItem";
+import CartHeader from "./CartHeader";
+import CartFooter from "./CartFooter";
+import CartAside from "./CartAside";
+
 interface ShoppingCardType {}
 
 const ShoppingCard: React.FC<ShoppingCardType> = (props) => {
   return (
-    <main className="min-h-[35vw] flex">
-      <div className="flex-1 bg-blue-500">
-        <header></header>
-        <ul className="flex flex-col">
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-          <li>
-            <div>item</div>
-          </li>
-        </ul>
+    <main className="min-h-[35vw] bg-app-gray-shade">
+      <div className="flex relative bg-indigo-400 h-12">
+        <div className="flex-1 bg-pink-400"></div>
+        <div className="flex-1 bg-app-black "></div>
+        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 max-w-container-lg w-full flex items-center text-sm font-bold">
+          <div className="flex-1 text-center flex flex-col">
+            <span>UP TO 50% OFF</span>
+            <span>CERTIFIED BANGERS!</span>
+          </div>
+          <div className="flex-1 text-center text-app-white">
+            FREE WORLDWIDE DELIVERY
+          </div>
+        </div>
       </div>
-      <aside className="w-80 sticky z-30 top-[85px] self-start bg-red-500">
-        checkout
-      </aside>
+
+      <div className="flex gap-4 max-w-container-lg m-auto pt-4 pb-12">
+        <div className="flex-1 flex flex-col gap-4">
+          <CartHeader />
+
+          <ul className="flex flex-col gap-6 bg-app-white px-8 py-4">
+            <CartItem />
+            <CartItem />
+            <CartItem />
+          </ul>
+
+          <CartFooter />
+        </div>
+        <CartAside />
+      </div>
     </main>
   );
 };

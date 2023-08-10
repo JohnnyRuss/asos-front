@@ -27,7 +27,7 @@ const Products: React.FC = () => {
     }, 1000);
 
     return () => {
-      clearInterval(timer);
+      clearTimeout(timer);
     };
   }, [activeFilters]);
 
