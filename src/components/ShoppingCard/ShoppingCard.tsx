@@ -1,4 +1,5 @@
 import React from "react";
+import { useShoppingCardStore } from "store";
 
 import CartItem from "./CartItem";
 import CartHeader from "./CartHeader";
@@ -7,7 +8,9 @@ import CartAside from "./CartAside";
 
 interface ShoppingCardType {}
 
-const ShoppingCard: React.FC<ShoppingCardType> = (props) => {
+const ShoppingCard: React.FC<ShoppingCardType> = () => {
+  const cartProducts = useShoppingCardStore((state) => state.cartProducts);
+
   return (
     <main className="min-h-[35vw] bg-app-gray-shade">
       <div className="flex relative bg-indigo-400 h-12">
@@ -29,9 +32,16 @@ const ShoppingCard: React.FC<ShoppingCardType> = (props) => {
           <CartHeader />
 
           <ul className="flex flex-col gap-6 bg-app-white px-8 py-4">
-            <CartItem />
-            <CartItem />
-            <CartItem />
+            {cartProducts[0] &&
+              cartProducts.map((product) => (
+                <CartItem key={product.productId} product={product} />
+              ))}
+
+            {!cartProducts[0] && (
+              <span className="inline-block text-center font-bold text-app-black-tr">
+                There are no products in cart.
+              </span>
+            )}
           </ul>
 
           <CartFooter />

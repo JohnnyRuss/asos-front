@@ -1,14 +1,16 @@
 import { ProductT } from "interface/DB";
 
 export interface ShoppingCardStoreT extends ShoppingCardStoreActionsT {
-  products: ProductToCardT[];
+  cartProducts: ProductToCardT[];
 }
 
-interface ShoppingCardStoreActionsT {
+export interface ShoppingCardStoreActionsT {
   addToBag: (args: AddToBagArgsT) => void;
+  removeFromCart: (productId: string) => void;
+  increaseProductQuantity: (productId: string, quantity: number) => void;
 }
 
-interface ProductToCardT {
+export interface ProductToCardT {
   productId: ProductT["_id"];
   color: ProductT["colour"];
   sizes: ProductT["sizes"];
@@ -16,6 +18,7 @@ interface ProductToCardT {
   title: ProductT["title"];
   price: ProductT["price"];
   thumbnail: string;
+  quantity: number;
 }
 
 type AddToBagArgsT = ProductToCardT;

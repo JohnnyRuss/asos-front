@@ -1,36 +1,72 @@
 import React from "react";
 
-interface CartItemType {}
+import { useShoppingCardStore } from "store";
+import { createImageUrl } from "utils";
 
-const CartItem: React.FC<CartItemType> = (props) => {
+import { ProductToCardT } from "interface/store/shoppingCard";
+
+interface CartItemType {
+  product: ProductToCardT;
+}
+
+const CartItem: React.FC<CartItemType> = ({ product }) => {
+  const { increaseProductQuantity, onRemove } = useShoppingCardStore(
+    (state) => ({
+      increaseProductQuantity: state.increaseProductQuantity,
+      onRemove: state.removeFromCart,
+    })
+  );
+
   return (
     <li className="h-56 pb-6 flex gap-2 items-start border-b border-b-app-dark-gray last:border-b-0">
       <figure className="h-full w-40 overflow-hidden">
         <img
           className="object-contain w-full h-full"
-          src="http://localhost:4013/products/119904279.webp"
-          alt="fig"
+          src={createImageUrl(product.thumbnail)}
+          alt={product.title}
         />
       </figure>
 
       <div className="flex flex-col self-stretch gap-2 relative flex-1">
-        <span className="font-bold">£48.00</span>
+        <span className="font-bold">£{product.price.toFixed(2)}</span>
 
-        <span>
-          Jack & Jones Originals oversized clean revere collar shirt in grey
-          co-ord
-        </span>
+        <span>{product.title}</span>
 
         <div className="flex items-center gap-2 mt-6">
-          <span className="border-r border-r-app-dark-gray pr-3">color</span>
+          <span className="border-r border-r-app-dark-gray pr-3 uppercase">
+            {product.color}
+          </span>
+
           <div className="border-r border-r-app-dark-gray pr-3">
-            <select name="size" id="" className="w-16">
-              <option value="size">XL</option>
+            <select name="size" id="" className="w-16 outline-none">
+              {product.sizes.map((size) => (
+                <option value={size._id} key={size._id}>
+                  {size.size}
+                </option>
+              ))}
             </select>
           </div>
+
           <div className="p-l-3">
-            <select name="quantity" id="" className="w-16">
-              <option value="size">1</option>
+            <select
+              name="quantity"
+              id=""
+              className="w-16 outline-none"
+              onChange={(e) =>
+                increaseProductQuantity(product.productId, +e.target.value)
+              }
+            >
+              {Array.from({ length: 10 }, (_, index) => index + 1).map(
+                (quantity) => (
+                  <option
+                    value={quantity}
+                    key={`quantity-${quantity}`}
+                    selected={product.quantity === quantity}
+                  >
+                    {quantity}
+                  </option>
+                )
+              )}
             </select>
           </div>
         </div>
@@ -50,7 +86,10 @@ const CartItem: React.FC<CartItemType> = (props) => {
           <p className="first-letter:capitalize">add to favorites</p>
         </button>
 
-        <button className="absolute top-1 right-1 text-2xl">
+        <button
+          className="absolute top-1 right-1 text-2xl"
+          onClick={() => onRemove(product.productId)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useProductsStore, useShoppingCardStore } from "store";
+
 import ProductAccordion from "./ProductAccordion";
 import ProductSize from "./ProductSize";
 import ProductColor from "./ProductColor";
@@ -25,6 +26,7 @@ const ProductDetails: React.FC = () => {
       selectedSizeId: selectedSize,
       thumbnail: product.media.pictures[0],
       title: product.title,
+      quantity: 1,
     });
   }
 

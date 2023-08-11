@@ -1,13 +1,14 @@
 import React from "react";
+import { useShoppingCardSubTotal } from "store/shoppingCartStore";
 
-interface CartFooterType {}
+const CartFooter: React.FC = () => {
+  const subTotal = useShoppingCardSubTotal();
 
-const CartFooter: React.FC<CartFooterType> = (props) => {
   return (
     <footer className="flex flex-col gap-4">
       <div className="bg-app-white px-8 py-4 flex justify-end gap-8 uppercase font-bold text-lg">
         <span>sub total</span>
-        <span>£82.00</span>
+        <span>£{subTotal.toFixed(2)}</span>
       </div>
 
       <div className="bg-app-white px-8 py-4 flex gap-8">

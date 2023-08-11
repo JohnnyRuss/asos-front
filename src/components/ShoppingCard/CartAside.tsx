@@ -1,8 +1,9 @@
 import React from "react";
+import { useShoppingCardSubTotal } from "store/shoppingCartStore";
 
-interface CartAsideType {}
+const CartAside: React.FC = () => {
+  const subTotal = useShoppingCardSubTotal();
 
-const CartAside: React.FC<CartAsideType> = (props) => {
   return (
     <aside className="w-80 sticky z-30 top-[85px] self-start bg-app-white flex flex-col gap-2 py-6 px-4">
       <span className="text-lg font-bold uppercase border-b border-b-app-gray-shade pb-4">
@@ -11,7 +12,7 @@ const CartAside: React.FC<CartAsideType> = (props) => {
 
       <div className="flex justify-between">
         <span className="capitalize font-bold">sub-total</span>
-        <span>$97.50</span>
+        <span>${subTotal.toFixed(2)}</span>
       </div>
 
       <div className="flex justify-between">

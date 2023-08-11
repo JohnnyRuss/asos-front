@@ -15,6 +15,7 @@ const ProductSize: React.FC<ProductSizeType> = ({ sizes, setSelectedSize }) => {
         className="w-60 h-10 cursor-pointer outline-none border border-app-gray p-1 rounded-md"
       >
         <option disabled>Please select size</option>
+        <option value="">select size</option>
         {sizes.map((size) => (
           <option
             key={size._id}
